@@ -1,0 +1,3 @@
+markdown: redcarpet
+baseurl: /prettyneat.io
+exclude: ['README.md']
