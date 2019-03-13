@@ -1,0 +1,160 @@
+nav ul li {
+    display: inline;
+}
+
+
+.current { 
+    color: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid div:nth-child(even){
+    background-color: red;
+}
+
+.grid div:nth-child(odd){
+    background-color: green;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-areas: 
+    ". header header header header ."
+    ". content content content content ."
+    ". . footer footer . . "
+}
+
+.grid-item.content{
+    grid-area: content;
+}
+
+.grid-item.footer{
+    grid-area: footer;
+}
+
+.nav-container{
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas: 
+    "nav-banner . nav-links"
+}
+
+.grid-nav-item.banner{
+    grid-area: nav-banner;
+}
+
+.grid-nav-item.links{
+    grid-area: nav-links;
+}
+
+.grid-nav-item.links a{
+    padding-left:1rem;
+}
+.grid-item.nav{
+    grid-area: header;
+}
+
+.landing-container{
+    height: 60vh;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    ". we-make . . ."
+    ". . landing-banner . ."
+    ". . . services ."
+    "whitespace whitespace whitespace whitespace whitespace"
+}
+
+.stack-container{
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "stack-image stack-image stack-open ."
+    "stack-image stack-image stack-content stack-content"
+    "stack-image stack-image . stack-closed"
+}
+
+.grid-content-item.we-make{
+    grid-area: we-make;
+}
+
+.grid-content-item.landing-banner{
+    grid-area: landing-banner;
+}
+
+.grid-content-item.services{
+    grid-area: services;
+}
+
+.grid-content-item.whitespace{
+    grid-area: whitespace;
+}
+
+.grid-content-item.stack-image{
+    grid-area: stack-image;
+}
+
+.grid-content-item.stack-closed{
+    grid-area: stack-closed;
+}
+
+.grid-content-item.stack-open{
+    grid-area: stack-open;
+}
+
+.grid-content-item.stack-content{
+    grid-area: stack-content;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.float-center{
+    text-align: center;
+}
+
+.whitespace{
+    padding-top: 5rem;
+}
+
+.stack-image svg{
+    max-width: 35vw;
+    max-height: 50vh;
+    margin: auto;
+    display: block;
+}
+
+.we-make, .stack-open{
+    display: flex;
+    align-items: flex-end;
+    flex-flow: row;
+}
+
+.landing-banner, .stack-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.services .stack-closed{
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row-reverse;
+}
+
+*{
+    border: red;
+    border-style: solid;
+}

@@ -1,0 +1,9 @@
+<nav class="nav-container">
+    <span class="grid-nav-item banner">
+        <a href="{{site.baseurl}}/index.html"  class="{% if page.url == '/' %}current{% endif %} float-left">pretty neat</a>
+    </span>
+    <span class="grid-nav-item links">
+        <a href="{{site.baseurl}}/about.html" class="{% if page.url == '/about.html' %}current{% endif %} float-right">about</a>
+        <a href="{{site.baseurl}}/careers.html" class="{% if page.url == '/careers.html' %}current{% endif %} float-right">careers</a>
+    </span>
+</nav>

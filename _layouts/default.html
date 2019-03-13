@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretty Neat!</title>
+  </head>
+  <body class="main-container">
+      <header class="grid-item nav">
+        {% include nav.html %}
+      </header>
+      <div class="grid-item content">
+        {{content}}
+      </div>
+      <div class="grid-item footer">
+        {% include footer.html %}
+      </div>
+  </body>
+  <link href="{{site.baseurl}}/css/common.css" rel="stylesheet"/>
+</html>
