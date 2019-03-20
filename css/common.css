@@ -2,6 +2,9 @@ nav ul li {
     display: inline;
 }
 
+nav {
+    padding: 2rem;
+}
 
 .current { 
     color: red;
@@ -61,7 +64,7 @@ nav ul li {
 }
 
 .landing-container{
-    height: 60vh;
+    height: 80vh;
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -154,7 +157,27 @@ nav ul li {
     flex-flow: row-reverse;
 }
 
+.flex-right{
+    margin-left:auto;
+    order:2;
+}
+/* 
 *{
     border: red;
     border-style: solid;
+} */
+
+h1, h2, h3 {
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html{
+    background: #D31027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
 }
