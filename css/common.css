@@ -15,13 +15,6 @@ nav {
     padding: 0;
 }
 
-.grid div:nth-child(even){
-    background-color: red;
-}
-
-.grid div:nth-child(odd){
-    background-color: green;
-}
 
 .main-container{
     display: grid;
@@ -43,7 +36,7 @@ nav {
 .nav-container{
     height: 10vh;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
     "nav-banner . nav-links"
 }
@@ -66,7 +59,7 @@ nav {
 .landing-container{
     height: 80vh;
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr 1fr;
+    grid-template: repeat(5, 1fr);
     grid-template-areas:
     ". we-make . . ."
     ". . landing-banner . ."
@@ -76,7 +69,7 @@ nav {
 
 .stack-container{
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr;
+    grid-template: repeat(4, 1fr);
     grid-template-areas:
     "stack-image stack-image stack-open ."
     "stack-image stack-image stack-content stack-content"
@@ -123,12 +116,13 @@ nav {
     float: right;
 }
 
-.float-center{
+.text-center{
     text-align: center;
 }
 
 .whitespace{
     padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .stack-image svg{
@@ -168,37 +162,122 @@ nav {
 } */
 
 h1, h2, h3 {
-    font-family: 'Bungee Shade', cursive;
-    color:#CF3A3A;
-    -webkit-text-stroke: 0.3rem white;
-    paint-order: stroke fill;
+    font-family: 'Lora', serif;
+    /* color:#CF3A3A; */
     text-shadow: none;
-
 }
 
 body{
-    font-family: 'BioRhyme', serif;
-    text-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;}
+    font-family: 'Source Sans Pro', sans-serif;
+    /* text-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important; */
+}
 
 html{
-    background: #EE5050;
+    background: #eee;
     /* background: #D31027;  
     background: -webkit-linear-gradient(to right, #e60075, #d80073);  
     background: linear-gradient(to right, #e60075, #d80073);  */
-    color: white;
+    color: #333;
     font-size: 115%;
 }
 
 .nav-container a{
-    color: white;
+    color: #333;
     text-decoration: none;
     font-size: 1rem;
 }
 
 .landing-banner h1{
+    /* mix-blend-mode: soft-light; */
     font-size: 3rem;
 }
 
 .landing-container{
     font-size: 1rem;
+}
+
+/** HIGHLIGHTING EFFECTS **/
+/** Pretty Neat **/
+
+.landing-text{
+    pointer-events: none;
+}
+
+/** Landing Banner 2 **/
+.landing-banner-background > span{
+    height:100%;
+    width:100%;
+}
+
+.landing-banner-background:hover > span{
+    transform: scaleY(0.3);
+    background-image: linear-gradient(#66FF33,hsla(100, 97%, 59%, 0.75));
+    background-clip:content-box;
+}
+
+.landing-banner-background > span {
+    z-index: -1;
+    display: inline-grid;
+    position: relative;
+    transform-origin: right center;
+    transform: scaleY(1);
+    transition: all 0.1s ease-in-out;
+    background-image: linear-gradient(hsla(100, 97%, 59%, 0.75),#66FF33);
+}
+
+
+/** We Make **/
+.we-make-background > span{
+    height:100%;
+    width:100%;
+}
+
+.we-make-background:hover > span{
+    transform: scaleY(1);
+    background-image: linear-gradient(#fc2f70,hsla(341, 97%, 59%, 0.75));
+    background-clip:content-box;
+}
+
+.we-make-background > span {
+    z-index: -1;
+    display: inline-grid;
+    position: relative;
+    transform-origin: top center;
+    transform: scaleY(0.1);
+    transition: all 0.1s ease-in-out;
+    background-image: linear-gradient(hsla(341, 97%, 59%, 0.75),#fc2f70);
+}
+
+ .we-make .landing-text{
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
+
+/** Websites Apps Consultants**/
+
+.services-background > span{
+    height:100%;
+    width:100%;
+}
+
+.services-background:hover > span{
+    transform: scaleY(1);
+    background-image: linear-gradient(hsla(341, 97%, 59%, 0.75),#fc2f70);
+    background-clip:content-box;
+}
+
+.services-background > span {
+    z-index: -1;
+    display: inline-grid;
+    position: relative;
+    transform-origin: bottom center;
+    transform: scaleY(0.1);
+    transition: all 0.1s ease-in-out;
+    background-image: linear-gradient(#fc2f70,hsla(341, 97%, 59%, 0.75));
+
+}
+
+ .services .landing-text{
+    padding-top: 1rem;
+    padding-left: 1rem;
 }

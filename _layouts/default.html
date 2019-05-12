@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.2">
     <title>Pretty Neat!</title>
-    <link href="https://fonts.googleapis.com/css?family=BioRhyme|Bungee+Shade" rel="stylesheet"> 
-  </head>
   <body class="main-container">
       <header class="grid-item nav">
         {% include nav.html %}
@@ -17,5 +15,14 @@
         {% include footer.html %}
       </div>
   </body>
-  <link href="{{site.baseurl}}/css/common.css" rel="stylesheet"/>
+  <script>
+    document.write(
+      '<script src="http://' +
+        (location.host || '${1:localhost}').split(':')[0] +
+        ':${2:35729}/livereload.js?snipver=1"></' +
+        'script>'
+    );
+  </script>
+    <link href="https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro:600" rel="stylesheet">   </head>
+    <link href="{{site.baseurl}}/css/common.css" rel="stylesheet"/>
 </html>
