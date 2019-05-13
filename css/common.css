@@ -1,9 +1,10 @@
 :root {
-    --primary: #66FF33;
-    --secondary: #fc2f70;
-    --tertiary: brown;
+    --primary:  #fd7e8e;
+    --secondary: #5ac7a2;
+    --tertiary:  #edff91  ;
     --black: #333;
-    --background-color: #eee;
+    --background-color: #edf9ff;
+    --background-gradient: linear-gradient( #edf9ff,#cbffff)
   }
 
   
@@ -12,7 +13,7 @@ nav ul li {
 }
 
 nav {
-    padding: 2rem;
+    width:100%;
 }
 
 .current { 
@@ -46,20 +47,25 @@ body{
 }
 
 html{
-    background: var(--background-color);
     /* background: #D31027;  
     background: -webkit-linear-gradient(to right, #e60075, #d80073);  
     background: linear-gradient(to right, #e60075, #d80073);  */
     color: var(--black);
     font-size: 150%;
+    width: 100vw;
+
 }
+
 .main-container{
+    width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+
     grid-template-areas: 
-    ". header header header header ."
-    ". content content content content ."
-    ". . footer footer . . "
+    "header header header header"
+    "content content content content"
+    ". footer footer ."
+    
 }
 
 .grid-item.content{
@@ -76,6 +82,10 @@ html{
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
     "nav-banner . nav-links"
+}
+
+.grid-nav-item{
+    padding: 2rem;
 }
 
 .grid-nav-item.banner{
@@ -104,14 +114,31 @@ html{
     "whitespace whitespace whitespace whitespace whitespace"
 }
 
-.stack-container{
-    display: grid;
-    grid-template: repeat(4, 1fr);
-    grid-template-areas:
-    "stack-image stack-image stack-open ."
-    "stack-image stack-image stack-content stack-content"
-    "stack-image stack-image . stack-closed"
+
+@media  (min-width: 763px) {
+    .stack-container{
+        background: var(--tertiary);
+        display: grid;
+        grid-template: repeat(4, 1fr);
+        grid-template-areas:
+        "stack-image stack-image stack-open ."
+        "stack-image stack-image stack-content stack-content"
+        "stack-image stack-image . stack-closed"
+    }
 }
+
+@media  (max-width: 763px) {
+    .stack-container{
+        display: grid;
+        grid-template: repeat(2, 1fr);
+        grid-template-areas:
+        "stack-open ."
+        "stack-content stack-content"
+        " . stack-closed"
+        " stack-image stack-image "
+    }
+}
+
 
 .grid-content-item.we-make{
     grid-area: we-make;
@@ -131,6 +158,8 @@ html{
 
 .grid-content-item.stack-image{
     grid-area: stack-image;
+    align-self: center;
+    justify-self: center;
 }
 
 .grid-content-item.stack-closed{
@@ -162,12 +191,7 @@ html{
     padding-bottom: 5rem;
 }
 
-.stack-image svg{
-    max-width: 35vw;
-    max-height: 50vh;
-    margin: auto;
-    display: block;
-}
+
 
 .we-make, .stack-open{
     display: flex;
@@ -188,6 +212,9 @@ html{
     flex-flow: row-reverse;
 }
 
+.stack-image img{
+    width:30vw;    
+}
 
 .nav-container a{
     color: var(--black);
@@ -219,7 +246,7 @@ html{
 
 .landing-banner-background.background-active > span {
     transform: scaleY(1);
-    background-image: linear-gradient(var(--primary),hsla(100, 97%, 59%, 0.75));
+    background-image: linear-gradient(var(--primary),var(--primary));
     background-clip:content-box;
 }
 
@@ -230,7 +257,7 @@ html{
     transform-origin: right center;
     transition: all 0.5s ease-in-out;
     transform: scaleY(0.3);
-    background-image: linear-gradient(hsla(100, 97%, 59%, 0.75),var(--primary));
+    background-image: linear-gradient(var(--primary),var(--primary));
 }
 
 
@@ -242,7 +269,7 @@ html{
 
 .we-make-background.background-active > span{
     transform: scaleY(1);
-    background-image: linear-gradient(var(--secondary),hsla(341, 97%, 59%, 0.75));
+    background-image: linear-gradient(var(--secondary),var(--secondary));
     background-clip:content-box;
 }
 
@@ -253,7 +280,8 @@ html{
     transform-origin: top center;
     transform: scaleY(0.1);
     transition: all 0.5s ease-in-out;
-    background-image: linear-gradient(hsla(341, 97%, 59%, 0.75),var(--secondary));
+    transition-delay: 0.2s;
+    background-image: linear-gradient(var(--secondary),var(--secondary));
 }
 
  .we-make .landing-text{
@@ -270,7 +298,7 @@ html{
 
 .services-background.background-active > span{
     transform: scaleY(1);
-    background-image: linear-gradient(hsla(341, 97%, 59%, 0.75),var(--secondary));
+    background-image: linear-gradient(var(--tertiary),var(--tertiary));
     background-clip:content-box;
 }
 
@@ -281,11 +309,35 @@ html{
     transform-origin: bottom center;
     transform: scaleY(0.1);
     transition: all 0.5s ease-in-out;
-    background-image: linear-gradient(var(--secondary),hsla(341, 97%, 59%, 0.75));
+    transition-delay: 0.2s;
+    background-image: linear-gradient(var(--tertiary),var(--tertiary));
 
 }
 
  .services .landing-text{
     padding-top: 1rem;
     padding-left: 1rem;
+}
+
+/**STACK CONTAINER**/
+/**Stack Image **/
+
+.stack-image img{
+    z-index: 5;
+    position: relative;
+}
+
+.stack-image-background > span {
+    transform: scaleY(1);
+    background-clip:content-box;
+    z-index: 1;
+    display: inline-grid;
+    position: relative;
+    transform-origin: center;
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    background-image: linear-gradient(var(--secondary),var(--tertiary));
+    height:30vh;
+    width:30vw;
 }
