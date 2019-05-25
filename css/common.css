@@ -191,8 +191,6 @@ html{
     padding-bottom: 5rem;
 }
 
-
-
 .we-make, .stack-open{
     display: flex;
     align-items: flex-end;
@@ -223,8 +221,8 @@ html{
 }
 
 .landing-banner h1{
-    /* mix-blend-mode: soft-light; */
     font-size: 3rem;
+    color: var(--black);
 }
 
 .landing-container{
@@ -245,8 +243,8 @@ html{
 }
 
 .landing-banner-background.background-active > span {
-    transform: scaleY(1);
-    background-image: linear-gradient(var(--primary),var(--primary));
+    height: 100%;
+    /* background-image: linear-gradient(var(--primary),var(--primary)); */
     background-clip:content-box;
 }
 
@@ -256,30 +254,39 @@ html{
     position: relative;
     transform-origin: right center;
     transition: all 0.5s ease-in-out;
-    transform: scaleY(0.3);
-    background-image: linear-gradient(var(--primary),var(--primary));
+    /* transform: scaleY(0.3); */
+    height: 45%;
+
+    /* background-image: linear-gradient(var(--primary),var(--primary)); */
+}
+.landing-banner-background > span > span.inner-border {
+    margin: 0.1rem;
+    border: var(--primary) solid 0.35rem;
 }
 
-
 /** We Make **/
+.we-make{
+    padding-left:1rem;
+}
 .we-make-background > span{
     height:100%;
     width:100%;
 }
 
 .we-make-background.background-active > span{
-    transform: scaleY(1);
+    transform: scaleY(0.05);
     background-image: linear-gradient(var(--secondary),var(--secondary));
     background-clip:content-box;
+    transform-origin: top center;
 }
 
 .we-make-background > span {
     z-index: -1;
     display: inline-grid;
     position: relative;
-    transform-origin: top center;
-    transform: scaleY(0.1);
+    transform: scaleY(0.05);
     transition: all 0.5s ease-in-out;
+    transform-origin: bottom center;
     transition-delay: 0.2s;
     background-image: linear-gradient(var(--secondary),var(--secondary));
 }
@@ -290,6 +297,9 @@ html{
 }
 
 /** Websites Apps Consultants**/
+.services{
+    padding-right:1rem;
+}
 
 .services-background > span{
     height:100%;
@@ -297,17 +307,19 @@ html{
 }
 
 .services-background.background-active > span{
-    transform: scaleY(1);
+    transform: scaleY(0.05);
     background-image: linear-gradient(var(--tertiary),var(--tertiary));
+    transform-origin: bottom center;
     background-clip:content-box;
+
 }
 
 .services-background > span {
     z-index: -1;
+    transform-origin: top center;
     display: inline-grid;
     position: relative;
-    transform-origin: bottom center;
-    transform: scaleY(0.1);
+    transform: scaleY(0.05);
     transition: all 0.5s ease-in-out;
     transition-delay: 0.2s;
     background-image: linear-gradient(var(--tertiary),var(--tertiary));
