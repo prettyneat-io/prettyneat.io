@@ -137,6 +137,45 @@ html{
         " . stack-closed"
         " stack-image stack-image "
     }
+
+    .service-body{
+        width: 80vw;
+    }
+
+}
+
+
+@media  (min-width: 763px) {
+    .services-container{
+        background: var(--primary);
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        ". service-header ."
+        ". service-subheader ."
+        "service-body-1 service-body-2 service-body-3"
+    }
+
+    .service-body{
+        width: 25vw;
+    }
+
+}
+
+@media  (max-width: 763px) {
+    .services-container{
+        background: var(--primary);
+        justify-items: center;
+        display: grid;
+        grid-template: repeat(1, 1fr);
+        grid-template-areas:
+        "service-header"
+        "service-subheader"
+        "service-body-1"
+        "service-body-2"
+        "service-body-3"
+    }
 }
 
 
@@ -174,6 +213,24 @@ html{
     grid-area: stack-content;
 }
 
+.grid-content-item.service-header{
+    grid-area: service-header;
+}
+
+.grid-content-item.service-subheader{
+    grid-area: service-subheader;
+}
+
+.grid-content-item.service-body-1{
+    grid-area: service-body-1;
+}
+.grid-content-item.service-body-2{
+    grid-area: service-body-2;
+}
+.grid-content-item.service-body-3{
+    grid-area: service-body-3;
+}
+
 .float-left{
     float: left;
 }
@@ -197,7 +254,7 @@ html{
     flex-flow: row;
 }
 
-.landing-banner, .stack-content{
+.landing-banner, .stack-content, .services-container div{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -352,4 +409,25 @@ html{
     background-image: linear-gradient(var(--secondary),var(--tertiary));
     height:30vh;
     width:30vw;
+}
+
+
+/**SERVICES CONTAINER**/
+.services-container h2, .services-container h3{
+    color: white;
+}
+
+.services-container h2{
+    padding-top: 2rem;
+}
+
+.services-container h3{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.service-body{
+    height: 25vh;
+    border: solid white;
+    margin-bottom: 2rem;
 }
