@@ -112,18 +112,53 @@ html{
 .grid-item.nav{
     grid-area: header;
 }
+@media  (min-width: 763px) {
+    .landing-container{
+        height: 80vh;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        overflow-x: hidden;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "landing-subcontainer landing-subcontainer landing-image landing-image"
+    }
 
-.landing-container{
-    height: 80vh;
-    display: grid;
-    grid-template: repeat(5, 1fr);
-    grid-template-areas:
-    ". we-make . . ."
-    ". . landing-banner . ."
-    ". . . services ."
-    "whitespace whitespace whitespace whitespace whitespace"
+    .landing-subcontainer{
+        width: calc(50vw - 1rem);
+    }
 }
 
+@media  (max-width: 763px) {
+    .landing-container{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        overflow-x: hidden;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "landing-subcontainer"
+        "landing-image"
+    }
+    
+}
+
+
+.landing-subcontainer{
+    min-height: 80%;
+    padding: 1rem;
+    background: url(/assets/squiggle.svg) center center;
+    background-repeat: repeat-y;
+    background-size: 0.2rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    " we-make . .   "
+    " . landing-banner . "
+    " . . services "
+    " . . . "
+}
 
 @media  (min-width: 763px) {
     .stack-container{
@@ -195,6 +230,9 @@ html{
     }
 }
 
+.grid-content-item.landing-subcontainer{
+    grid-area: landing-subcontainer;
+}
 
 .grid-content-item.we-make{
     grid-area: we-make;
@@ -204,6 +242,10 @@ html{
     grid-area: landing-banner;
 }
 
+.grid-content-item.landing-image{
+    grid-area: landing-image;
+    
+}
 .grid-content-item.services{
     grid-area: services;
 }
@@ -276,6 +318,7 @@ html{
     justify-content: center;
     flex-direction: column;
     text-align: center;
+
 }
 
 .services .stack-closed{
@@ -301,11 +344,28 @@ html{
 
 .landing-banner h1{
     font-size: 3rem;
-    color: var(--black);
+    /* font-size: f(3rem + (25 - 2.5) * ((100vw - 10rem) / (1600 - 300))); */
+    /* font-size: 10vw; */
+    color: var(--primary);
+    text-shadow: white 1px 1px 1px;
+    -webkit-font-smoothing: antialiased;
+
 }
 
 .landing-container{
-    font-size: 1rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    text-shadow: white 1px 1px 1px;
+    -webkit-font-smoothing: antialiased;
+    /* background-image: url('/assets/squiggle.svg');
+    background-position: 50% 100%;
+    background-size: auto 1rem;
+    background-repeat: repeat-y;
+    text-decoration: none; */
+    
+}
+.landing-image img{
+    max-height: 60vh
 }
 
 /** HIGHLIGHTING EFFECTS **/
@@ -319,10 +379,17 @@ html{
 .landing-banner-background > span{
     height:100%;
     width:100%;
+
 }
 
+.landing-banner-background{
+    background: white;
+    z-index: 0;
+}
+.landing-banner h1{
+    z-index: 1;
+}
 .landing-banner-background.background-active > span {
-    height: 100%;
     /* background-image: linear-gradient(var(--primary),var(--primary)); */
     background-clip:content-box;
 }
@@ -340,18 +407,19 @@ html{
 }
 .landing-banner-background > span > span.inner-border {
     margin: 0.1rem;
-    border: var(--primary) solid 0.35rem;
+    /* border: var(--primary) solid 0.35rem; */
 }
 
 /** We Make **/
 .we-make{
     padding-left:1rem;
 }
+
 .we-make-background > span{
     height:100%;
     width:100%;
 }
-
+/* 
 .we-make-background.background-active > span{
     transform: scaleY(0.05);
     background-image: linear-gradient(var(--secondary),var(--secondary));
@@ -368,7 +436,7 @@ html{
     transform-origin: bottom center;
     transition-delay: 0.2s;
     background-image: linear-gradient(var(--secondary),var(--secondary));
-}
+} */
 
  .we-make .landing-text{
     padding-bottom: 1rem;
@@ -384,7 +452,7 @@ html{
     height:100%;
     width:100%;
 }
-
+/* 
 .services-background.background-active > span{
     transform: scaleY(0.05);
     background-image: linear-gradient(var(--tertiary),var(--tertiary));
@@ -403,7 +471,7 @@ html{
     transition-delay: 0.2s;
     background-image: linear-gradient(var(--tertiary),var(--tertiary));
 
-}
+} */
 
  .services .landing-text{
     padding-top: 1rem;

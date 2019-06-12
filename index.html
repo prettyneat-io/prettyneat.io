@@ -3,6 +3,7 @@ layout: default
 ---
 
 <div class="landing-container blending landing-container-background">
+    <div class="grid-item landing-subcontainer">
         <div class="grid-content-item we-make">
             <div class="flex-right landing-text">we make</div>
         </div>
@@ -18,7 +19,6 @@ layout: default
 
             </span>
         </div>
-
         <div class="grid-content-item services">
             <div class="landing-text">
                 <div >websites</div>
@@ -27,8 +27,12 @@ layout: default
             </div>
         </div>
         <div class="grid-content-item services services-background " >
-                <span class="services-background-child "></span>
-            </div>
+            <span class="services-background-child "></span>
+        </div>
+    </div>
+    <div class="grid-content-item landing-image">
+        <img src="/assets/flame-5.png" />
+    </div>
 </div>
 
 <div class="services-container">
@@ -98,19 +102,23 @@ function landingAnimator(){
     document.getElementsByClassName("landing-banner-background")[0].classList.remove("background-active");
     document.getElementsByClassName("we-make-background")[0].classList.add("background-active");
     document.getElementsByClassName("services-background")[0].classList.add("background-active");
-
   } else {
     document.getElementsByClassName("landing-banner-background")[0].classList.add("background-active");
     document.getElementsByClassName("we-make-background")[0].classList.remove("background-active");
     document.getElementsByClassName("services-background")[0].classList.remove("background-active");
-    const servicesElement = document.getElementsByClassName("services-container")[0];
-
   }
   const servicesElement = document.getElementsByClassName("services-container")[0];
   if(window.scrollY > servicesElement.offsetTop + (servicesElement.offsetHeight * 0.8)){
         document.getElementsByClassName("stack-image-background")[0].classList.add("background-active");
-    }else {
+  } else {
         document.getElementsByClassName("stack-image-background")[0].classList.remove("background-active");
-    }
+  }
+
+//   const landingContainer = document.getElementsByClassName("landing-container")[0];
+//   const limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+//                    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+//   console.log((limit - (window.scrollY / 10 )/100) + 'rem');
+//   landingContainer.style.backgroundSize = (limit - (window.scrollY ))/100 + 'rem';
+   
 }
 </script>
