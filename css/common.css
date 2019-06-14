@@ -4,7 +4,7 @@
     --tertiary:  #fdb306;
     --quaternary: #0f3259;
     --black: #333;
-    --background-color: #edf9ff;
+    --background-color: #fff8ea;
     --background-gradient: linear-gradient( #edf9ff,#cbffff)
   }
 /* 
@@ -63,6 +63,7 @@ html{
     color: var(--black);
     font-size: 150%;
     width: 100vw;
+    background-color: var(--background-color);
 
 }
 
@@ -70,7 +71,6 @@ html{
     width: 100vw;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
-
     grid-template-areas: 
     "header header header header"
     "content content content content"
@@ -84,6 +84,8 @@ html{
 
 .grid-item.footer{
     grid-area: footer;
+    text-align:center;
+    padding: 2rem;
 }
 
 .nav-container{
@@ -122,6 +124,8 @@ html{
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
         "landing-subcontainer landing-subcontainer landing-image landing-image"
+        "landing-subcontainer landing-subcontainer . ."
+
     }
 
     .landing-subcontainer{
@@ -144,20 +148,34 @@ html{
 }
 
 
+
 .landing-subcontainer{
     min-height: 80%;
     padding: 1rem;
-    background: url(/assets/squiggle.svg) center center;
-    background-repeat: repeat-y;
-    background-size: 0.2rem;
-    margin: 0 auto;
     display: grid;
+    background-image: url(/assets/blob-blue.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-    " we-make . .   "
-    " . landing-banner . "
-    " . . services "
-    " . . . "
+}
+
+@media  (min-width: 763px) {
+    .landing-subcontainer{
+        grid-template-areas:
+        " we-make landing-banner .   "
+        " . landing-banner ."
+        " . landing-banner services "
+    }
+}
+@media  (max-width: 763px) {
+    .landing-subcontainer{
+        grid-template-areas:
+        " we-make we-make  .   "
+        " . landing-banner . "
+        " . services services "
+        " . . . "
+    }
 }
 
 @media  (min-width: 763px) {
@@ -236,6 +254,7 @@ html{
 
 .grid-content-item.we-make{
     grid-area: we-make;
+    align-items:end;
 }
 
 .grid-content-item.landing-banner{
@@ -244,10 +263,10 @@ html{
 
 .grid-content-item.landing-image{
     grid-area: landing-image;
-    
 }
 .grid-content-item.services{
     grid-area: services;
+    align-self:center;
 }
 
 .grid-content-item.whitespace{
@@ -383,7 +402,10 @@ html{
 }
 
 .landing-banner-background{
-    background: white;
+    background: linear-gradient(var(--background-color),rgb(255,248,234,0.1),rgb(255,248,234,0.1),var(--background-color),var(--background-color),var(--background-color),var(--background-color),rgb(255,248,234,0.1),rgb(255,248,234,0.1),var(--background-color)), url(/assets/squiggle.svg);
+    background-size: 0.2rem, 0.2rem;
+    background-repeat: repeat-y;
+    background-position: center;    
     z-index: 0;
 }
 .landing-banner h1{
@@ -425,18 +447,22 @@ html{
     background-image: linear-gradient(var(--secondary),var(--secondary));
     background-clip:content-box;
     transform-origin: top center;
-}
-
-.we-make-background > span {
+} */
+/* 
+.we-make-background{
     z-index: -1;
     display: inline-grid;
     position: relative;
-    transform: scaleY(0.05);
     transition: all 0.5s ease-in-out;
     transform-origin: bottom center;
     transition-delay: 0.2s;
-    background-image: linear-gradient(var(--secondary),var(--secondary));
-} */
+    margin-right: -10rem;
+    background-image: url(/assets/blob-orange.svg);
+    background-position: left center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+     background-image: linear-gradient(var(--secondary),var(--secondary)); 
+}  */
 
  .we-make .landing-text{
     padding-bottom: 1rem;
@@ -472,6 +498,22 @@ html{
     background-image: linear-gradient(var(--tertiary),var(--tertiary));
 
 } */
+/* 
+.services-background{
+    background:  url('/assets/blob-blue.svg') repeat center;
+    background-size: contain;
+    margin: -2rem;
+    z-index: -1;
+}
+
+
+.we-make-background{
+    background:  url('/assets/blob-orange.svg') repeat-y center;
+    background-size: contain;
+    margin: -4rem;
+    margin-right: -6rem;
+    z-index: -1;
+} */
 
  .services .landing-text{
     padding-top: 1rem;
@@ -503,6 +545,7 @@ html{
     position: relative;
     transform-origin: center;
     transition: all 0.5s ease-in-out;
+    border-radius: 1rem;
 
     /* transition-delay: 0.2s; */
     background-image: linear-gradient(var(--background-color),var(--background-color));
@@ -551,6 +594,7 @@ html{
 .service-body{
     color: var(--tertiary);
     border: solid var(--tertiary);
+    border-radius: 1rem;
     margin-bottom: 2rem;
     background: url(/assets/dotted-circle.svg) center 20% / 260px 260px no-repeat var(--quaternary);
     height: min-content;
