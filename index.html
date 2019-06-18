@@ -4,29 +4,35 @@ layout: default
 
 <div class="landing-container blending landing-container-background">
     <div class="grid-item landing-subcontainer">
-        <div class="grid-content-item we-make">
-            <div class="flex-right landing-text">we make</div>
-        </div>
-        <div class="grid-content-item we-make we-make-background " >
-            <span class="we-make-background-child"></span>
-        </div>
+     
         <div class="grid-content-item landing-banner">
-            <h1 class="text-center landing-text">pretty neat</h1>
+            <h1 class="text-center landing-text t-stroke t-shadow">pretty neat</h1>
         </div>
         <div class="grid-content-item landing-banner landing-banner-background  background-active" >
             <span class="landing-banner-background-child">
                 <span class="inner-border"></span>
             </span>
         </div>
-        <div class="grid-content-item services">
-            <div class="landing-text">
-                <div >websites</div>
-                <div>apps</div>
-                <div>consultants</div>
+        <div class="grid-content-item code">
+            <div class="code-window">
+                <span class="code-window-button"></span>
+                <span class="code-window-button"></span>
+<span id="codeComment" hidden>
+<span class="code-comment">/* Service Summary */ </span>
+</span>
+<pre id="typewriter" >
+<span class="var-highlight">let</span> prettyneat = {
+    write: <span class="string-highlight">'Code'</span>,
+    think: <span class="string-highlight">'Design'</span>,
+    make:[
+        <span class="string-highlight">'Websites'</span>,
+        <span class="string-highlight">'Apps'</span>,
+        <span class="string-highlight">'Consultants'</span>
+        ];
+}; 
+
+</pre>
             </div>
-        </div>
-        <div class="grid-content-item services services-background " >
-            <span class="services-background-child "></span>
         </div>
     </div>
     <div class="grid-content-item landing-image">
@@ -99,12 +105,12 @@ window.onscroll = function(){
 function landingAnimator(){
   if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
     document.getElementsByClassName("landing-banner-background")[0].classList.remove("background-active");
-    document.getElementsByClassName("we-make-background")[0].classList.add("background-active");
-    document.getElementsByClassName("services-background")[0].classList.add("background-active");
+    // document.getElementsByClassName("we-make-background")[0].classList.add("background-active");
+    // document.getElementsByClassName("services-background")[0].classList.add("background-active");
   } else {
     document.getElementsByClassName("landing-banner-background")[0].classList.add("background-active");
-    document.getElementsByClassName("we-make-background")[0].classList.remove("background-active");
-    document.getElementsByClassName("services-background")[0].classList.remove("background-active");
+    // document.getElementsByClassName("we-make-background")[0].classList.remove("background-active");
+    // document.getElementsByClassName("services-background")[0].classList.remove("background-active");
   }
   const servicesElement = document.getElementsByClassName("services-container")[0];
   if(window.scrollY > servicesElement.offsetTop + (servicesElement.offsetHeight * 0.8)){
@@ -120,4 +126,78 @@ function landingAnimator(){
 //   landingContainer.style.backgroundSize = (limit - (window.scrollY ))/100 + 'rem';
    
 }
+
+
+
+function setupTypewriter(t) {
+	    var HTML = t.innerHTML;
+        var comment = document.getElementById('codeComment');
+
+	    t.innerHTML = comment.innerHTML;
+
+	    var cursorPosition = 0,
+	        tag = "",
+	        writingTag = false,
+	        tagOpen = false,
+	        typeSpeed = 100,
+        tempTypeSpeed = 0;
+
+	    var type = function() {
+        
+	        if (writingTag === true) {
+	            tag += HTML[cursorPosition];
+	        }
+
+	        if (HTML[cursorPosition] === "<") {
+	            tempTypeSpeed = 0;
+	            if (tagOpen) {
+	                tagOpen = false;
+	                writingTag = true;
+	            } else {
+	                tag = "";
+	                tagOpen = true;
+	                writingTag = true;
+	                tag += HTML[cursorPosition];
+	            }
+	        }
+	        if (!writingTag && tagOpen) {
+	            tag.innerHTML += HTML[cursorPosition];
+	        }
+	        if (!writingTag && !tagOpen) {
+	            if (HTML[cursorPosition] === " ") {
+	                tempTypeSpeed = 0;
+	            }
+	            else {
+	                tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+	            }
+	            t.innerHTML += HTML[cursorPosition];
+	        }
+	        if (writingTag === true && HTML[cursorPosition] === ">") {
+	            tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+	            writingTag = false;
+	            if (tagOpen) {
+	                var newSpan = document.createElement("span");
+	                t.appendChild(newSpan);
+	                newSpan.innerHTML = tag;
+	                tag = newSpan.firstChild;
+	            }
+	        }
+
+	        cursorPosition += 1;
+	        if (cursorPosition < HTML.length - 1) {
+	            setTimeout(type, tempTypeSpeed);
+	        }
+
+	    };
+
+	    return {
+	        type: type
+	    };
+	}
+
+	var typer = document.getElementById('typewriter');
+
+	typewriter = setupTypewriter(typewriter);
+
+	typewriter.type();
 </script>
