@@ -3,6 +3,7 @@
     --dark-orange: #aa2f05;
     --light-blue: #0da2cf;
     --light-orange: #fdb306;
+    --blue: #133e6f;
     --dark-blue: #0f3259;
     --lighter-blue: #2dc7ff;
     --black: #333;
@@ -183,7 +184,7 @@ html{
         background: var(--orange);
         display: grid;
         justify-items: center;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(minmax(0, 1fr), 1fr);
         grid-template-areas: 
         "service-header service-header service-header "
         "service-body-1 service-body-2 service-body-3"
@@ -196,7 +197,7 @@ html{
 }
 @media (max-width: 763px) {
     .services-container{
-        min-height: 90vh;
+        min-height: 100vh;
         background: var(--orange);
         justify-items: center;
         display: grid;
@@ -210,7 +211,7 @@ html{
    }
     .service-body{
         width: 80vw;
-        height: 80vw;
+        height: 80vh;
    }
 }
 .grid-content-item.landing-subcontainer{
@@ -251,14 +252,8 @@ html{
 }
 .grid-content-item.service-header{
     grid-area: service-header;
-    /* background: var(--light-primary);
-    border-radius: 1rem;
-    margin: 1rem;
-    padding: 1rem;
-    -moz-box-shadow:    inset 50% 50% 10px var(--light-orange);
-    -webkit-box-shadow: inset 0 0 10px  var(--light-orange);
-    box-shadow:         inset 0 0 10px  var(--light-orange); */
-    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .grid-content-item.service-subheader{
     grid-area: service-subheader;
@@ -303,6 +298,7 @@ html{
 }
 .stack-image img{
     width:30vw;
+
 }
 .stack-open, .stack-closed{
     min-width: max-content;
@@ -449,24 +445,6 @@ html{
     margin-right: 10%;
     padding-bottom: 1rem;
 }
-.service-body{
-    color: var(--light-orange);
-    border: solid var(--light-orange);
-    border-radius: 1rem;
-    margin-bottom: 2rem;
-    background: url(/assets/dotted-circle.svg) center 20% / 260px 260px no-repeat var(--dark-blue);
-    height: min-content;
-}
-.service-body img{
-    max-height: 90%;
-    max-width: 90%;
-}
-.service-body{
-    transition: transform .2s ease-in-out;
-}
-.service-body:hover{
-    transform: scale(1.1) 
-}
 pre{
     color: white;
 }
@@ -581,30 +559,72 @@ pre{
  
   /* POPOVER */
 /* Added to solve the z-order problem of IE */  
-.info:hover {  
+.service-body:hover {  
     z-index:2;  
 }  
 /* End */  
-.info > span{  
-    display: none;  
-    width: 0rem;
-    transition: width 1s;
-    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+.service-body > span{  
+    transition-property: height, width, margin, left, transform, box-shadow, filter, -webkit-filter;
+    transition: all 0.2s ease-in-out;
+    display:flex;  
+    position:relative;  
+    background-color:transparent;  
+    text-align: center;
+    font-size:1rem;  
+    font-weight:normal;  
+    line-height:1.5rem;  
+    width: 100%;
+    height: 0rem;
+    margin-top: 0;
+}  
+.service-body:hover > span{  
+    display:flex;  
+    position:relative;  
+    z-index:-50;  
+    color:var(--black);  
+    height: 4rem;
+    transform-origin:50% 0%;
+    color: var(--light-orange);
+    transition-property: height, width, margin, left, transform, box-shadow, filter, -webkit-filter;
+}  
+.service-body .tech-icon{
+    max-width: 5rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    margin: 0 auto;
+    transition: border 0.2s ease-in-out;
+    transition-property: border;
+    border: solid 0px var(--blue);
 
-}  
-.info:hover > span{  
- display:block;  
- position:absolute;  
- z-index:1;  
- left: 100%;  
- width:4rem;  
- border: none !important;
- background-color:var(--background-color);  
- color:var(--black);  
- font-size:1rem;  
- font-weight:normal;  
- padding:3px;  
- line-height:1.5rem;  
- height: 80%;
- z-index: 23;
-}  
+}
+
+.service-body:hover .tech-icon{
+    border: solid 1px var(--blue);
+    border-radius: 0.125rem;
+}
+.service-body{
+    color: var(--light-orange);
+    border: solid var(--light-orange);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    background: url(/assets/dotted-circle.svg) center 20% / 260px 260px no-repeat var(--dark-blue);
+    height: 70vh;
+
+}
+
+.service-body img{
+    max-height: 90%;
+    margin: 0 auto;
+    max-width: 90%;
+}
+.service-body{
+    transition: transform .2s ease-in-out, height .2s ease-in-out,  margin .2s ease-in-out;
+}
+.service-body:hover{
+    transform: scale(1.1) ;
+    height: calc(70vh + 4rem);
+    margin-top: -4rem;
+}
