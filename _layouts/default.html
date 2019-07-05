@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-      <title>Pretty Neat!</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86"
+    />
+    <title>Pretty Neat!</title>
   </head>
   <body class="main-container">
-      <header class="grid-item nav">
-        {% include nav.html %}
-      </header>
-      <div class="grid-item content">
-        {{content}}
-      </div>
-      <div class="grid-item footer">
-        {% include footer.html %}
-      </div>
+    <header class="grid-item nav">
+      {% include nav.html %}
+    </header>
+    <div class="grid-item content">
+      {{ content }}
+    </div>
   </body>
   <footer>
-    <link href="https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro:600" rel="stylesheet"> 
-    <link href="{{site.baseurl}}/css/common.css" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro:600"
+      rel="stylesheet"
+    />
+    <link href="{{ site.baseurl }}/css/common.css" rel="stylesheet" />
   </footer>
 </html>
