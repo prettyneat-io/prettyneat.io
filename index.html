@@ -57,7 +57,7 @@ layout: default
             <img src="/assets/tech-icons/postgresql.svg" class="tech-icon">
             <img src="/assets/tech-icons/dotnet.svg" class="tech-icon">
             <img src="/assets/tech-icons/vue.svg" class="tech-icon">
-            we write all the 
+            <!-- we write all the  -->
         </span>
     </div>
     <div class="grid-content-item service-body-2 service-body">
@@ -69,7 +69,7 @@ layout: default
             <img src="/assets/tech-icons/ubuntu.svg" class="tech-icon">
             <img src="/assets/tech-icons/node.svg" class="tech-icon">
             <img src="/assets/tech-icons/js.svg" class="tech-icon">
-            taster of 
+            <!-- taster of  -->
         </span>
     </div>
     <div class="grid-content-item service-body-3 service-body">
@@ -87,42 +87,43 @@ layout: default
         <!-- <p>just look at these beauts!</p> -->
     </div>
 </div>
-
+<div class="stack-container ">
+        <div class="grid-content-item stack-image stack-image-background">
+        <span class="stack-image-background">
+        </span>
+        </div>
+        <div class="grid-content-item stack-image">
+            <img src="assets/flame-8.png" alt="That's pretty neat!">
+        </div>
+    
+        <div class="grid-content-item stack-open">
+            <h2 class="flex-right">pick a stack...</h2>
+        </div>
+        <div class="grid-content-item stack-content">
+            <!-- <p class="text-center">PostgresSQL, .NET Core, and VueJS?</p>
+            <p class="text-center">MySQL, Django, and JQuery?</p>
+            <p class="text-center">Wordpress and... Wordpress?</p>
+            <p class="text-center">&nbsp; </p> -->
+            <p class="text-center"></p>
+            <p class="text-center">websites, mobile apps, digital games, and</p> 
+            <p class="text-center">virtual or augmented reality experiences </p> 
+            <p class="text-center">are our bread and butter. </p> 
+            <p class="text-center">&nbsp; </p> 
+            <p class="text-center">whatever development stack you need, </p> 
+            <p class="text-center">our developers are at your disposal. </p> 
+        </div>
+        <div class="grid-content-item stack-closed">
+            <h2 class="float-left">...any stack</h2>
+        </div>
+    </div>
 </div>
     <div class="testimonials">
-        <div class="stack-container ">
-                <div class="grid-content-item stack-image stack-image-background">
-                <span class="stack-image-background">
-                </span>
-                </div>
-                <div class="grid-content-item stack-image">
-                    <img src="assets/flame-8.png" alt="That's pretty neat!">
-                </div>
-            
-                <div class="grid-content-item stack-open">
-                    <h2 class="flex-right">pick a stack...</h2>
-                </div>
-                <div class="grid-content-item stack-content">
-                    <!-- <p class="text-center">PostgresSQL, .NET Core, and VueJS?</p>
-                    <p class="text-center">MySQL, Django, and JQuery?</p>
-                    <p class="text-center">Wordpress and... Wordpress?</p>
-                    <p class="text-center">&nbsp; </p> -->
-                    <p class="text-center"></p>
-                    <p class="text-center">websites, mobile apps, digital games, and</p> 
-                    <p class="text-center">virtual or augmented reality experiences </p> 
-                    <p class="text-center">are our bread and butter. </p> 
-                    <p class="text-center">&nbsp; </p> 
-                    <p class="text-center">whatever development stack you need, </p> 
-                    <p class="text-center">our developers are at your disposal. </p> 
-            
-                </div>
-                <div class="grid-content-item stack-closed">
-                    <h2 class="float-left">...any stack</h2>
-                </div>
-                <div class="grid-item footer">
-                    {% include footer.html %}
-                </div>
-            </div>
+        <div class="contact-us">
+            contact us today
+        </div>
+        <div class="grid-item footer">
+            {% include footer.html %}
+        </div>
     </div>
 <script>
 
@@ -158,74 +159,70 @@ function landingAnimator(){
 
 
 function setupTypewriter(t) {
-	    var HTML = t.innerHTML;
-        var comment = document.getElementById('codeComment');
+    var HTML = t.innerHTML;
+    var comment = document.getElementById('codeComment');
 
-	    t.innerHTML = comment.innerHTML;
+    t.innerHTML = comment.innerHTML;
 
-	    var cursorPosition = 0,
-	        tag = "",
-	        writingTag = false,
-	        tagOpen = false,
-	        typeSpeed = 15,
-        tempTypeSpeed = 0;
+    var cursorPosition = 0,
+        tag = "",
+        writingTag = false,
+        tagOpen = false,
+        typeSpeed = 15,
+    tempTypeSpeed = 0;
 
-	    var type = function() {
-        
-	        if (writingTag === true) {
-	            tag += HTML[cursorPosition];
-	        }
+    var type = function() {
+        if (writingTag === true) {
+            tag += HTML[cursorPosition];
+        }
+        if (HTML[cursorPosition] === "<") {
+            tempTypeSpeed = 0;
+            if (tagOpen) {
+                tagOpen = false;
+                writingTag = true;
+            } else {
+                tag = "";
+                tagOpen = true;
+                writingTag = true;
+                tag += HTML[cursorPosition];
+            }
+        }
+        if (!writingTag && tagOpen) {
+            tag.innerHTML += HTML[cursorPosition];
+        }
+        if (!writingTag && !tagOpen) {
+            if (HTML[cursorPosition] === " ") {
+                tempTypeSpeed = 0;
+            }
+            else {
+                tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+            }
+            t.innerHTML += HTML[cursorPosition];
+        }
+        if (writingTag === true && HTML[cursorPosition] === ">") {
+            tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+            writingTag = false;
+            if (tagOpen) {
+                var newSpan = document.createElement("span");
+                t.appendChild(newSpan);
+                newSpan.innerHTML = tag;
+                tag = newSpan.firstChild;
+            }
+        }
 
-	        if (HTML[cursorPosition] === "<") {
-	            tempTypeSpeed = 0;
-	            if (tagOpen) {
-	                tagOpen = false;
-	                writingTag = true;
-	            } else {
-	                tag = "";
-	                tagOpen = true;
-	                writingTag = true;
-	                tag += HTML[cursorPosition];
-	            }
-	        }
-	        if (!writingTag && tagOpen) {
-	            tag.innerHTML += HTML[cursorPosition];
-	        }
-	        if (!writingTag && !tagOpen) {
-	            if (HTML[cursorPosition] === " ") {
-	                tempTypeSpeed = 0;
-	            }
-	            else {
-	                tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-	            }
-	            t.innerHTML += HTML[cursorPosition];
-	        }
-	        if (writingTag === true && HTML[cursorPosition] === ">") {
-	            tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-	            writingTag = false;
-	            if (tagOpen) {
-	                var newSpan = document.createElement("span");
-	                t.appendChild(newSpan);
-	                newSpan.innerHTML = tag;
-	                tag = newSpan.firstChild;
-	            }
-	        }
+        cursorPosition += 1;
+        if (cursorPosition < HTML.length - 1) {
+            setTimeout(type, tempTypeSpeed);
+        }
+    };
+    return {
+        type: type
+    };
+}
 
-	        cursorPosition += 1;
-	        if (cursorPosition < HTML.length - 1) {
-	            setTimeout(type, tempTypeSpeed);
-	        }
+var typer = document.getElementById('typewriter');
 
-	    };
+typewriter = setupTypewriter(typewriter);
 
-	    return {
-	        type: type
-	    };
-	}
-
-	var typer = document.getElementById('typewriter');
-
-	typewriter = setupTypewriter(typewriter);
-
-	typewriter.type();
+typewriter.type();
 </script>

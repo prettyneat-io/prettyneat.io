@@ -57,11 +57,20 @@ h4 {
   top: 1px;
   display: flex;
   z-index: -5;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact-us {
+  color: var(--lighter-blue);
+  font-family: "Lora", serif;
+  font-size: 5rem;
+  margin-top: calc(30vh - 2.5rem);
+  margin-bottom: calc(45vh - 2.5rem);
+  vertical-align: middle;
 }
 .testimonials > span {
-  flex-direction: row;
 }
-
 body {
   font-family: "Source Sans Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -69,20 +78,14 @@ body {
   text-rendering: optimizeLegibility;
   -moz-font-feature-settings: "liga" on;
   background: var(--background-color);
-  /* text-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
-    */
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.175) !important;
-
   margin-bottom: 80vh;
 }
 html {
-  background: #d31027;
-  background: -webkit-linear-gradient(to right, #e60075, #d80073);
-  background: linear-gradient(to right, #e60075, #d80073);
   color: var(--black);
   font-size: 150%;
   width: 100vw;
-  background-color: pink;
+  background-color: var(--background-color);
 }
 .main-container {
   width: 100vw;
@@ -96,12 +99,13 @@ html {
   grid-area: content;
 }
 .grid-item.footer {
-  height: 30vh;
-  color: var(--black);
+  height: 5vh;
+  min-height: 3rem;
+  color: var(--orange);
   background-color: var(--background-color);
-  grid-area: footer;
   text-align: center;
-  padding: 2rem;
+  border-top: var(--orange) solid 0.25rem;
+  width: 100vw;
 }
 .nav-container {
   height: 10vh;
@@ -199,14 +203,13 @@ html {
     color: var(--background-color);
     /* background-color: #338c00; */
     background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
-    min-height: 120vh;
+    min-height: 90vh;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-areas:
       ". stack-image stack-image . stack-open . . . ."
       ". stack-image stack-image . stack-content stack-content stack-content stack-content ."
-      ". stack-image stack-image . . . . stack-closed ."
-      "footer footer footer footer footer footer footer footer footer";
+      ". stack-image stack-image . . . . stack-closed .";
   }
 }
 @media (max-width: 763px) {
@@ -583,7 +586,8 @@ pre {
 /** HIGHLIGHTING EFFECTS **/
 /** Pretty Neat **/
 
-.landing-text {
+.landing-text,
+.contact-us {
   -webkit-text-stroke-width: 3px;
   -moz-text-stroke-width: 3px;
   text-shadow: 7px -3px #2dc7ff;
