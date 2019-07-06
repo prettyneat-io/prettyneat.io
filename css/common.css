@@ -52,7 +52,7 @@ h4 {
   text-shadow: none;
 }
 .testimonials {
-  margin-top: 15vh;
+  margin-top: calc(22vh - 1rem);
   position: fixed;
   top: 1px;
   display: flex;
@@ -62,12 +62,12 @@ h4 {
   flex-direction: column;
 }
 .contact-us {
-  color: var(--lighter-blue);
   font-family: "Lora", serif;
-  font-size: 5rem;
-  margin-top: calc(30vh - 2.5rem);
-  margin-bottom: calc(45vh - 2.5rem);
+  font-size: 6rem;
+  margin-top: calc(30vh - 3rem);
+  margin-bottom: calc(46vh - 3rem);
   vertical-align: middle;
+  max-height: 6rem;
 }
 .testimonials > span {
 }
@@ -99,14 +99,19 @@ html {
   grid-area: content;
 }
 .grid-item.footer {
-  height: 5vh;
-  min-height: 3rem;
-  color: var(--orange);
-  background-color: var(--background-color);
+  /* height: 5vh; */
+  color: var(--background-color);
+  background-color: var(--orange);
   text-align: center;
-  border-top: var(--orange) solid 0.25rem;
+  /* border-top: var(--orange) solid 0.25rem; */
+  padding: 0.25rem;
   width: 100vw;
+  height: 3rem;
 }
+
+.footer div {
+}
+
 .nav-container {
   height: 10vh;
   display: grid;
