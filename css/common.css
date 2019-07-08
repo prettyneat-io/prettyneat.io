@@ -63,16 +63,17 @@ h4 {
 }
 .contact-us {
   font-family: "Lora", serif;
-  font-size: 6rem;
-  margin-top: calc(30vh - 3rem);
-  margin-bottom: calc(46vh - 3rem);
+  font-size: 3rem;
+  margin-top: calc(30vh - 1.5rem);
+  margin-bottom: calc(46vh - 1.5rem);
   vertical-align: middle;
-  max-height: 6rem;
+  max-height: 3rem;
 }
 .testimonials > span {
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -495,7 +496,7 @@ html {
   flex-direction: column;
   text-align: center;
 }
-.services-container p {
+.services-container .service-body-subheader {
   color: var(--light-blue);
   max-width: 80%;
   text-align: center;
@@ -515,6 +516,7 @@ pre {
 #typewriter {
   margin: 0;
   font-family: "Courier New";
+  font-weight: 400;
 }
 .code-window::before {
   border-radius: 6px 6px 0px 0px;
@@ -637,22 +639,27 @@ pre {
 }
 
 /* End */
-.service-body > span {
+.service-body > span,
+.tech-text {
   transition-property: height, width, margin, left, transform, box-shadow,
     filter, -webkit-filter;
   transition: all 0.2s ease-in-out;
   display: flex;
   position: relative;
+  align-items: center;
   background-color: transparent;
   text-align: center;
-  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5rem;
   width: 100%;
   height: 0rem;
   margin-top: 0;
+  justify-content: center;
+
+  filter: opacity(0);
 }
-.service-body:hover > span {
+.service-body:hover > span,
+.service-body:hover .tech-text {
   display: flex;
   /* position: relative;
   z-index: -50;
@@ -661,8 +668,14 @@ pre {
   color: var(--light-orange);
   transition-property: height, width, margin, left, transform, box-shadow,
     filter, -webkit-filter; */
-  justify-content: center;
+
+  filter: opacity(1);
   height: 4rem;
+  font-size: 1rem;
+}
+
+.tech-text {
+  font-weight: 200;
 }
 .service-body .tech-icon {
   max-width: 5rem;
@@ -675,18 +688,20 @@ pre {
   margin: 0 auto;
   transition: border 0.1s ease-in-out;
   transition-property: border;
-  border: solid 0px var(--blue);
+  border: solid 0px var(--light-orange);
+  margin: 0.25rem;
 }
 
 .service-body p {
   line-height: 1.2rem;
-  height: 6rem;
+  /* height: 6rem; */
   overflow: ellipse;
 }
 
 .service-body:hover .tech-icon {
-  border: solid 1px var(--blue);
+  border: solid 1px var(--light-orange);
   border-radius: 0.125rem;
+  margin: 0.25rem;
 }
 .service-body {
   min-height: fit-content;
