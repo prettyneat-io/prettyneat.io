@@ -11,15 +11,6 @@
   --background-gradient: linear-gradient(#edf9ff, #cbffff);
 }
 
-/* :root {
-    --orange: #fd7e8e;
-    --light-blue: #5ac7a2;
-    --light-orange: #edff91 ;
-    --black: #333;
-    --background-color: #edf9ff;
-    --background-gradient: linear-gradient( #edf9ff,#cbffff) 
-}
-*/
 nav ul li {
   display: inline;
 }
@@ -37,18 +28,12 @@ nav {
   margin-left: auto;
   order: 2;
 }
-/* *{
-    border: red;
-    border-style: solid;
-}
-*/
+
 h1,
 h2,
 h3,
 h4 {
   font-family: "Lora", serif;
-  /* color:#CF3A3A;
-    */
   text-shadow: none;
 }
 .testimonials {
@@ -84,7 +69,7 @@ body {
 }
 html {
   color: var(--black);
-  font-size: 150%;
+  font-size: 120%;
   width: 100vw;
   background-color: var(--background-color);
 }
@@ -109,10 +94,6 @@ html {
   width: 100vw;
   height: 3rem;
 }
-
-.footer div {
-}
-
 .nav-container {
   height: 10vh;
   display: grid;
@@ -305,15 +286,7 @@ html {
 .grid-content-item.service-body-container {
   grid-area: service-body-container;
 }
-/* .grid-content-item.service-body-1{
-    grid-area: service-body-1;
-}
-.grid-content-item.service-body-2{
-    grid-area: service-body-2;
-}
-.grid-content-item.service-body-3{
-    grid-area: service-body-3;
-} */
+
 .float-left {
   float: left;
 }
@@ -617,118 +590,71 @@ pre {
   -webkit-filter: drop-shadow(5px -3px 5px var(--lighter-blue));
   filter: drop-shadow(5px -3px 0px var(--lighter-blue));
 }
-
-/* POPOVER */
-/* Added to solve the z-order problem of IE */
-.service-body:hover {
-  z-index: 2;
-}
-
-.service-body-container {
-  display: flex;
+/* SERVICE BODY */
+.service-body-container{
+  display:flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 3rem;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: flex-start;
+  width: 100vw;
 }
-
-.service-body {
-  flex-basis: 25vw;
-  padding: 1rem;
-  margin: 1rem;
-}
-
-/* End */
-.service-body > span,
-.tech-text {
-  transition-property: height, width, margin, left, transform, box-shadow,
-    filter, -webkit-filter;
-  transition: all 0.2s ease-in-out;
-  display: flex;
-  position: relative;
-  align-items: center;
-  background-color: transparent;
-  text-align: center;
-  font-weight: normal;
-  line-height: 1.5rem;
-  width: 100%;
-  height: 0rem;
-  margin-top: 0;
-  justify-content: center;
-
-  filter: opacity(0);
-}
-.service-body:hover > span,
-.service-body:hover .tech-text {
-  display: flex;
+.service-body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   /* position: relative;
-  z-index: -50;
-  color: var(--black);
-  transform-origin: 50% 0%;
-  color: var(--light-orange);
-  transition-property: height, width, margin, left, transform, box-shadow,
-    filter, -webkit-filter; */
 
-  filter: opacity(1);
-  height: 4rem;
-  font-size: 1rem;
-}
-
-.tech-text {
-  font-weight: 200;
-}
-.service-body .tech-icon {
-  max-width: 5rem;
-  display: flex;
-  width: 3rem;
-  height: 3rem;
-  text-align: center;
-  margin: 0.25rem;
-  padding: 0.25rem;
-  margin: 0 auto;
-  transition: border 0.1s ease-in-out;
-  transition-property: border;
-  border: solid 0px var(--light-orange);
-  margin: 0.25rem;
-}
-
-.service-body p {
-  line-height: 1.2rem;
-  /* height: 6rem; */
-  overflow: ellipse;
-}
-
-.service-body:hover .tech-icon {
-  border: solid 1px var(--light-orange);
-  border-radius: 0.125rem;
-  margin: 0.25rem;
-}
-.service-body {
-  min-height: fit-content;
-  display: flex;
-  flex-direction: column;
-  color: var(--light-orange);
-  border: solid var(--light-orange);
-  border-radius: 1rem;
   background: var(--dark-blue);
-  height: 60vh;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: var(--light-orange) solid  0.15rem;
+  box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+  perspective: 150em; */
+  height: 30rem;
+  width: 22rem;
+  position: relative;
+  perspective: 130rem;;
+}
+.card-back{
+  transform: rotateY(180deg);
+}
+.service-body:hover .card-front {
+  transform: rotateY(-180deg);
+}
+.service-body:hover .card-back {
+  transform: rotateY(0);
+}
+.card-side{
+  max-height: 28rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  transition: all .6s ease-in-out;
+  box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+  background-color: var(--dark-blue);
+  border-radius: 1rem;
+  border: var(--light-orange) solid 0.2rem;
+  overflow:hidden;
 }
 
-.service-body img {
-  max-height: 60%;
+.service-body img{
+  width: 100%;
   margin: 0 auto;
-  max-width: 100%;
-  background: url(/assets/dotted-circle.svg) center 20% / 15vw 15vw no-repeat;
 }
-.service-body {
-  transition: transform 0.2s ease-in-out, height 0.2s ease-in-out,
-    margin 0.2s ease-in-out;
+.card-back{
+  width:100%;
+  height: 100%;
 }
-.service-body:hover {
-  transform: scale(1.1);
-  height: calc(60vh + 4rem);
-  margin-bottom: -2rem;
-  margin-top: -2rem;
+.service-body img.tech-icon{
+  width: 4rem;
+  margin: 0 auto;
 }
+
+.service-body:hover{
+  
+}
+
