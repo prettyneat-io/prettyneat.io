@@ -5,7 +5,9 @@ layout: default
 <div class="landing-container blending landing-container-background">
     <div class="grid-item landing-subcontainer">
         <div class="grid-content-item landing-banner">
-            <h1 class="text-center landing-text t-stroke t-shadow">pretty neat</h1>
+            <h1 class="text-center landing-text t-stroke t-shadow">pretty</h1>
+            <h1 class="text-center landing-text t-stroke t-shadow">neat</h1>
+
             <h2>Software House</h4>
         </div>
         <div class="grid-content-item landing-banner landing-banner-background  background-active" >
@@ -55,15 +57,20 @@ layout: default
             <p class="service-body-subheader"> We automate complex systems, to keep things simple at home, in-office, or on the go. </p>
         </span>
         <span class="card-side card-back">
-            <span>
+            <span class="card-icons">
                 <img src="/assets/tech-icons/windows.svg" class="tech-icon">
                 <img src="/assets/tech-icons/postgresql.svg" class="tech-icon">
                 <img src="/assets/tech-icons/dotnet.svg" class="tech-icon">
                 <img src="/assets/tech-icons/vue.svg" class="tech-icon">
                 <!-- we write all the  -->
             </span>
-            <p class="tech-text">
-                Organizations are complex, but the tools shouldn't be. We'll find the tech that works for you.
+            <span>
+                <h4>Monolith or Microservice?</h4>
+                <p class="tech-text">
+                    Organizations are complex, but the tools shouldn't be. 
+                    We'll architect a stack that works for you.
+                </p>
+            </span>
             </p>
         </span>
         <!--<p class="tech-text">
@@ -77,15 +84,19 @@ layout: default
             <p  class="service-body-subheader"> We help provide the security, high performance and cost-effectiveness of doing things online.</p>
         </span>
         <span class="card-side card-back">
-            <span>     
+            <span class="card-icons">     
                 <img src="/assets/tech-icons/aws.svg" class="tech-icon">
                 <img src="/assets/tech-icons/ubuntu.svg" class="tech-icon">
                 <img src="/assets/tech-icons/node.svg" class="tech-icon">
                 <img src="/assets/tech-icons/js.svg" class="tech-icon">
             </span>
-            <p class="tech-text">
-                Start local, take it global. From bots to subscription services - we'll put together a stack that scales.
-            </p>
+            <span>
+                <h4>Serverless, Containers or VPS?</h4>
+                <p class="tech-text">
+                    Start local, take it global. From bots to subscription services - 
+                    we'll put together a platform and stack combination that scales. 
+                </p>
+            </span>
         </span>
     </div>
     <div class="grid-content-item service-body-3 service-body">
@@ -95,15 +106,20 @@ layout: default
                 <p  class="service-body-subheader"> We create responsive applications that adapt to your customers’ habits no matter what their device is!</p>
             </span>
         <span class="card-side card-back">
-            <span>
+            <span class="card-icons">
                 <img src="/assets/tech-icons/ios.svg" class="tech-icon">
                 <img src="/assets/tech-icons/swift.svg" class="tech-icon">
                 <img src="/assets/tech-icons/android.svg" class="tech-icon">
                 <img src="/assets/tech-icons/java.svg" class="tech-icon">
             </span>
-            <p class="tech-text">
-                Every device, screen size or interaction model needs love. We're here to care.
-            </p>
+            <span >
+                <h4>Cross Platform or Native?</h4>
+                <p class="tech-text">
+                    Sometimes a responsive web app is all it takes. 
+                    Other times, the only way forward is native. 
+                    We'll help you figure out when its the right fit.
+                </p>
+            </span>
         </span>
     </div>
     <div class="grid-content-item service-subheader">
@@ -115,7 +131,7 @@ layout: default
         <span class="stack-image-background">
         </span>
         </div>
-        <div class="grid-content-item stack-image">
+        <div class="grid-content-item stack-image stack-stripe">
             <img src="assets/flame-8.png" alt="That's pretty neat!">
         </div>
     
@@ -165,7 +181,7 @@ function landingAnimator(){
     // document.getElementsByClassName("services-background")[0].classList.remove("background-active");
   }
   const servicesElement = document.getElementsByClassName("services-container")[0];
-  if(window.scrollY > servicesElement.offsetTop + (servicesElement.offsetHeight * 0.8)){
+  if(window.scrollY > servicesElement.offsetTop + (servicesElement.offsetHeight * 0.4)){
         document.getElementsByClassName("stack-image-background")[0].classList.add("background-active");
   } else {
         document.getElementsByClassName("stack-image-background")[0].classList.remove("background-active");

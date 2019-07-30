@@ -64,7 +64,7 @@ body {
   text-rendering: optimizeLegibility;
   -moz-font-feature-settings: "liga" on;
   background: var(--background-color);
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.175) !important;
+  box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.3);
   margin-bottom: 80vh;
 }
 html {
@@ -189,14 +189,24 @@ html {
     background: var(--light-blue);
     color: var(--background-color);
     /* background-color: #338c00; */
-    background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
     min-height: 90vh;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    /* grid-template-columns: repeat(9, 1fr);
     grid-template-areas:
       ". stack-image stack-image . stack-open . . . ."
       ". stack-image stack-image . stack-content stack-content stack-content stack-content ."
-      ". stack-image stack-image . . . . stack-closed .";
+      ". stack-image stack-image . . . . stack-closed ."; */
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      ". stack-image stack-image stack-image stack-image . . . . . ."
+      ". stack-image stack-image stack-image stack-image . stack-open . . . ."
+      ". stack-image stack-image stack-image stack-image . stack-content stack-content stack-content stack-content ."
+      ". stack-image stack-image stack-image stack-image . . . . stack-closed ."
+      ". stack-image stack-image stack-image stack-image . . . . . ."
+
+
+  }
   }
 }
 @media (max-width: 763px) {
@@ -469,7 +479,7 @@ html {
   flex-direction: column;
   text-align: center;
 }
-.services-container .service-body-subheader {
+.services-container .service-body-subheader, .tech-text {
   color: var(--light-blue);
   max-width: 80%;
   text-align: center;
@@ -539,7 +549,9 @@ pre {
   padding-bottom: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  /* box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; */
+  box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.3);
+
 }
 #typewriter:after {
   content: "|";
@@ -612,7 +624,7 @@ pre {
   border: var(--light-orange) solid  0.15rem;
   box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
   perspective: 150em; */
-  height: 30rem;
+  height: 35rem;
   width: 22rem;
   position: relative;
   perspective: 130rem;;
@@ -628,33 +640,86 @@ pre {
 }
 .card-side{
   max-height: 28rem;
+  min-height: 28rem;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 20rem;
   backface-visibility: hidden;
   transition: all .6s ease-in-out;
-  box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
+  box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.3);
   background-color: var(--dark-blue);
   border-radius: 1rem;
   border: var(--light-orange) solid 0.2rem;
   overflow:hidden;
+  padding: 1rem;
 }
 
-.service-body img{
-  width: 100%;
+.card-front img{
+  /* width: 100%; */
+  height: 18rem;
   margin: 0 auto;
+  display: flex;
+  background-image: url(/assets/dotted-circle.svg);
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-position: center;
+  background-size: 80% 80%;
 }
+
 .card-back{
-  width:100%;
   height: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  background-position-y: -7rem;
 }
+.card-icons{
+    background-image: linear-gradient(var(--light-blue),var(--light-blue));
+    border-radius: 1rem;
+    border: solid var(--light-orange) 0.125rem;
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-items: normal;
+    max-height: 12rem;
+    margin-top: 4em;
+    margin-bottom: 4rem;
+}
+
 .service-body img.tech-icon{
   width: 4rem;
   margin: 0 auto;
 }
 
-.service-body:hover{
-  
+/* 
+.tech-text{
+    text-align: center;
+    color: var(--light-blue);
+} */
+
+
+
+.stack-stripe, .stack-content{
+    background: url("https://www.transparenttextures.com/patterns/black-twill.png");
+}
+.stack-open{
+  border-radius: 2rem 2rem 0 0;
+}
+.stack-closed{
+  border-radius: 0 0 2rem 2rem ;
+}
+.stack-content{
+  border-radius: 0 2rem 0 2rem;
+}
+.stack-open h2, .stack-closed h2{
+  color: var(--dark-blue);
 }
 
+.stack-stripe{
+  border-radius: 2rem;
+}
