@@ -49,13 +49,20 @@ h4 {
 .contact-us {
   font-family: "Lora", serif;
   font-size: 3rem;
-  margin-top: calc(30vh - 1.5rem);
-  margin-bottom: calc(46vh - 1.5rem);
+  margin-top: calc(20vh - 1.5rem);
+  margin-bottom: calc(56vh - 1.5rem);
   vertical-align: middle;
   max-height: 3rem;
 }
-.testimonials > span {
+
+.contact-text{
+  display:block;
 }
+
+.contact-inputs{
+  text-align: center;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -187,6 +194,7 @@ html {
 @media (min-width: 763px) {
   .stack-container {
     background: var(--light-blue);
+    border-top: 1rem solid var(--dark-blue);
     color: var(--background-color);
     /* background-color: #338c00; */
     min-height: 90vh;
@@ -204,11 +212,9 @@ html {
       ". stack-image stack-image stack-image stack-image . stack-content stack-content stack-content stack-content ."
       ". stack-image stack-image stack-image stack-image . . . . stack-closed ."
       ". stack-image stack-image stack-image stack-image . . . . . ."
-
-
-  }
   }
 }
+
 @media (max-width: 763px) {
   .stack-container {
     display: grid;
@@ -579,7 +585,7 @@ pre {
 /** Pretty Neat **/
 
 .landing-text,
-.contact-us {
+.contact-text {
   -webkit-text-stroke-width: 3px;
   -moz-text-stroke-width: 3px;
   text-shadow: 7px -3px #2dc7ff;
@@ -676,6 +682,7 @@ pre {
   justify-content: center;
   background-position-y: -7rem;
 }
+
 .card-icons{
     background-image: linear-gradient(var(--light-blue),var(--light-blue));
     border-radius: 1rem;
@@ -696,24 +703,24 @@ pre {
   margin: 0 auto;
 }
 
-/* 
-.tech-text{
-    text-align: center;
-    color: var(--light-blue);
-} */
-
-
-
 .stack-stripe, .stack-content{
     background: url("https://www.transparenttextures.com/patterns/black-twill.png");
 }
 .stack-open{
+  padding-bottom: 1rem;
   border-radius: 2rem 2rem 0 0;
 }
 .stack-closed{
+  padding-top: 1rem;
   border-radius: 0 0 2rem 2rem ;
 }
 .stack-content{
+  color: white;
+  text-shadow:
+   -2px -2px 0 var(--light-blue),  
+    2px -2px 0 var(--light-blue),
+    -2px 2px 0 var(--light-blue),
+     2px 2px 0 var(--light-blue);
   border-radius: 0 2rem 0 2rem;
 }
 .stack-open h2, .stack-closed h2{
