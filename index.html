@@ -31,6 +31,7 @@ layout: default
         ];
 }; 
 
+
 </pre>
             </div>
         </div>
@@ -156,10 +157,20 @@ layout: default
 </div>
     <div class="closing-section">
         <div class="contact-us">
-            <span class="contact-text">contact us today</span>
-            <span class="contact-inputs">
-                <textarea rows="3" placeholder="I love the site! I want one of my own!"></textarea>
-            </span>        
+            <span class="contact-text text-center">contact us today</span>
+            <div class="contact-inputs ">
+                <label>
+                    <strong>Message</strong>
+                    <textarea rows="3" placeholder="This is a pretty neat site - I want one of my own!"></textarea>
+                </label>
+                <label>
+                    Email
+                    <input type="email" placeholder="email@company.com"></input>
+                </label>
+                <div class="submit-container">
+                    <a href="{{site.baseurl}}/"  class="bos-hover button button-light submit-button">submit</a>
+                </div>
+        </div>        
         </div>
         <div class="grid-item footer">
             {% include footer.html %}
