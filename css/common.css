@@ -189,6 +189,7 @@ html {
   grid-template-columns: repeat(5, 1fr);
   grid-template-areas:
     " . landing-banner landing-banner landing-banner . "
+    ". code code code ."
     ". code code code .";
 }
 @media (min-width: 763px) {
