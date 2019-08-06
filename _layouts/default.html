@@ -2,10 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=3.0, minimum-scale=1"
-    /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pretty Neat!</title>
   </head>
@@ -23,6 +19,8 @@
       href="https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro:400,600&display=swap"
       rel="stylesheet"
     />
+    {% if page.url != '/' %}
     <link href="{{ site.baseurl }}/css/common.css" rel="stylesheet" />
+    {% endif %}
   </footer>
 </html>
