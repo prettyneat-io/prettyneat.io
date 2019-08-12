@@ -22,6 +22,7 @@ text-shadow: none;
 body {
 font-family: "Source Sans Pro", sans-serif;
 font-weight: 600;
+font-size: 1.2rem;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 text-rendering: optimizeLegibility;
@@ -124,12 +125,11 @@ nav {
   background-size: 200%;
   transition: all 0.4s;
 }
-
 /* HERO SECTION */
 @media (min-width: 763px) {
   .landing-container {
     height: 85vh;
-    overflow-x: hidden;
+    overflow: hidden;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
       "landing-subcontainer landing-subcontainer landing-image landing-image landing-image"
@@ -244,7 +244,7 @@ nav {
   text-align: center;
 }
 .landing-banner h1 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 .landing-banner h2 {
   font-family: "Source Sans Pro", sans-serif;
@@ -278,7 +278,7 @@ nav {
   margin: 0.1rem;
 }
 .landing-banner {
-  line-height: 3.5rem;
+  line-height: 4rem;
 }
 .landing-text {
   -webkit-text-stroke-width: 3px;
@@ -349,7 +349,7 @@ pre {
   border-radius: 0.15rem;
   font-size: 1.2rem;
   line-height: 1.4rem;
-  min-height: 20rem;
+  min-height: 18rem;
   background-color: var(--dark-blue);
   padding-bottom: 1rem;
   padding-right: 1rem;
@@ -609,7 +609,7 @@ pre {
   padding: 1rem;
 }
 .card-front img{
-  width: 100%;
+  width: 90%;
   /* height: 18rem; */
   margin: 0 auto;
   display: flex;
