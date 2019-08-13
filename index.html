@@ -40,7 +40,6 @@ layout: default
 <a href="#services" class="scroll-down">
     <span class="scroll-button"></span>
 </a>
-
 </div>
 
 <div id="services" class="services-container">
@@ -63,7 +62,6 @@ layout: default
                 <img src="/assets/tech-icons/postgresql.svg" class="tech-icon">
                 <img src="/assets/tech-icons/dotnet.svg" class="tech-icon">
                 <img src="/assets/tech-icons/vue.svg" class="tech-icon">
-                <!-- we write all the  -->
             </span>
             <span>
                 <h4>Monolith or Microservice?</h4>
@@ -74,9 +72,6 @@ layout: default
             </span>
             </p>
         </span>
-        <!--<p class="tech-text">
-            Migrating from legacy systems can be hard. We're here to make it easy. Whatever the stack.
-        </p> -->
     </div>
     <div class="grid-content-item service-body-2 service-body">
         <span class="card-side card-front">
@@ -137,7 +132,6 @@ layout: default
         <div class="grid-content-item stack-image stack-stripe">
             <img src="assets/flame-8.png" alt="That's pretty neat!">
         </div>
-    
         <div class="grid-content-item stack-open">
             <h2 class="flex-right">pick a stack...</h2>
         </div>
@@ -153,29 +147,8 @@ layout: default
             <h2 class="float-left">...any stack</h2>
         </div>
     </div>
-    <div class="closing-section">
-        <div class="contact-us">
-            <span class="contact-text text-center">Contact us today!</span>
-            <div class="contact-inputs ">
-                <label>
-                    <strong>Message</strong>
-                    <textarea rows="3" placeholder="I like what you've got cooking. I want one!"></textarea>
-                </label>
-                <label>
-                    Email
-                    <input type="email" placeholder="email@company.com"></input>
-                </label>
-                <div class="submit-container">
-                    <a href="{{site.baseurl}}/"  class="bos-hover button button-light submit-button">submit</a>
-                </div>
-        </div>        
-        </div>
-        <div class="grid-item footer">
-            {% include footer.html %}
-        </div>
-    </div>
+    {% include closing.html %}
     <link href="{{ site.baseurl }}/css/landing.css" rel="stylesheet" />
-
 <script>
 
     window.onscroll = function(){
@@ -183,11 +156,6 @@ layout: default
     }
 
     function landingAnimator(){
-        if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-            document.getElementsByClassName("landing-banner-background")[0].classList.remove("background-active");
-        } else {
-            document.getElementsByClassName("landing-banner-background")[0].classList.add("background-active");
-        }
         const servicesElement = document.getElementsByClassName("services-container")[0];
         if(window.scrollY > servicesElement.offsetTop + (servicesElement.offsetHeight * 0.4)){
                 document.getElementsByClassName("stack-image-background")[0].classList.add("background-active");

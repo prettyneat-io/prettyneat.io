@@ -11,6 +11,9 @@
     </header>
     <div class="grid-item content">
       {{ content }}
+      {% if page.url != '/' %}
+        {% include closing.html %}
+      {% endif %}
     </div>
   </body>
   <footer>
