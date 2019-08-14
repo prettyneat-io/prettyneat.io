@@ -23,6 +23,9 @@ h4 {
   font-family: "Lora", serif;
   text-shadow: none;
 }
+p{
+  font-weight: 400;
+}
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -294,8 +297,8 @@ nav {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0 auto;
   margin-top: 1rem;
-  width: 90%;
-  max-width: 15rem;
+  width: 25rem;
+  max-width: 90vw;
   display: block;
   border: var(--orange) solid 0.25rem;
   border-radius: 0.15rem;
