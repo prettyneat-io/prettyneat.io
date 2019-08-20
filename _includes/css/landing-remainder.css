@@ -216,9 +216,9 @@
       min-height: 90vh;
       grid-template: repeat(2, 1fr);
       grid-template-areas:
-        "stack-open ."
+        "stack-open stack-open"
         "stack-content stack-content"
-        " . stack-closed"
+        " stack-closed stack-closed"
         " stack-image stack-image ";
     }
     .grid-content-item.stack-open {
@@ -266,6 +266,7 @@
     display: flex;
     align-items: flex-start;
     flex-flow: row-reverse;
+    padding-bottom: 1rem;
   }
   .stack-open,
   .stack-closed {
