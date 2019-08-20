@@ -40,7 +40,9 @@
       rel="stylesheet"
     />
     {% if page.url != '/' %}
-    <link href="/css/common.css" rel="stylesheet" />
+      <style>
+        {% include css/common.css %}
+      </style>
     {% endif %}
   </footer>
 </html>
