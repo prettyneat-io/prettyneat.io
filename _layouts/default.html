@@ -23,6 +23,11 @@
     {% include meta.html %}
   </head>
   <body class="main-container">
+      {% if page.url != '/' %}
+      <style>
+        {% include css/common-hero.css %}
+      </style>
+    {% endif %}
     <header class="grid-item nav">
       {% include nav.html %}
     </header>
@@ -41,7 +46,7 @@
     />
     {% if page.url != '/' %}
       <style>
-        {% include css/common.css %}
+        {% include css/common-remainder.css %}
       </style>
     {% endif %}
   </footer>
