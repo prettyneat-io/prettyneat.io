@@ -20,10 +20,12 @@
         const form = document.forms['submit-to-google-sheet']
 
         form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => alert("Success, message sent! We'll be in touch shortly.", response))
-                .catch(error => alert("Oh no! Something went wrong. Could you refresh and try again?", error.message))
+            e.preventDefault();
+            if(e.target[0].value.length > 1 && e.target[0].value.length > 1){
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => alert("Success, message sent! We'll be in touch shortly.", response))
+                    .catch(error => alert("Oh no! Something went wrong. Could you refresh and try again?", error.message))
+            }
         });
     </script>
     <div class="grid-item footer">

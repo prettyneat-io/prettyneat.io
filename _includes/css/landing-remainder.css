@@ -416,6 +416,8 @@
   }
   .submit-button {
     margin: 0 auto;
+    cursor: pointer;
+    font-weight: 600;
   }
   .footer {
     color: var(--background-color);
