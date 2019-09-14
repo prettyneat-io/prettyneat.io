@@ -6,7 +6,7 @@
   --gold: #fdb306;
   --brown: #504526;
   --white: #fcfcfa;
-  --green: #b3efb2;
+  --green: #db5461;
   --black: #333;
   --bg-black: #1d1c1a;
   --background-gradient: linear-gradient(#edf9ff, #cbffff);
@@ -298,7 +298,7 @@ pre {
   color: var(--brown-yellow);
 }
 .string-highlight {
-  color: var(--gold);
+  color: var(--green);
 }
 #typewriter {
   margin: 0;
