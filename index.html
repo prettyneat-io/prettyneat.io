@@ -7,38 +7,32 @@ layout: default
 <title>PrettyNeat!</title>
 <div class="landing-container blending landing-container-background">
     <div class="grid-item landing-subcontainer">
-        <div class="grid-content-item landing-banner">
-            <h1 class="text-center landing-text t-stroke t-shadow">Pretty Neat</h1>
-            <h2>Software House</h4>
-        </div>
-        <div class="grid-content-item landing-bannhttps://www.office.com/?auth=2er landing-banner-background  background-active" >
-            <span class="landing-banner-background-child">
-                <span class="inner-border"></span>
-            </span>
-        </div>
+        
+        
+        
         <div class="grid-content-item code">
-            <div class="code-window">
+            <h1 class="text-center landing-text t-stroke t-shadow" style="font-size: 5rem;">Pretty Neat</h1><h2 style="text-align: center;">Software House</h2><div>
+            
+        </div><div class="code-window">
                 <span class="code-window-button"></span>
                 <span class="code-window-button"></span>
-<span id="codeComment" hidden>
-<span class="code-comment">/* Service Summary */ </span>
-</span>
-<pre id="typewriter" >
-<span class="var-highlight">let</span> prettyneat = {
-    write: <span class="string-highlight">'Code'</span>,
+<pre id="typewriter">
+<span class=" ">/* Service Summary */ </span>
+<span class="var-highlight " >let</span> <span class="code-comment">prettyneat</span> = {
+    write: <span class="string-highlight">'Code'</span>
     think: <span class="string-highlight">'Design'</span>,
     make:[
         <span class="string-highlight">'Websites'</span>,
         <span class="string-highlight">'Apps'</span>,
         <span class="string-highlight">'Consultants'</span>
         ];
-}; 
-</pre>
+};
+ </pre>
             </div>
         </div>
     </div>
     <div class="grid-content-item landing-image">
-        <img alt="cartoon robots giving ok sign" src="/assets/flame-landing.png" />
+        <img alt="cartoon robots giving ok sign"  src="/assets/landing-hero.svg" />
     </div>
 <a href="#services" aria-label="scroll down button" class="scroll-down">
     <span class="scroll-button"></span>
@@ -122,113 +116,35 @@ layout: default
         </span>
     </div>
     <div class="grid-content-item service-subheader">
-   
     </div>
 </div>
 </div>
-
 <div class="stack-container ">
     <div class="grid-content-item stack-image stack-image-background">
     <span class="stack-image-background">
     </span>
     </div>
     <div class="grid-content-item stack-image stack-stripe">
-        <img src="/assets/flame-deal.png" alt="cartoon handshake">
+        <img src="/assets/flame-design-science.png" alt="cartoon engineer">
     </div>
     <div class="grid-content-item stack-open">
         <h2 class="flex-right">pick a stack...</h2>
     </div>
     <div class="grid-content-item stack-content">
-        <p class="text-center">Websites, mobile apps, digital games, and</p> 
-        <p class="text-center">virtual or augmented reality experiences </p> 
-        <p class="text-center">are our bread and butter. </p> 
-        <p class="text-center">&nbsp; </p> 
-        <p class="text-center">Whatever development stack you need, </p> 
-        <p class="text-center">our developers are at your disposal. </p> 
+        <span class="stack-text-container">
+            <p class="text-center">Websites, mobile apps, digital games, and virtual or augmented reality experiences are our bread and butter. </p> 
+            <br>
+            <p class="text-center">We work with businesses and individuals to design and develop products, modernize internal systems, and bring digital services to market.</p> 
+        </span>
     </div>
     <div class="grid-content-item stack-closed">
         <h2 class="float-left">...any stack</h2>
     </div>
 </div>
     {% include closing.html %}
-    
 <style>
     {% include css/landing-remainder.css %}
 </style>
 <script>
-
-    window.onscroll = function(){
-        landingAnimator();
-    }
-
-    function landingAnimator(){
-        const servicesElement = document.getElementsByClassName("services-container")[0];
-        if(window.scrollY > servicesElement.offsetTop + (servicesElement.offsetHeight * 0.4)){
-                document.getElementsByClassName("stack-image-background")[0].classList.add("background-active");
-        } else {
-                document.getElementsByClassName("stack-image-background")[0].classList.remove("background-active");
-        }
-    }
-
-    function setupTypewriter(t) {
-        let HTML = t.innerHTML;
-        const comment = document.getElementById('codeComment');
-        t.innerHTML = comment.innerHTML;
-        let cursorPosition = 0,
-            tag = "",
-            writingTag = false,
-            tagOpen = false,
-            typeSpeed = 15,
-        tempTypeSpeed = 0;
-        let type = function() {
-            if (writingTag === true) {
-                tag += HTML[cursorPosition];
-            }
-            if (HTML[cursorPosition] === "<") {
-                tempTypeSpeed = 0;
-                if (tagOpen) {
-                    tagOpen = false;
-                    writingTag = true;
-                } else {
-                    tag = "";
-                    tagOpen = true;
-                    writingTag = true;
-                    tag += HTML[cursorPosition];
-                }
-            }
-            if (!writingTag && tagOpen) {
-                tag.innerHTML += HTML[cursorPosition];
-            }
-            if (!writingTag && !tagOpen) {
-                if (HTML[cursorPosition] === " ") {
-                    tempTypeSpeed = 0;
-                }
-                else {
-                    tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-                }
-                t.innerHTML += HTML[cursorPosition];
-            }
-            if (writingTag === true && HTML[cursorPosition] === ">") {
-                tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-                writingTag = false;
-                if (tagOpen) {
-                    var newSpan = document.createElement("span");
-                    t.appendChild(newSpan);
-                    newSpan.innerHTML = tag;
-                    tag = newSpan.firstChild;
-                }
-            }
-            cursorPosition += 1;
-            if (cursorPosition < HTML.length - 1) {
-                setTimeout(type, tempTypeSpeed);
-            }
-        };
-        return {
-            type: type
-        };
-    }
-
-    const typer = document.getElementById('typewriter');
-    typewriter = setupTypewriter(typewriter);
-    typewriter.type();
+    {% include js/landing.js %}
 </script>
