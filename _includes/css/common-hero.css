@@ -1,18 +1,18 @@
 /* GLOBAL */
 :root {
-  --orange: #f54407;
-  --dark-orange: #aa2f05;
-  --light-blue: #0da2cf;
-  --light-orange: #fdb306;
-  --blue: #133e6f;
-  --dark-blue: #0f3259;
-  --lighter-blue: #2dc7ff;
+  --yellow: #f54407;
+  --darker-yellow: #aa2f05;
+  --brown-yellow: #0da2cf;
+  --green: #fdb306;
+  --brown: #133e6f;
+  --bg-black: #1d1c1a;
+  --gold: #2dc7ff;
   --black: #333;
-  --background-color: #fff8ea;
+  --bg-black: #fff8ea;
   --background-gradient: linear-gradient(#edf9ff, #cbffff);
 }
 
-button{
+button {
   border: none;
 }
 
@@ -23,7 +23,7 @@ h4 {
   font-family: "Lora", serif;
   text-shadow: none;
 }
-p{
+p {
   font-weight: 400;
 }
 body {
@@ -34,14 +34,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   -moz-font-feature-settings: "liga" on;
-  background: var(--background-color);
+  background: var(--bg-black);
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
   margin-bottom: 80vh;
 }
 html {
   color: var(--black);
   font-size: 120%;
-  background-color: var(--background-color);
+  background-color: var(--bg-black);
   scroll-behavior: smooth;
 }
 .main-container {
@@ -100,13 +100,13 @@ nav {
 .button {
   text-decoration: none;
   font-size: 1.2rem;
-  color: var(--background-color);
+  color: var(--bg-black);
   border-radius: 0.125rem;
   padding: 0.25rem;
   background-image: linear-gradient(
     to right,
-    var(--orange) 50%,
-    var(--dark-blue) 50%
+    var(--yellow) 50%,
+    var(--bg-black) 50%
   );
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
@@ -116,8 +116,8 @@ nav {
 .button.button-light {
   background-image: linear-gradient(
     to right,
-    var(--orange) 50%,
-    var(--light-blue) 50%
+    var(--yellow) 50%,
+    var(--brown-yellow) 50%
   );
 }
 .bos-hover {
@@ -125,8 +125,8 @@ nav {
   background-size: 200%;
   transition: all 1s;
   background-position: 100%;
-  -webkit-filter: drop-shadow(0.0625rem 0.0625rem 0.125rem   rgba(0, 0, 0, 0.3));
-  filter: drop-shadow(0.0625rem 0.0625rem 0.125rem   rgba(0, 0, 0, 0.3));
+  -webkit-filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
 }
 .bos-hover:hover {
   background-position: 0;
@@ -135,8 +135,8 @@ nav {
 }
 /* HERO */
 .hero-container {
-  background-color: var(--background-color);
-  color: var(--orange);
+  background-color: var(--bg-black);
+  color: var(--yellow);
   justify-content: stretch;
   align-items: center;
   display: grid;
@@ -152,17 +152,17 @@ nav {
       "hero-stripe";
   }
 
-  .hero-container .image{
-    display:flex;
+  .hero-container .image {
+    display: flex;
   }
 
-  .hero-container img{
+  .hero-container img {
     max-width: 90%;
-    
-    margin:  0 auto;
+
+    margin: 0 auto;
   }
 
-  .content-container{
+  .content-container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -184,7 +184,7 @@ nav {
   z-index: 0;
   height: 6rem;
   background-image: url(/assets/orange-twill.png);
-  border-bottom: 1rem solid var(--lighter-blue);
+  border-bottom: 1rem solid var(--gold);
 }
 .hero-container .text h1 {
   border-bottom-color: transparent;
@@ -196,15 +196,15 @@ nav {
   text-shadow: 7px -3px #2dc7ff;
   -webkit-text-stroke-width: 3px;
   color: transparent;
-  color: var(--orange);
+  color: var(--yellow);
   -webkit-font-smoothing: antialiased;
   font-size: 5rem;
 }
 .hero-container .text h2 {
-  color: var(--dark-blue);
+  color: var(--bg-black);
   font-size: 3rem;
 }
 .hero-container .image img {
   width: 30rem;
-  filter: drop-shadow(5px -3px 0px var(--lighter-blue));
+  filter: drop-shadow(5px -3px 0px var(--gold));
 }
