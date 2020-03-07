@@ -12,7 +12,7 @@
   --background-gradient: linear-gradient(#edf9ff, #cbffff);
 }
 
-button{
+button {
   border: none;
 }
 
@@ -20,10 +20,11 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Lora", serif;
+  font-family: "capri_serif", serif;
   text-shadow: none;
+  font-weight: normal;
 }
-p{
+p {
   font-weight: 400;
 }
 body {
@@ -125,8 +126,8 @@ nav {
   background-size: 200%;
   transition: all 1s;
   background-position: 100%;
-  -webkit-filter: drop-shadow(0.0625rem 0.0625rem 0.125rem   rgba(0, 0, 0, 0.3));
-  filter: drop-shadow(0.0625rem 0.0625rem 0.125rem   rgba(0, 0, 0, 0.3));
+  -webkit-filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
 }
 .bos-hover:hover {
   background-position: 0;
@@ -152,17 +153,17 @@ nav {
       "hero-stripe";
   }
 
-  .hero-container .image{
-    display:flex;
+  .hero-container .image {
+    display: flex;
   }
 
-  .hero-container img{
+  .hero-container img {
     max-width: 90%;
-    
-    margin:  0 auto;
+
+    margin: 0 auto;
   }
 
-  .content-container{
+  .content-container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -193,12 +194,14 @@ nav {
   background-repeat: repeat-x;
   padding-bottom: 3px;
   text-decoration: none;
-  text-shadow: 7px -3px #2dc7ff;
-  -webkit-text-stroke-width: 3px;
+  /* text-shadow: 7px -3px #2dc7ff; */
+  /* -webkit-text-stroke-width: 3px; */
   color: transparent;
   color: var(--orange);
-  -webkit-font-smoothing: antialiased;
   font-size: 5rem;
+  text-shadow: 4px -1px var(--lighter-blue);
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
 }
 .hero-container .text h2 {
   color: var(--dark-blue);

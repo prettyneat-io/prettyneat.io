@@ -12,13 +12,18 @@
   --background-gradient: linear-gradient(#edf9ff, #cbffff);
 }
 
-
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Lora", serif;
+  font-family: "capri_serif", serif;
   text-shadow: none;
+  font-weight: normal;
+}
+.landing-logo {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-bottom: 1rem;
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -32,7 +37,7 @@ body {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
   margin-bottom: 80vh;
 }
-p{
+p {
   font-weight: 400;
 }
 html {
@@ -60,7 +65,7 @@ html {
 .float-right {
   float: right;
 }
-button{
+button {
   border: none;
 }
 /* NAVIGATION */
@@ -125,8 +130,8 @@ nav {
   background-size: 200%;
   transition: all 1s;
   background-position: 100%;
-  -webkit-filter: drop-shadow(0.0625rem 0.0625rem 0.125rem   rgba(0, 0, 0, 0.3));
-  filter: drop-shadow(0.0625rem 0.0625rem 0.125rem   rgba(0, 0, 0, 0.3));
+  -webkit-filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
 }
 .bos-hover:hover {
   background-position: 0;
@@ -159,7 +164,7 @@ nav {
   }
   .landing-image img {
     max-width: 100vw;
-    display:none;
+    display: none;
   }
   .code {
     max-width: 90%;
@@ -254,11 +259,11 @@ nav {
   font-size: 5rem;
 }
 .landing-subcontainer h2 {
-  /* font-family: "Source Sans Pro", sans-serif; */
+  /* font-family: "capri_sans", sans-serif; */
   color: var(--black);
-  margin-bottom:2rem;
+  margin-bottom: 2rem;
 }
-.landing-image  {
+.landing-image {
   /* background: url(/assets/landing-hero.svg) no-repeat top left; */
   /* background-size: contain; */
   margin-top: -40%;
@@ -268,6 +273,7 @@ nav {
 }
 .landing-text {
   pointer-events: none;
+  font-size: 100%;
 }
 /** Landing Banner 2 **/
 .landing-banner-background > span {
@@ -292,19 +298,26 @@ nav {
 .landing-banner {
   line-height: 4rem;
 }
-.landing-text {
-  -webkit-text-stroke-width: 3px;
-  -moz-text-stroke-width: 3px;
-  text-shadow: 7px -3px #2dc7ff;
-  color: transparent;
+.landing-text-pretty {
+  /* -webkit-text-stroke-width: 3px; */
+  /* -moz-text-stroke-width: 3px; */
+  text-shadow: 5px -2px var(--light-orange);
+  color: var(--dark-blue);
+  -webkit-font-smoothing: antialiased;
+}
+
+.landing-text-neat {
+  /* -webkit-text-stroke-width: 3px; */
+  /* -moz-text-stroke-width: 3px; */
+  text-shadow: 5px -2px var(--lighter-blue);
   color: var(--orange);
   -webkit-font-smoothing: antialiased;
 }
 .landing-container img {
   /* box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3); */
-  
-  -webkit-filter: drop-shadow(0.0625rem 0.0625rem 0.125rem   rgba(0, 0, 0, 0.3));
-  filter: drop-shadow(0.0625rem 0.0625rem 0.125rem   rgba(0, 0, 0, 0.3));
+
+  -webkit-filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
   /* -webkit-filter: drop-shadow(5px -3px 5px var(--lighter-blue)); */
   /* filter: drop-shadow(5px -3px 0px var(--lighter-blue)); */
 }
@@ -318,10 +331,10 @@ pre {
   color: var(--light-orange);
 }
 #typewriter {
-  padding-top:1rem;
+  padding-top: 1rem;
   margin: 0;
   /* font-family: "Courier New"; */
-  font-family:monospace;
+  font-family: monospace;
   font-weight: 400;
 }
 .code-window::before {
@@ -336,15 +349,15 @@ pre {
   margin-left: -1rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  border-radius: 0.15rem;
+  border-radius: 0.25rem;
   margin-bottom: -1.25rem;
 }
 .code-comment {
   padding-bottom: 0.5rem;
   color: var(--orange);
 }
-.hidden{
-  display:none;
+.hidden {
+  display: none;
 }
 .code-window-button:nth-child(odd) {
   background: var(--orange) none repeat scroll 0% 0%;
@@ -367,7 +380,7 @@ pre {
   padding-top: -12px;
 }
 .code-window {
-  border-radius: 0.15rem;
+  border-radius: 0.25rem;
   font-size: 1.2rem;
   line-height: 1.4rem;
   min-height: 18rem;
@@ -400,8 +413,7 @@ pre {
 }
 
 @media (max-width: 763px) {
-  .landing-container  .scroll-down {
-
+  .landing-container .scroll-down {
     margin-right: 10%;
   }
 }
@@ -411,9 +423,8 @@ pre {
   cursor: pointer;
 }
 .scroll-down {
-
-  -webkit-filter: drop-shadow(0.0625rem 0.0625rem 0.125rem   rgba(0, 0, 0, 0.3));
-  filter: drop-shadow(0.0625rem 0.0625rem 0.125rem   rgba(0, 0, 0, 0.3));
+  -webkit-filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
   position: absolute;
   display: block;
   top: 90vh;

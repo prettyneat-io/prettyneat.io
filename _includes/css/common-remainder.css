@@ -32,7 +32,7 @@
     width: 10rem;
     height: 10rem;
     font-size: 2rem;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: monospace;
     margin: 0 auto;
     margin-top: 1rem;
     max-width: 15rem;
@@ -83,7 +83,7 @@
     max-height: 3rem;
   }
   .contact-text {
-    font-family: "Lora", serif;
+    font-family: "capri_serif", serif;
     font-size: 3rem;
   }
   .contact-text {
@@ -94,7 +94,7 @@
   }
   .contact-inputs textarea,
   .contact-inputs input {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: monospace;
     margin: 0 auto;
     margin-top: 1rem;
     width: 25rem;
