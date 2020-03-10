@@ -2,6 +2,9 @@
 <html lang="en">
   {% seo %}
   <head>
+    <script>
+    {% include js/ga-shutdown.js %}
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -95,7 +98,7 @@
       {{ content }} {% if page.url != '/' %} {% include closing.html %} {% endif
       %}
     </div>
-  </body>
+    {% include cookies.html %}
   <footer>
     <link
       rel="stylesheet"
@@ -111,6 +114,13 @@
     <style>
       {% include css/common-remainder.css %}
     </style>
-    {% endif %}
-  </footer>
+    {% endif %}    
+    <style>
+          {% include css/cookies-consent.css %}
+    </style>
+  </footer>  
+  <script>
+  {% include js/cookies.js %}
+  </script>
+  </body>
 </html>
