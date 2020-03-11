@@ -2,6 +2,9 @@
 layout: default
 title: blog
 ---
+<style>
+  {% include css/blog-list.css %}
+</style>
 <title>The PrettyNeat blog!</title>
 <div class="container">
     <div class="hero-container">
@@ -18,34 +21,43 @@ title: blog
       <span class="">
         <div class="header-and-text" id="recent-blogs">
           <h3>Latest from the blog</h3>
-          
+          <div class="blog-list">
+            {% for post in site.posts %}            
+              <div class="blog-list__post">
+                <div class="blog-list__post__header">
+                  <a href="{{ post.url }}" title="Read '{{ post.title }}'">
+                    <h4>{{post.title}}</h4>
+                  </a>
+                  <div class="blog-list__post__header__by">
+                    <img src="/assets/authors/{{ post.author | default: 'PrettyNeat'  | slugify }}.thumb.png" alt="A nice picture of {{ author | default: 'PrettyNeat' }}"/>
+                    <h5>Posted on {{ post.date | date_to_long_string: 'ordinal'}}</h5>
+                    <h5>Written by {{ post.author | default: 'PrettyNeat' }}</h5>
+                  </div>
+                </div>
+                <div class="blog-list__post__excerpt">
+                  {{ post.excerpt }}
+                  <a href="{{ post.url }}" class="button button-light bos-hover" title="Read '{{ post.title }}'">📖 Keep reading</a>
+                  {% if post.timeToRead %}
+                    <span class="blog-list__post__excerpt__reading-time">(est. {{ post.timeToRead }} to read)</span>
+                  {% endif %}
+                </div>
+                <div class="blog-list__post__footer">
+                    {% for tag in post.tags %}
+                      <span class="blog-list__tag">{{ tag }}</span>
+                    {% else %}
+                      No tags :(
+                    {% endfor %}
+                </div>
+              </div>
+            {% else %}
+              <h4>There are no posts at all!</h4>
+              <h5>We are very sad about that, and it's probably an error.</h5>
+            {% endfor %}
+          </div>
         </div>
         <div class="header-and-text" id="tag-cloud">
-          <h3>Company Info</h3>
-          <h4>Contact</h4>
-          <p>
-            <strong>Email:</strong>
-            <a href="mailto:kris@prettyneat.io">kris@prettyneat.io</a>
-          </p>
-          <p>
-            <strong>Pretty Neat Phone:</strong>
-            +356 23269120
-          </p>
-          <p>
-            <strong>Inspectra Ltd Phone: </strong>
-            +356 21226841
-          </p>
-          <h4>Address</h4>
-          <p><strong>PrettyNeat</strong>,</p>
-          <p>
-            Inspectra Ltd, MRA 049B
-          </p>
-          <p>
-            Marsa Industrial Estate
-          </p>
-          <p>
-            Marsa MRS3000, Malta
-          </p>
+          <h3>Need more?</h3>        
+          See all of our {{ site.posts | size }} posts in our <a href="{{ link blog/index.html }}" title="Browse the archives">Blog Archives</a>
         </div>
       </span>
     </div>
