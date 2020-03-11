@@ -209,3 +209,17 @@
         padding-top: 0 !important;
     }
 }
+
+@media screen and (max-width:1679px){
+    .cookies-slider{
+        padding-bottom: 1rem;
+    }
+
+    .cookies-slider__text{
+        width: 100%;
+    }
+
+    .cookies-slider__consent{
+        margin-left: 1rem;
+    }
+}

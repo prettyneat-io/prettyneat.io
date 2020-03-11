@@ -12,7 +12,12 @@ function cookies_checkConsent(){
 }
 
 function cookies_setConsent(consent){
-    document.cookie = `prettyneat-cookie-consent=${ consent ? '1' : '0'}; expires=Fri, 31 Dec 9999, 23:59:59 GMT`;
+    let expiry = Date.now() + (1000 * 60 * 60 * 24 * 183); //the number of milliseconds in half a year + half a day, because JS
+                                                            //although once every 4 years this is exactly half a year because 29th Feb
+                                                            //which also means that every very-rarely it should be half a year but it isn't
+                                                            //we really suck at dates, as a race
+
+    document.cookie = `prettyneat-cookie-consent=${ consent ? '1' : '0'}; expires=${ new Date(expiry).toGMTString()}; path=/`;
 
     document.querySelector('.cookies-slider__consent').classList.add('cookies-slider__consent--out')
     document.querySelector('.cookies-slider__more-info').classList.add('cookies-slider__more-info--out')

@@ -92,7 +92,7 @@
 }
 .contact-inputs textarea,
 .contact-inputs input {
-  font-family: monospace;
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0 auto;
   margin-top: 1rem;
   width: 25rem;
@@ -130,6 +130,8 @@
 }
 .submit-button {
   margin: 0 auto;
+  cursor: pointer;
+  font-weight: 600;
 }
 .footer {
   color: var(--background-color);

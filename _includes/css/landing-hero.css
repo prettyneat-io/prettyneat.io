@@ -152,7 +152,7 @@ nav {
     width: calc(50vw - 1rem);
   }
 }
-@media (max-width: 970px) {
+@media (max-width: 969px) {
   .landing-container {
     display: grid;
     align-items: center;
@@ -237,7 +237,7 @@ nav {
   }
 }
 
-@media (max-width: 763px) {
+@media (max-width: 762px) {
   .landing-subcontainer {
     display: grid;
     background-repeat: no-repeat;
