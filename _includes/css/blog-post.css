@@ -1,5 +1,9 @@
 .blog-post{
+}
+
+.blog-post *{
     box-sizing: border-box;
+
 }
 
 .blog-post__top{
@@ -61,12 +65,13 @@
 .blog-post__readable{
     display: block;
     width: 100%;
-    padding: 0.6rem;    
-    background: url('/assets/orange-twill.png');
-    filter: unset;
+    padding: 1.6rem;    
+    background: #fff8ea;
+    filter: hue-rotate(180deg);
     background-repeat: repeat;
 }
 
 .blog-post__readable p{
     color: var(--dark-blue);
+    background-color: #fff8ea;    
 }
