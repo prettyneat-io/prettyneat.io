@@ -88,25 +88,16 @@
 }
 
 .blog-list__post__excerpt{
-    margin: 0.4rem 0.1rem 0 0.1rem;
+    margin: 0.4rem 0.1rem;
     width: 100%;
     display: block;
-    position: relative;
-    border-top: 1px solid var(--dark-blue);
+    position: relative;    
     border-bottom: 1px solid var(--dark-blue);
-    padding: 0 2.3rem 0.2rem 2.3rem;
+    padding: 0 2.3rem 0.6rem 2.3rem;
 }
 
 .blog-list__post__excerpt p{
     display: inline;
-}
-
-.blog-list__post__excerpt__tags{
-    width: 100%;
-    font-size: 0.7em;
-    text-align: right;
-    display: block;
-    color: rgba(0,0,0,0.7);
 }
 
 .blog-list__post__excerpt::before{
@@ -115,11 +106,11 @@
     width: 2rem;
     height: 4rem;
     top: -0.8rem;
-    left: 0rem;
+    left: 0;
     content: '“';
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: bold;
-    color: var(--blue);
+    color: rgba(0,0,0,0.6);
 }
 
 .blog-list__post__excerpt::after{
@@ -127,12 +118,12 @@
     position: absolute;
     width: 2rem;
     height: 4rem;
-    bottom: -1.3rem;
-    right: 0rem;
+    bottom: -1.6rem;
+    right: 0;
     content: '”';
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: bold;
-    color: var(--blue);
+    color: rgba(0,0,0,0.6);
 }
 
 .blog-list__post__footer{
@@ -140,40 +131,29 @@
     text-align: right;
     
     
-    width: auto;    
+    width: 100%;
         
-    color: var(--lighter-blue);
     
-    margin-left: auto;
-    margin-right: 1.3rem;
     opacity: 0.9;
     
     color: rgba(0,0,0,0.7);
+    display: flex;
 }
 
-.blog-list__post__footer a{
+.blog-list__post__footer__meta{
+    flex: 1;
+    text-align: left;
+}
 
+.blog-list__post__footer__tags{
+    flex: 1;
     text-align: right;
-    color: rgba(255,255,255,1) !important;
-    float: right;
-    margin-right: 0;
-
-}
-
-.blog-list__post__footer__reading-time{
-    letter-spacing: -0.1rem;
-    font-family: monospace;
-    color: var(--blue);
-    padding: 0 0.2rem;
 }
 
 .blog-list__tag{
     font-style: normal;
     font-weight: bold;
-    letter-spacing: 0.08em;
-    font-size: 0.8em;
-    padding: 0.1rem 0.2rem;
-    border-radius: 0.1rem;    
+    padding: 0.1rem 0.2rem; 
     
     display: inline-block;        
 }
