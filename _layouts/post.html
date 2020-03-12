@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% seo %}
+  <head>
+    <script>
+    {% include js/ga-shutdown.js %}
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/assets/favicons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/assets/favicons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/assets/favicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/assets/favicons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/assets/favicons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/assets/favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/favicons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/assets/favicons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/favicons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/favicons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/favicons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="/assets/favicons/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    {% include meta.html %}
+  </head>
+  <body class="main-container blog-post">
+    <style>
+      {% include css/common-hero.css %}
+      {% include css/blog-post.css %}
+    </style>    
+    <header class="grid-item nav">
+      {% include nav.html %}
+    </header>
+    <div class="grid-item content">
+        <title>{{ page.title }} – the PrettyNeat blog</title>
+        <div class="container">
+          <div class="content-container blog-post__top">
+            <div class="text">
+              <h1 class="title">{{ page.title }}</h1>
+              <h2 class="sub-title">{{ page.subtitle }}</h2>
+            </div>
+            <div class="blog-post__top-excerpt">
+              <div class="blog-post__top-excerpt__text-blot">                
+                <div class="blog-post__top-excerpt__text-blot__text">{{ page.excerpt }}</div>
+              </div>
+              <div class="blog-post__top-excerpt__readable">{{ page.excerpt }}</div>
+            </div>            
+          </div>
+          <div class="content-container">
+            <div class="blog-post__stripe-bg">
+              <div class="blog-post__readable">
+              {{ content | remove_first: page.excerpt }}
+              </div>
+            </div>
+          </div>  
+        </div>      
+      {% include closing.html %} 
+    </div>
+    {% include cookies.html %}
+  <footer>
+    <link
+      rel="stylesheet"
+      href="/assets/css/stylesheet.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap"
+      rel="stylesheet"
+    />    
+    <style>
+      {% include css/common-remainder.css %}
+    </style>
+    <style>
+          {% include css/cookies-consent.css %}
+    </style>
+  </footer>  
+  <script>
+  {% include js/cookies.js %}
+  </script>
+  </body>
+</html>
