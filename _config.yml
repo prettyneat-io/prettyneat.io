@@ -1,4 +1,6 @@
 jekyll serve --watch --baseurl ""markdown: redcarpet
+collections: 
+  - neat_people
 baseurl: prettyneat.io
 exclude: ["README.md"]
 permalink: /:title/
