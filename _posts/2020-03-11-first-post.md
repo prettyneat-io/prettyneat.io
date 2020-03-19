@@ -6,8 +6,8 @@ author: Ilya@PrettyNeat
 tags: ['Tag','Other tag']
 timeToRead: 5'30"
 ---
-Finally we might be able to have a blog! It might be worth noticing that there's a bit of experimentation ongoing at the very top of the page right now...
+You should never, ever, use lorem-ipsums, if you have any time at all to write some copy that makes sense.
 
-Let's see if this works at all...
+Eye-catching copy makes it quite easier for the reader to skim through the article(s) or whatever you have properly, much closer to what would happen if a user were browsing that website, page or, again, whatever.
 
-*Maybe?*.
+Writing interesting, nonsensical, whimsy copy also allow to unwind a bit and perhaps entertain clients, who are often way more bored than we are.

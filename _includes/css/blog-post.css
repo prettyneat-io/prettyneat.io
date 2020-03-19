@@ -147,8 +147,8 @@
 
 .blog-post__content__inner::before{
     position: absolute;
-    top: 1.8rem;
-    left: 1.4rem;
+    top: -0.4rem;
+    left: -0.7rem;
     width: 1.5rem;
     height: 1.5rem;
     border: 2px solid var(--blue);
@@ -158,8 +158,8 @@
 
 .blog-post__content__inner::after{
     position: absolute;
-    bottom: 1.8rem;
-    right: 1.4rem;
+    bottom: -0.4rem;
+    right: -0.7rem;
     width: 1.5rem;
     height: 1.5rem;
     border: 2px solid var(--blue);
@@ -197,9 +197,12 @@
 
 .blog-post__author figure{
     margin-right: 2rem;
+    min-width: 20%;
+    max-width: 30%;
 }
 
 .blog-post__author figure img{
+    width: 100%;
     box-shadow: 
         3px 3px 0 var(--orange),
         -6px 6px 0 var(--light-orange),
