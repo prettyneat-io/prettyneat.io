@@ -102,17 +102,14 @@
                 <h2 class="sub-title">{{ page.subtitle }}</h2>
               </div>
               <div class="blog-post__top-excerpt">
-                <div class="blog-post__top-excerpt__author">
-                  <img src="/assets/authors/{{ page.author | slugify }}.thumb.png" alt="{{ page.author }}"/>
-                </div>
                 {{ page.excerpt }}
               </div>
-          </div>
-          <div class="content-container blog-post__top__meta">
-            Posted on the {{ page.date | date_to_long_string: 'ordinal' }}
-            {{ if page.timeToRead.size > 0 }}
-              , takes&nbsp;<strong>{{ page.timeToRead }}</strong>&nbsp;to read <span class="stopwatch-pre"></span><a href="javascript:;" class="stopwatch" title="Want to race?" onclick="toggle_stopwatch()">⏱</a><span class="stopwatch-post"></span>
-            {{ endif }}
+              <div class="blog-post__top__meta">
+                Posted on the {{ page.date | date_to_long_string: 'ordinal' }}
+                {{ if page.timeToRead.size > 0 }}
+                  , takes&nbsp;<strong>{{ page.timeToRead }}</strong>&nbsp;to read <span class="stopwatch-pre"></span><a href="javascript:;" class="stopwatch" title="Want to race?" onclick="toggle_stopwatch()">⏱</a><span class="stopwatch-post"></span>
+                {{ endif }}
+              </div>              
           </div>
           <div class="content-container blog-post__separator">
             <hr>
@@ -121,6 +118,7 @@
             <div class="blog-post__content__inner">
               {{ content | remove_first: page.excerpt }}
             </div>
+            <span class="stopwatch-last"></span><a class="stopwatch stopwatch-winner" href="javascript:;" onclick="done_stopwatch();"></a>
           </div>   
           <div class="content-container blog-post__separator">
             <hr>
@@ -134,7 +132,7 @@
             </figure>
             <div class="blog-post__author__data">
               <h2>Written by {{current_author.name}} <span>({{ page.author }})</span></h2>
-              <p>{{ current_author.content | markdownify }}</p>
+              <div class="blog-post__author__data__bio">{{ current_author.content | markdownify }}</div>
             </div>
           </div>
           <div class="content-container blog-post__separator">

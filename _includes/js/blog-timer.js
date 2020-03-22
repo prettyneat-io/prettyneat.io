@@ -3,7 +3,9 @@ var started = 0;
 
 var span_pre = document.querySelector('.stopwatch-pre');
 var span_post = document.querySelector('.stopwatch-post');
+var span_last = document.querySelector('.stopwatch-last')
 var toggle = document.querySelector('.stopwatch');
+var winner = document.querySelector('.stopwatch-winner');
 
 function toggle_stopwatch(){
     if ( started > 0 )
@@ -18,6 +20,10 @@ function run(){
     span_pre.innerHTML = ' (You took no time at all ';
     span_post.innerHTML = ')';
     toggle.innerHTML = '[reset?]';
+    span_last.innerHTML = "";
+    span_last.classList.add('running');
+    winner.innerHTML = "[Done?]";
+    winner.classList.add('running');
 }
 
 function reset(){
@@ -26,6 +32,14 @@ function reset(){
     window.clearTimeout(blog_post_timer);
     toggle.innerHTML = '⏱';
     started = 0;
+    span_last.classList.remove('running');
+    winner.classList.remove('running');
+}
+
+function done_stopwatch(){
+    winner.innerHTML = "";
+    span_last.innerHTML = `You ended up taking ${timeSpanToWords(Date.now() - started)}!`;
+    reset();
 }
 
 function second(){
