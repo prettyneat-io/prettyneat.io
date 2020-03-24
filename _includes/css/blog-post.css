@@ -427,4 +427,29 @@ hr::after{
         right: -0.15rem;
         height: 0.55rem;
     }
+
+    .content-container.blog-post__separator {
+        margin: 0 auto;
+        height: auto;
+        margin-top: -1rem;
+    }
+
+    .content-container.blog-post__separator hr{
+        padding: 0;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .blog-post__author{
+        flex-flow: row wrap;
+    }
+
+    .blog-post__author figure{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .blog-post__author figure img{
+        width: 98%;
+    }
 }
