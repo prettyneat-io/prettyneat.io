@@ -203,7 +203,12 @@ a.keep-reading{
 @media (max-width: 767px){
     .blog-list__post__excerpt{
         text-align: justify;
-        padding: 0 2rem 0.5rem 2rem;
+        padding: 0 1.6rem 0.5rem 1.4rem;
+    }
+
+    .blog-list__post__excerpt::before,
+    .blog-list__post__excerpt::after{
+        font-size: 2.6rem;
     }
 
     .blog-list__post__footer{

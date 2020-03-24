@@ -7,7 +7,7 @@ var wizard = document.querySelector('.nl-subscribe__wizard');
 var thisStep = wizard.children.item( nl_wizard_step - 1);
 
 var email = '';
-var nl_consent = false;
+var nl_consent = null;
 
 var setStep = {
     1: function(){
@@ -70,6 +70,7 @@ async function nl_wizard_complete(){
     let data = new FormData();
 
     data.append('email',email);
+    data.append('promo',nl_consent);
 
     let url = 'https://script.google.com/macros/s/AKfycbw4qqfAgT3hAEiQWSqqhI6fP_kCO0P28evR0nmzEFfrC2J-DVU/exec';
 
@@ -98,10 +99,15 @@ function nl_wizard_test(resultOnly){
             else email = '';
         } break;
         case 2: {
-            passed = nl_consent;
+            
+            document.querySelectorAll('input[name="rd_promo"]').forEach(r => {
+
+                nl_consent = r.checked ? (r.value == 'y' ? true : false) : nl_consent;
+            })
+            passed = (nl_consent != null);
         } break;
         case 3: {
-            passed = nl_consent && email;
+            passed = nl_consent != null && email;
         }break;
     }
 

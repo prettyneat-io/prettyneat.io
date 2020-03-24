@@ -1,11 +1,14 @@
 <div class="nl-subscribe">
-<h3>Receive the latest and greatest on your electron-based letterbox!</h3>
-<p>Would you like to receive all the latest news and updates from PrettyNeat in a convenient and condensed fashion to your email?</p>
-<p>It's as easy as one - two - three:</p>
+<h3>Never miss an essay!</h3>
+<p>Here at Pretty Neat we write original content on a bi-weekly basis. If you find software development, design, leadership, systems thinking and management interesting then just drop your email into the box below!</p>
+<p>It's as easy as one-two-three and we'll never give your address to anyone else or spam you :)</p>
+<div class="nl-subscribe__done">
+    <p>...and you're done! Thank you so much!</p>
+</div>
 <div class="nl-subscribe__frame">
-    <form class="nl-subscribe__wizard">
+    <form class="nl-subscribe__wizard" onsubmit="nl_wizard_next(); return false;">
         <div class="nl-subscribe__wizard__step nl-subscribe__wizard__step--next">
-            <div class="nl-subscribe__wizard__step__number">1:</div>
+            <div class="nl-subscribe__wizard__step__number">1</div>
             <div class="nl-subscribe__wizard__step__content">
                 <label for="nl-email-box">Type your email here:</label>
                 <input type="email" id="nl-email-box" placeholder="your@email.you" onchange="nl_wizard_test()" onkeyup="nl_wizard_test()" onblur="nl_wizard_test()" oninput="nl_wizard_test()"/>
@@ -15,17 +18,24 @@
                 <a href="javascript:;" onclick="nl_wizard_next()" title="confirm email!">NEXT</a>
             </div>
         </div><div class="nl-subscribe__wizard__step nl-subscribe__wizard__step--future">
-            <div class="nl-subscribe__wizard__step__number">2:</div>
+            <div class="nl-subscribe__wizard__step__number">2</div>
             <div class="nl-subscribe__wizard__step__content">
-                <p>Acknowledge that we will only use this email to send you updates on PrettyNeat and will never share it with anyone, and that you can unsubscribe at any time.</p>
-            <label class="button-ify" for="nl-accept-terms">I'm cool with that <button type="button" onclick="nl_consent = true; nl_wizard_test();" id="nl-accept-terms" class="nl-subscribe__thumbutton">👍</button></label>
+                <p>Would you be ok with receiving some promotions as well?</p>
+                <input type="radio" name="rd_promo" id="rd_promo_y" value="y" onchange="nl_wizard_test()">
+                <label class="fancy-radio" for="rd_promo_y">
+                    Sure, send them my way!                    
+                </label>
+                <input type="radio" name="rd_promo" id="rd_promo_n" value="n" onchange="nl_wizard_test()">
+                <label class="fancy-radio" for="rd_promo_n">
+                    Only the essays, thank you
+                </label>
             </div>
             <div class="nl-subscribe__wizard__step__next">
-                <span>Please let us know you're cool with that...</span>
+                <span>Please let us know how you feel about promotions</span>
                 <a href="javascript:;" onclick="nl_wizard_next()" title="confirm terms!">NEXT</a>
             </div>
         </div><div class="nl-subscribe__wizard__step nl-subscribe__wizard__step--future">
-            <div class="nl-subscribe__wizard__step__number">3:</div>
+            <div class="nl-subscribe__wizard__step__number">3</div>
             <div class="nl-subscribe__wizard__step__content">
                 <p>All set, we will be sending updates from news@prettyneat.io to you:</p>
                 <span class="esteemed-user"></span>
@@ -33,12 +43,10 @@
             </div>
             <div class="nl-subscribe__wizard__step__next">
                 <span>We're all set...</span>
-                <a href="javascript:;" onclick="nl_wizard_next()" title="get news!">NICE</a>
+                <a href="javascript:;" onclick="nl_wizard_next()" title="get news!">THANKS</a>
             </div>        
         </div>
     </form>
 </div>
-<div class="nl-subscribe__done">
-    <p>...and you're done! Thank you so much!</p>
-</div>
+
 </div>
