@@ -209,5 +209,6 @@ nav {
 }
 .hero-container .image img {
   width: 30rem;
+  max-width: 90vw;
   filter: drop-shadow(5px -3px 0px var(--lighter-blue));
 }

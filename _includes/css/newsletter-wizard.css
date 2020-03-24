@@ -213,3 +213,56 @@ a{
     font-weight: bold;
     display: inline-block;
 }
+
+@media (max-width: 767px){
+    .nl-subscribe{
+        max-width: 90vw;
+    }
+
+    .nl-subscribe__wizard{
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step{
+        flex-flow: row wrap;
+
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step
+    .nl-subscribe__wizard__step__number{
+        flex: 0 0 100%;
+        font-size: 4rem;
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step
+    .nl-subscribe__wizard__step__content{
+        flex: 0 0 100%;
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step
+    .nl-subscribe__wizard__step__next{
+        flex: 0 0 100%;
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step
+    .nl-subscribe__wizard__step__next span{
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step
+    .nl-subscribe__wizard__step__next a{
+        position: absolute;
+        transform: translate(0, -50%);
+        top: 50%;
+    }    
+}

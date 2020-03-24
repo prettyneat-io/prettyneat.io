@@ -385,3 +385,46 @@ hr::after{
 .stopwatch-winner.running{
     display: inline-block;
 }
+
+@media (max-width: 767px){
+    .blog-post .content .container{
+        max-width: 100%;
+        padding: 1rem 0 0 0;
+    }
+
+    .blog-post .content .container::before{
+        content: '';
+        display: none;
+    }
+
+    .blog-post .content-container{
+        width: calc(100% - 1rem);
+        padding: 0.6rem;
+    }
+
+    .blog-post__top .text{
+        margin: 0.5rem 0 1rem 0;
+    }
+
+    .blog-post__top .blog-post__top-excerpt,
+    .blog-post .blog-post__top__meta{
+        margin-bottom: 1rem;
+    }
+
+    .blog-post .blog-post__top__meta{
+        text-align: center;
+        flex-flow: row wrap;
+    }
+
+    .blog-post__content__inner::before {
+        top: -0.6rem;
+        left: -0.15rem;
+        height: 0.55rem;
+    }
+
+    .blog-post__content__inner::after {
+        bottom: -0.6rem;
+        right: -0.15rem;
+        height: 0.55rem;
+    }
+}

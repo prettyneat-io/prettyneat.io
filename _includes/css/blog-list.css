@@ -199,3 +199,20 @@ a.keep-reading{
     content:'.';
     animation: reading-dots 3s linear infinite running;
 }
+
+@media (max-width: 767px){
+    .blog-list__post__excerpt{
+        text-align: justify;
+        padding: 0 2rem 0.5rem 2rem;
+    }
+
+    .blog-list__post__footer{
+        flex-flow: row wrap;
+    }
+
+    .blog-list__post__footer__meta,
+    .blog-list__post__footer__tags{
+        flex: 0 0 100%;
+        text-align: left;
+    }
+}
