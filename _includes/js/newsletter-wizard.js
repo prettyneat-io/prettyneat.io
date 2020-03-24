@@ -56,7 +56,7 @@ function nl_wizard_showNext(){
     setStep[nl_wizard_step]();
 }
 
-function nl_wizard_complete(){
+async function nl_wizard_complete(){
     let prev = wizard.querySelector('nl-subscribe__wizard__step--prev');
     if ( prev != null ){
     prev.classList.remove('nl-subscribe__wizard__step--prev');
@@ -66,8 +66,25 @@ function nl_wizard_complete(){
     thisStep.classList.add('nl-subscribe__wizard__step--prev');
 
     wizard.parentElement.classList.add('nl-subscribe__frame--collapsed');
-    document.querySelector('.nl-subscribe__done').classList.add('nl-subscribe__done--shown');
-    console.log(email);
+
+    let data = new FormData();
+
+    data.append('email',email);
+
+    let url = 'https://script.google.com/macros/s/AKfycbw4qqfAgT3hAEiQWSqqhI6fP_kCO0P28evR0nmzEFfrC2J-DVU/exec';
+
+    let response = await fetch(url,{
+        method: 'POST',
+        body: data
+    });
+
+    if ( response.ok ){
+        document.querySelector('.nl-subscribe__done').classList.add('nl-subscribe__done--shown');
+    }
+    else{
+        document.querySelector('.nl-subscribe__done').innerHTML = '...ahem. Please reload the page and try again :(';
+        document.querySelector('.nl-subscribe__done').classList.add('nl-subscribe__done--shown');
+    }
 }
 
 function nl_wizard_test(resultOnly){
