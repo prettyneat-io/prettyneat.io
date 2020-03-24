@@ -53,12 +53,13 @@
 
 .blog-post .blog-post__top__meta{  
     flex: 0 0 100%;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--blue);
     min-height: 2.2rem;
     display: flex;
     align-items: center;        
     box-shadow: none;  
+    opacity: 0.75;
 }
 
 .blog-post__top .text{
@@ -137,6 +138,8 @@
 
 .blog-post__content__inner{
     position: relative;
+    font-size: 1.3rem;
+    color: var(--dark-blue);
 }
 
 .blog-post__content__inner::before{
@@ -170,9 +173,22 @@
 
 .blog-post__content p{
     margin-bottom: 1.3rem;
-    color: var(--dark-blue);
     background-color: #fff8ea;    
-    font-size: 1.3rem;
+
+}
+
+.blog-post__content ul,
+.blog-post__content ol{
+    list-style-position: outside;
+    padding-left: 1.4rem;
+
+}
+
+.blog-post__content li{
+    font-weight: normal;
+    margin-bottom: 1rem;
+    line-height: 2.1rem;
+
 }
 
 .blog-post__author{
@@ -183,67 +199,22 @@
     text-shadow: 3px 0 0 var(--light-blue);
 }
 
-.blog-post__author h2 span{
-    font-size: 0.5em;
-    color: var(--lighter-blue);
-    text-shadow: 1px 0 0 var(--blue);
-}
-
 .blog-post__author .blog-post__author__data__bio{
-    padding: 0 4.75rem 0 3.25rem;
+    padding-left: 0.4rem;
     position: relative;
     color: var(--blue);
     margin-top: 1rem;
-}
-
-.blog-post__author .blog-post__author__data__bio::before{
-    content: '{';
-    font-size: 6rem;
-    position: absolute;
-    top: -1.2rem;
-    left: -0.2rem;
-    color: var(--lighter-blue);
-    text-shadow: 0 3px 0 var(--blue);
-    opacity: 0.5;
-}
-
-.blog-post__author .blog-post__author__data__bio::after{
-    content: '}';
-    font-size: 6rem;
-    position: absolute;       
-    bottom: -1.20rem;
-    right: 1rem;
-    color: var(--lighter-blue);
-    text-shadow: 0 3px 0 var(--blue);
-    opacity: 0.5;    
-}
-
-.blog-post__author .blog-post__author__data__bio p::before{
-    content: '//';
-    display: inline-block;
-    margin-left: -0.6rem;
-    width: 0.6rem;
-    color: var(--blue);
-    font-weight: normal;
 }
 
 .blog-post__author .blog-post__author__data__bio p{
     text-indent: -0.4rem;    
 }
 
-
 .blog-post__author .blog-post__author__data__bio ul,
 .blog-post__author .blog-post__author__data__bio ol{
     list-style-position: inside;
-}
-
-.blog-post__author .blog-post__author__data__bio li::before{
-    content: '//';
-    display: inline-block;
-    margin-left: -2.3rem;
-    width: 2.3rem;
-    color: var(--blue);
-    font-weight: normal;
+    margin-left: -0.4rem;
+    margin-top: 0.4rem;
 }
 
 .blog-post__author .blog-post__author__data__bio li{

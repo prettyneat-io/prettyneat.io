@@ -40,6 +40,7 @@ function done_stopwatch(){
     winner.innerHTML = "";
     span_last.innerHTML = `You ended up taking ${timeSpanToWords(Date.now() - started)}!`;
     reset();
+    span_last.classList.add('running');
 }
 
 function second(){

@@ -56,10 +56,11 @@ title: blog
             {% endfor %}
           </div>
         </div>
-        <div class="header-and-text" id="tag-cloud">
-          <h3>Need more?</h3>        
-          See all of our {{ site.posts | size }} posts in our <a href="{{ link blog/index.html }}" title="Browse the archives">Blog Archives</a>
-        </div>
       </span>
+    </div>
+    <div class="content-container">
+      {% include subscribe.html %}
+      <style>{% include css/newsletter-wizard.css %}</style>
+      <script>{% include js/newsletter-wizard.js %}</script>      
     </div>
   </div>
