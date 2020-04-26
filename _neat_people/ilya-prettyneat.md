@@ -1,12 +1,10 @@
 ---
-author: ilya-prettyneat
+author: ilya-florenskiy
 name: Ilya
-title: Senior Bug Generator
+title: Senior Software Developer
 spirit_animal: the golden dragon
 ---
-Ilya mostly codes in whatever language is needed at that specific time.
-
-This is especially true if Ilya does not know that language.
+Ilya mostly codes in whatever language is needed at that specific time. This is especially true if Ilya does not know that language.
 His hobbies include:
 * Introducing bugs
 * Diagnosing bugs

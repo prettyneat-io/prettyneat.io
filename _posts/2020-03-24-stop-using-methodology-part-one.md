@@ -2,11 +2,11 @@
 layout: post
 title: Stop using THAT methodology
 subtitle: Part one of a two-part epic
-author: Ilya@PrettyNeat
+author: ilya-florenskiy
 tags: ['Dogmas and conventions', 'Project Management', 'Logical fallacies']
 timeToRead: 5'30"
 ---
-Regardless of how long you’ve been writing software, you certainly came across several different, usually **conflicting, ways of “doing it right”.** 
+Inevitably, you've come across several different, **usually conflicting**, ways of doing it right.
 
 ## Everybody knows how everyone else should code 
 
