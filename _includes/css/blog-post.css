@@ -193,6 +193,7 @@
 }
 
 .blog-post__author{
+    padding-top: 1rem;
     display: flex;
 }
 
@@ -330,8 +331,6 @@ hr::after{
 .blog-post__tag{
     font-style: normal;
     font-weight: bold;
-    padding: 0.1rem 0.2rem; 
-    
     display: inline-block;    
     text-shadow: 0 1px 0px var(--blue);    
 }

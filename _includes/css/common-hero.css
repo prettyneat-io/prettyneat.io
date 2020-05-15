@@ -163,10 +163,11 @@ nav {
     margin: 0 auto;
   }
 
-  .content-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+}
+
+.content-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .hero-container .text {
   grid-area: hero-text;
@@ -175,6 +176,7 @@ nav {
   padding-bottom: 4rem;
 }
 .hero-container .image {
+  overflow-x: hidden;
   grid-area: hero-image;
   z-index: 1;
 }
