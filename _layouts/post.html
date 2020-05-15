@@ -105,10 +105,10 @@
                 {{ page.excerpt }}
               </div>
               <div class="blog-post__top__meta">
-                Posted on the {{ page.date | date_to_long_string: 'ordinal' }}
-                {{ if page.timeToRead.size > 0 }}
-                  , takes&nbsp;{{ page.timeToRead }}&nbsp;to read <span class="stopwatch-pre"></span><a href="javascript:;" class="stopwatch" title="Want to race?" onclick="toggle_stopwatch()">⏱</a><span class="stopwatch-post"></span>
-                {{ endif }}
+                Posted {{ page.date | date_to_long_string: 'ordinal' }}
+                <!-- ,
+                {{ if page.timeToRead.size > 0 }} takes&nbsp;{{ page.timeToRead }}&nbsp;to read <span class="stopwatch-pre"></span><a href="javascript:;" class="stopwatch" title="Want to race?" onclick="toggle_stopwatch()">⏱</a><span class="stopwatch-post"></span>
+                {{ endif }} -->
               </div>              
           </div>
           <div class="content-container blog-post__separator">

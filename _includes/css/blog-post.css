@@ -1,45 +1,38 @@
-.blog-post{
-}
-
 .blog-post *{
     box-sizing: border-box;
 }
 
+/* 
 .blog-post .container::before{
     display: block;
-
     position: relative;
-    
     content: ' ';
-    
     background-image: url('/assets/blue-twill.png');
-    
     height: 125px;
-    
     width: 1200px;
-    
     top: calc(-125px - 2.5rem);
     right: 2.5rem;
-    
     margin: 0 -2.5rem -125px auto;    
-
     background-position-x: 4px;
-}
+} */
 
-.blog-post .content .container{
-    background: url('/assets/blue-twill.png');
-    background-position: 50% 0;
-    background-repeat: repeat;    
-    padding: 2.5rem;
-    margin: 0 auto;
-    max-width: 1200px;
+@media (min-width: 763px) {
+    .blog-post .content .container{
+        background: url('/assets/blue-twill.png');
+        background-position: 50% 0;
+        background-repeat: repeat;    
+        padding: 2.5rem;
+        margin: 0 auto;
+        max-width: 900px;
+        padding-top: 10rem;
+        margin-top: -10rem;
+    }
 }
 
 .blog-post .content-container{
-    
     width: calc(100% - 3rem);
     margin: auto;    
-    padding: 2.1rem;  
+    padding: 1.5rem;  
     background: #fff8ea;   
     box-shadow: 7px 9px 9px rgba(0,0,0,0.1);
 }
@@ -53,7 +46,7 @@
 
 .blog-post .blog-post__top__meta{  
     flex: 0 0 100%;
-    font-size: 1.3rem;
+    font-size: 21px;
     color: var(--blue);
     min-height: 2.2rem;
     display: flex;
@@ -77,9 +70,8 @@
 .blog-post__top h2{
     color: var(--dark-blue);
     margin-bottom: 0.75rem;
+    font-size: 1.6rem;
 }
-
-
 
 .blog-post__top-excerpt{
     position: relative;
@@ -112,8 +104,9 @@
     content: ' '        
 }
 
-.blog-post__top-excerpt p{    
+.content-container .blog-post__top-excerpt p{    
     padding: 0.5rem 0 0.5rem 1rem;
+    text-align: left;
 }
 
 .blog-post__top-excerpt p::first-letter{
@@ -133,39 +126,31 @@
     background: #fff8ea;
 }
 
-.blog-post__content__inner{
+.blog-post__content__inner,
+.blog-post__author {
     position: relative;
-    font-size: 1.3rem;
+    font-size: 21px;
     color: var(--dark-blue);
 }
-/* 
-.blog-post__content__inner::before{
-    position: absolute;
-    top: -0.4rem;
-    left: -0.7rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 2px solid var(--blue);
-    border-width: 2px 0 0 2px;
-    content: ' '
+
+.blog-post__content__inner h2{
+    line-height: 1.2;
+    margin-bottom: 1rem;    
 }
 
-.blog-post__content__inner::after{
-    position: absolute;
-    bottom: -0.4rem;
-    right: -0.7rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 2px solid var(--blue);
-    border-width: 0 2px 2px 0;
-    content: ' '
-} */
+.content-container .blog-post__content__inner  p,
+.content-container.blog-post__author  p  {
+  line-height: 1.6rem;
+  text-align: justify;
+  text-justify: inter-cluster;
+}
 
 .blog-post__content img{
     width: 90%;
     margin: 3rem auto;
     display: block;
-    box-shadow: -5px 5px 0 var(--blue);
+    box-shadow: -5px 5px 0 var(--blue),
+     7px 9px 9px rgba(0,0,0,0.1);
 }
 
 .blog-post__content p{
@@ -178,14 +163,11 @@
 .blog-post__content ol{
     list-style-position: outside;
     padding-left: 1.4rem;
-
 }
 
 .blog-post__content li{
     font-weight: normal;
-    margin-bottom: 1rem;
     line-height: 2.1rem;
-
 }
 
 .blog-post__author{
@@ -351,8 +333,6 @@ hr::after{
 
 }
 
-
-
 .stopwatch{
     border-bottom: 1px dashed var(--orange);
     font-size: 0.8em;
@@ -382,6 +362,14 @@ hr::after{
 .stopwatch-winner.running{
     display: inline-block;
 }
+/* 
+.blog-post .nav-container{
+     /* background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);
+    background: url('/assets/blue-twill.png');
+    background-position-x: 0%;
+    background-position-y: 50%;
+    background-repeat: repeat;
+} */
 
 @media (max-width: 767px){
     .blog-post .content .container{
@@ -397,6 +385,8 @@ hr::after{
     .blog-post .content-container{
         width: calc(100% - 1rem);
         padding: 0.6rem;
+        box-shadow: none;
+
     }
 
     .blog-post__top .text{
@@ -442,11 +432,17 @@ hr::after{
     }
 
     .blog-post__author figure{
-        flex: 0 0 100%;
+        /* flex: 0 0 100%; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
         max-width: 100%;
     }
 
     .blog-post__author figure img{
         width: 98%;
+        max-width: 10rem;
+        text-align: center;
+        margin: 0 auto
     }
 }

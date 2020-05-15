@@ -78,11 +78,11 @@ nav {
 .nav-container {
   min-height: 5vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "nav-banner . nav-links";
 }
 .grid-nav-item {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 .grid-nav-item.banner {
   grid-area: nav-banner;
@@ -198,10 +198,17 @@ nav {
   /* -webkit-text-stroke-width: 3px; */
   color: transparent;
   color: var(--orange);
+  /* font-size: calc(96px + (96 - 14) * ((50vw - 150px) / (6000 - 150))); */
   font-size: 5rem;
   text-shadow: 4px -1px var(--lighter-blue);
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 763px) {
+  body .hero-container .text h1 {
+    font-size: 3.5em;
+  }
 }
 .hero-container .text h2 {
   color: var(--dark-blue);
