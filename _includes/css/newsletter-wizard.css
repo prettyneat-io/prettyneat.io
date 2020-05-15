@@ -145,6 +145,7 @@
 .nl-subscribe .nl-subscribe__wizard
 .nl-subscribe__wizard__step
 .nl-subscribe__wizard__step__next a{
+    text-decoration: none;
     opacity: 0;
     border: 2px solid #fff;
     background-color: var(--light-orange);
@@ -157,14 +158,22 @@
     transform: translate(0,-50%); 
     left: 0.2rem;
     right: 0.2rem;  
+    filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
     border-radius: 0.2rem;
     color: var(--orange);
+    cursor: pointer;
+}
+
+body .nl-subscribe .nl-subscribe__wizard .nl-subscribe__wizard__step .nl-subscribe__wizard__step__next a:hover{
+    transform: scale(1.02) translate(0,-50%); 
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .nl-subscribe .nl-subscribe__wizard
 .nl-subscribe__wizard__step
 .nl-subscribe__wizard__step__next a::after{
-    content: ' >>';
+    content: '';
     letter-spacing: -1rem;
     padding-left: 1.2rem;
 }

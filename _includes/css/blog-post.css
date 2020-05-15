@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+.grid-item.content{
+  border-bottom: 1rem solid var(--dark-blue);      
+}
+
+.blog-post .container {
+    padding-bottom: 6rem;
+    border-bottom: none;
+}
 /* 
 .blog-post .container::before{
     display: block;
@@ -15,6 +23,20 @@
     margin: 0 -2.5rem -125px auto;    
     background-position-x: 4px;
 } */
+@media(max-width: 763px){
+
+.grid-item.content{
+    background: url('/assets/blue-twill.png');
+  }
+
+  body.blog-post .content-container{
+      padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+
+  body.blog-post .content-container.blog-post__separator{
+    padding: 0.01rem;
+  }
+}
 
 @media (min-width: 763px) {
     .blog-post .content .container{
@@ -385,8 +407,7 @@ hr::after{
     .blog-post .content-container{
         width: calc(100% - 1rem);
         padding: 0.6rem;
-        box-shadow: none;
-
+        /* box-shadow: none; */
     }
 
     .blog-post__top .text{
@@ -433,10 +454,13 @@ hr::after{
 
     .blog-post__author figure{
         /* flex: 0 0 100%; */
-        display: flex;
         flex-direction: column;
         flex-wrap: wrap-reverse;
         max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
     }
 
     .blog-post__author figure img{

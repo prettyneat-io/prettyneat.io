@@ -120,9 +120,7 @@
             </div>
             <span class="stopwatch-last"></span><a class="stopwatch stopwatch-winner" href="javascript:;" onclick="done_stopwatch();"></a>
           </div>   
-          <div class="content-container blog-post__separator">
-            <hr>
-          </div>         
+          <br>  
           {% capture author_slug %}{{ page.author | slugify }}{% endcapture %}
           {% assign current_author = site.neat_people | where: "author", author_slug | first %}
           <div class="content-container blog-post__author">
@@ -137,12 +135,18 @@
           </div>
           <div class="content-container blog-post__separator">
             <hr>
-          </div> 
-          <div class="content-container blog-post__tags">
+          </div>       
+            <div class="content-container blog-post__tags">
             With the blessing of {{ current_author.spirit_animal }}, this article is tagged:
             {% for tag in page.tags %}
               <span class="blog-post__tag">{{ tag }}</span>
             {% endfor %}            
+          </div>
+          <br>
+          <div class="content-container">
+            {% include subscribe.html %}
+            <style>{% include css/newsletter-wizard.css %}</style>
+            <script>{% include js/newsletter-wizard.js %}</script>      
           </div>          
         </div>      
       {% include closing.html %} 
