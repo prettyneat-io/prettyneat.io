@@ -125,7 +125,7 @@
           {% assign current_author = site.neat_people | where: "author", author_slug | first %}
           <div class="content-container blog-post__author">
             <figure>
-              <img src="/assets/authors/{{ current_author.author }}.png" />
+              <img alt="{{ current_author.author }} portrait" src="/assets/authors/{{ current_author.author }}.png" />
               <figcaption>{{ current_author.title }} </figcaption>
             </figure>
             <div class="blog-post__author__data">
