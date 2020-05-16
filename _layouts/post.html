@@ -137,7 +137,11 @@
             <hr>
           </div>       
             <div class="content-container blog-post__tags">
-            With the blessing of {{ current_author.spirit_animal }}, this article is tagged:
+              {% if current_author.spirit_animal == null %}
+                This article is tagged:
+              {% else %}
+                With the blessing of {{ current_author.spirit_animal }}, this article is tagged:
+              {% endif %}
             {% for tag in page.tags %}
               <span class="blog-post__tag">{{ tag }}</span>
             {% endfor %}            

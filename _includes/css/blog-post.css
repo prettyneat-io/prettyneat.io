@@ -208,7 +208,8 @@
     margin-top: 1rem;
 }
 
-.blog-post__author .blog-post__author__data__bio p{
+.blog-post__author .blog-post__author__data__bio li{
+    font-weight: 400;
     /* text-indent: -0.4rem;     */
 }
 
@@ -231,6 +232,8 @@
 
 .blog-post__author figure img{
     width: 100%;
+    background: url('/assets/orange-twill.png');
+    filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.2));
     box-shadow: 
         3px 3px 0 var(--orange),
         -6px 6px 0 var(--light-orange),
