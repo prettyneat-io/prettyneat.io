@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Stop using THAT methodology
-subtitle: do you even methodology?
-author: ilya-florenskiy
+title: Stop Using /That/ Methodology
+subtitle: Do you even methodology?
+author: Ilya Florenskiy
 tags: ['Dogmas and conventions', 'Project Management', 'Logical fallacies']
 timeToRead: 5'30"
 ---
