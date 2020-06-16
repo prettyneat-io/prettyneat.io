@@ -1,0 +1,56 @@
+<div class="nl-subscribe">
+    <h3>Never miss an essay!</h3>
+    <p>If you find software development, design, systems thinking and management interesting - just drop
+        your email into the box below. We write content roughly every other week, we won't share your mail with anyone,
+        and we certainly won't spam you. </p>
+    <div class="nl-subscribe__done">
+        <br>
+        <p>...and you're done! Thank you so much!</p>
+    </div>
+    <div class="nl-subscribe__frame">
+        <form class="nl-subscribe__wizard" onsubmit="nl_wizard_next(); return false;">
+            <div class="nl-subscribe__wizard__step nl-subscribe__wizard__step--next">
+                <div class="nl-subscribe__wizard__step__number">1</div>
+                <div class="nl-subscribe__wizard__step__content">
+                    <label for="nl-email-box">Type your email here:</label>
+                    <input type="email" id="nl-email-box" placeholder="email@company.com" onchange="nl_wizard_test()"
+                        onkeyup="nl_wizard_test()" onblur="nl_wizard_test()" oninput="nl_wizard_test()" />
+                </div>
+                <div class="nl-subscribe__wizard__step__next">
+                    <span>Please input your email.</span>
+                    <a href="javascript:;" onclick="nl_wizard_next()" title="confirm email!">NEXT</a>
+                </div>
+            </div>
+            <div class="nl-subscribe__wizard__step nl-subscribe__wizard__step--future">
+                <div class="nl-subscribe__wizard__step__number">2</div>
+                <div class="nl-subscribe__wizard__step__content">
+                    <p>Would you be alright with receiving promotions as well?</p>
+                    <input type="radio" name="rd_promo" id="rd_promo_y" value="y" onchange="nl_wizard_test()">
+                    <label class="fancy-radio" for="rd_promo_y">
+                        Sure, send them my way!
+                    </label>
+                    <input type="radio" name="rd_promo" id="rd_promo_n" value="n" onchange="nl_wizard_test()">
+                    <label class="fancy-radio" for="rd_promo_n">
+                        Only the essays, thank you.
+                    </label>
+                </div>
+                <div class="nl-subscribe__wizard__step__next">
+                    <span>Please let us know how you feel about promotions</span>
+                    <a href="javascript:;" onclick="nl_wizard_next()" title="confirm terms!">NEXT</a>
+                </div>
+            </div>
+            <div class="nl-subscribe__wizard__step nl-subscribe__wizard__step--future">
+                <div class="nl-subscribe__wizard__step__number">3</div>
+                <div class="nl-subscribe__wizard__step__content">
+                    <p>All set, we will be sending updates from news@prettyneat.io to you:</p>
+                    <span class="esteemed-user"></span>
+                </div>
+                <div class="nl-subscribe__wizard__step__next">
+                    <span>We're all set...</span>
+                    <a href="javascript:;" onclick="nl_wizard_next()" title="get news!">Thanks</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,322 @@
+.nl-subscribe{
+ font-size: 1.2rem;
+}
+
+.nl-subscribe *{
+    box-sizing: border-box;
+}
+
+.nl-subscribe .nl-subscribe__frame{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0.2rem;
+    border: 4px solid var(--orange);    
+    opacity: 1;
+    overflow: hidden;
+    height: auto;
+}
+
+.nl-subscribe .nl-subscribe__wizard{
+    width: 300%;
+    color: var(--blue);   
+    display: flex; 
+}
+
+@keyframes frame-collapsed{
+    0%{ 
+        height: 220px;
+        opacity: 1;
+    }
+    100%{
+        width: 100%;       
+        height: 0%;
+        opacity: 0;
+        display: none;
+    }
+}
+
+.nl-subscribe .nl-subscribe__frame.nl-subscribe__frame--collapsed{
+    animation: frame-collapsed 0.5s ease-out 0s 1 normal both;
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step{
+    overflow: hidden;
+    display: inline-flex; 
+    width: calc((100% / 3));
+    transition: margin-left ease 1s;   
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step.nl-subscribe__wizard__step--next{
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step.nl-subscribe__wizard__step--future{
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step.nl-subscribe__wizard__step--prev{
+    margin-left: calc((-100% / 3));
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step.nl-subscribe__wizard__step--past{
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__number{
+    flex: 0 0 20%;
+    background-color: var(--orange);
+    color: var(--light-orange);
+    font-size: 2.4rem;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__content{
+    flex: 0 0 60%;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    display: flex;
+    align-content: center;
+    flex-flow: row wrap;
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__content p{
+    line-height: 1.2rem;
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__content input{
+    width: 100%;
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.2rem;
+    color: var(--dark-orange);
+    border: 3px solid var(--blue);
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__content button{
+    border: none 0 transparent;
+    background: transparent;
+    color: var(--dark-blue);
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__next{
+    flex: 0 0 20%;
+    background-color: var(--orange);
+    color: var(--light-orange);   
+    align-self: stretch;
+    text-align: center;
+    padding: 0.5rem;  
+    position: relative;       
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__next span{
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    transform: translate(0,-50%);      
+    left: 0.2rem;
+    right: 0.2rem; 
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__next a{
+    text-decoration: none;
+    opacity: 0;
+    border: 2px solid #fff;
+    background-color: var(--light-orange);
+    padding: 0.2rem 0.4rem;
+    position: absolute;
+    transition: opacity 1s ease;    
+    text-align: center;
+    display: inline-block;  
+    top: 50%;
+    transform: translate(0,-50%); 
+    left: 0.2rem;
+    right: 0.2rem;  
+    filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.3));
+    border-radius: 0.2rem;
+    color: var(--orange);
+    cursor: pointer;
+}
+
+body .nl-subscribe .nl-subscribe__wizard .nl-subscribe__wizard__step .nl-subscribe__wizard__step__next a:hover{
+    transform: scale(1.02) translate(0,-50%); 
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__next a::after{
+    content: '';
+    letter-spacing: -1rem;
+    padding-left: 1.2rem;
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__next.nl-subscribe__wizard__step__next--ready{
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__next.nl-subscribe__wizard__step__next--ready 
+span{
+    opacity: 0;
+}
+
+.nl-subscribe .nl-subscribe__wizard
+.nl-subscribe__wizard__step
+.nl-subscribe__wizard__step__next.nl-subscribe__wizard__step__next--ready 
+a{
+    opacity: 1;
+}
+
+.nl-subscribe .nl-subscribe__done{
+    opacity: 0;
+    transform: scale(0.01);
+    transition: opacity ease 1s;
+}
+
+.nl-subscribe .nl-subscribe__done.nl-subscribe__done--shown{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.button-ify{
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+    border: 2px solid var(--orange);
+    cursor: pointer;
+}
+
+.esteemed-user{
+    color: var(--dark-orange);
+    margin: 0.2rem 0;
+    font-weight: bold;
+    display: inline-block;
+}
+
+input[name='rd_promo']{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    display:none;
+}
+
+.fancy-radio{
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-left: 1.4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    cursor: pointer;
+}
+
+.fancy-radio::before{
+    content: ' ';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.2rem;
+    border: 2px solid rgba(0,0,0,0.7);
+    box-shadow: -2px 2px 0 rgba(0,0,0,0.6);
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+input[name='rd_promo']:checked + .fancy-radio:after{
+    content: '✔';
+    position: absolute;
+    top: -0.2rem;
+    left: 0.2rem;
+}
+
+input[name='rd_promo']:checked + .fancy-radio:before{
+    border: 2px solid var(--orange);
+    box-shadow: -2px 2px 0 var(--light-blue);
+}
+
+
+@media (max-width: 767px){
+    .nl-subscribe{
+        max-width: 90vw;
+    }
+
+    .nl-subscribe__wizard{
+        display: flex;
+        flex-flow: row wrap;
+
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step{
+        flex-flow: row wrap;
+
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step
+    .nl-subscribe__wizard__step__number{
+        flex: 0 0 100%;
+        font-size: 2.4rem;        
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step
+    .nl-subscribe__wizard__step__content{
+        flex: 0 0 100%;
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step
+    .nl-subscribe__wizard__step__next{
+        flex: 0 0 100%;
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step
+    .nl-subscribe__wizard__step__next span{
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .nl-subscribe .nl-subscribe__wizard
+    .nl-subscribe__wizard__step
+    .nl-subscribe__wizard__step__next a{
+        position: absolute;
+        transform: translate(0, -50%);
+        top: 50%;
+    }    
+}

@@ -1,0 +1,12 @@
+<nav class="nav-container">
+  <span class="grid-nav-item banner">
+    <a href="/" class="{% if page.url == '/' %}current{% endif %} button float-left bos-hover pretty-neat-button">Pretty
+      Neat</a>
+  </span>
+  <span class="grid-nav-item links">
+    <a href="/blog" class="{% if page.url == '/blog/' %}current{% endif %} button float-right bos-hover">Blog</a>
+    <a href="/careers"
+      class="{% if page.url == '/careers.html' %}current{% endif %} button float-right bos-hover">Careers</a>
+    <a href="/about" class="{% if page.url == '/about.html' %}current{% endif %} button float-right bos-hover">About</a>
+  </span>
+</nav>

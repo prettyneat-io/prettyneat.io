@@ -1,0 +1,231 @@
+.blog-list{
+    width: 100%;
+}
+
+.blog-list *{
+    box-sizing: border-box;
+}
+
+.blog-list__post{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-bottom: 3.1rem;
+}
+
+.blog-list__post__header{    
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    padding: 0;
+}
+
+.blog-list__post__header__talking-head{
+    display: none;
+    position: absolute;
+    left: -1.2rem; 
+    top: 0rem;
+    background-color: rgba(255,255,255,1);
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-right: 0.5rem;
+    border-radius: 100%;
+
+}
+
+.blog-list__post__header__talking-head img{
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 100%;
+    box-shadow: 3px -1px 0 var(--orange);
+    border: 0.15rem solid var(--lighter-blue);     
+    z-index: 1;
+    position: relative;
+}
+
+.blog-list__post__header__talking-head::before{
+    position: absolute;
+    right: -0.45rem;
+    height: 0;
+    top: 0.2rem;
+    width: 0;
+    border-top: 0.6rem solid transparent;
+    border-bottom: 0.6rem solid transparent;
+    border-left: 0.6rem solid var(--orange);
+    content: ' ';    
+    z-index: 0;
+}
+
+.blog-list__post__header a{
+    text-decoration: none; 
+    align-self: center;   
+}
+
+.blog-list__post__header a h4{
+    margin: 0;
+    padding: 0;
+    display: block;    
+    color: var(--blue); 
+}
+
+.blog-list__post__header__by{      
+    margin-left: auto;  
+    margin-right: 0.6rem; 
+    flex: 0 0 auto;
+    display: flex;   
+    flex-flow: column wrap; 
+    max-height: 2.2rem;
+    opacity: 0.7;  
+    margin-bottom: -0.2rem;  
+}
+
+.blog-list__post__header__by h5{       
+    
+    font-style: italic;
+    font-size: 0.6em;
+    display: inline-block
+}
+
+.blog-list__post__excerpt{
+    margin: 0.4rem 0.1rem;
+    width: 100%;
+    display: block;
+    position: relative;    
+    border-bottom: 1px solid var(--orange);
+    /* padding: 0 2.3rem 0.6rem 2.3rem; */
+}
+
+.blog-list__post__excerpt p{
+    display: inline;
+}
+/* 
+.blog-list__post__excerpt::before{
+    display: block;
+    position: absolute;
+    width: 2rem;
+    height: 4rem;
+    top: -0.8rem;
+    left: 0;
+    content: '“';
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: rgba(0,0,0,0.6);
+}
+
+.blog-list__post__excerpt::after{
+    display: block;
+    position: absolute;
+    width: 2rem;
+    height: 4rem;
+    bottom: -1.6rem;
+    right: 0;
+    content: '”';
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: rgba(0,0,0,0.6);
+} */
+
+.blog-list__post__footer{
+    font-size: 0.75em;    
+    text-align: right;
+    
+    
+    width: 100%;
+        
+    
+    opacity: 0.9;
+    
+    color: rgba(0,0,0,0.7);
+    display: flex;
+}
+
+.blog-list__post__footer__meta{
+    flex: 1;
+    text-align: left;
+}
+
+.blog-list__post__footer__tags{
+    flex: 1;
+    text-align: right;
+}
+
+.blog-list__tag{
+    font-style: normal;
+    font-weight: bold;
+    padding: 0.1rem 0.2rem; 
+    
+    display: inline-block;        
+}
+
+.blog-list__tag::before{
+    content: '[';
+    font-size: 0.7em;
+    display: inline-block;
+    padding-right: 0.2rem;
+    transform: translate(0,-0.09rem);
+}
+.blog-list__tag::after{
+    content: ']';
+    font-size: 0.7em;
+    display: inline-block;
+    padding-left: 0.2rem; 
+    transform: translate(0,-0.09rem);    
+}
+
+.align-fixer{
+    display: inline-block;
+    width: 1.2rem;
+    margin-right: 0.2rem;
+    text-align: right;
+    font-style: normal;
+}
+/* 
+@keyframes reading-dots{
+    0%{ content: '.'; }
+    33%{ content: '..'; }
+    67%{ content: '...'; }
+    100%{ content: '.'; }
+} */
+
+a.keep-reading{
+    font-style: italic;
+    color: var(--dark-blue) !important;
+    display: inline;
+    font-size: 0.9em;
+}
+/* 
+.keep-reading::after{
+    content:'.';
+    animation: reading-dots 3s linear infinite running;
+} */
+
+@media (max-width: 767px){
+    .blog-list__post__excerpt{
+        text-align: justify;
+        padding: 0 1rem 1rem 0rem;
+    }
+
+    .blog-list__post__excerpt::before{
+        font-size: 2rem;
+        opacity: 0.4;
+        left: -0.2rem; 
+        top: -0.3rem;       
+    }
+    .blog-list__post__excerpt::after{
+        font-size: 2rem;
+        opacity: 0.4;
+        right: -1rem;
+        bottom: -2.2rem;
+    }
+
+    .blog-list__post__footer{
+        flex-flow: row wrap;
+    }
+
+    .blog-list__post__footer__meta,
+    .blog-list__post__footer__tags{
+        flex: 0 0 100%;
+        text-align: left;
+    }
+}

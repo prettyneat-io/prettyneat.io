@@ -1,0 +1,225 @@
+@keyframes shifting-container{
+    0%{
+        padding: 0 0;
+    }
+    70%{
+        padding: 3rem;
+    }
+    100%{
+        padding: 0 0 1rem 0;
+    }
+}
+
+@keyframes shifting-container-top{
+    0%{
+        padding: 0 0 1rem 0;
+    }
+    70%{
+        padding: 0 0 3rem 0;
+    }
+    100%{
+        padding: 0 0 1rem 0;
+    }
+}
+
+@keyframes shifting-text{
+    0%{
+        opacity: 1.0;
+    }
+    40%{
+        opacity: 0.0;
+    }
+    100%{
+        opacity: 1.0;
+    }
+}
+
+.cookies-slider{
+    position: absolute;
+    background-color: var(--orange);  
+    bottom: 5vh;
+    right: 0;
+    max-width: 45vw;
+    transition: all 1s ease, opacity 0.25s ease;    
+    z-index: 7777;
+    border-radius: 0.25rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);  
+    overflow: hidden;  
+    opacity: 0;  
+}
+
+.cookies-slider *{
+    box-sizing: border-box;
+}
+
+.cookies-slider--in{    
+    opacity: 1 !important;
+}
+
+.cookies-slider--shifting{
+    animation: 0.5s ease 0.5s 1 running both shifting-container;        
+}
+
+.cookies-slider--out{
+    transition: all 0.3s ease 0.55s; 
+    max-width: 0;
+    opacity: 0;
+}
+
+.cookies-slider--shifting.cookies-slider--out{
+    transition: all 0.3s ease 0.7s;
+}
+
+.cookies-slider::before{
+    content:' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('/assets/flame-uploading.png');
+    opacity: 0.25;
+    z-index: -1;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    transition: background-size 0.2s ease;
+    transition: background-position 0.6s ease;
+}
+
+.cookies-slider--out::before{
+    background-size: 20%;
+    background-position: 199% 50%;
+}
+
+.cookies-slider__text{
+    text-shadow: 2px 2px 0 var(--orange);
+    color: rgba(255,255,255,1);
+    padding: 1rem;
+    display: inline-block;   
+    opacity: 1; 
+    transition: font-size 0.3s ease 0.5s, letter-spacing 0.3s ease 0.5s, opacity 0.2s ease 0.5s;
+}
+
+.cookies-slider__text hr{
+    width: 100%;
+    border-bottom: 2px dashed rgba(255,255,255,0.8);
+    border-radius: 50%;
+    margin: 1rem auto;
+    color: transparent;
+}
+
+.cookies-slider__text--shifting{
+    animation: 1s ease 0s 1 running both shifting-text;
+}
+
+.cookies-slider__text--out{
+    font-size: 1px;
+    letter-spacing: -1px;
+    opacity: 0;
+}
+
+.cookies-slider__consent{
+    margin-right: 0.3rem;
+    transition: margin 1s ease, font-size 0.3s ease 0.5s, width 0.3s ease 0.5s, opacity 0.2s ease 0.5s;
+    opacity: 1;
+}
+
+.cookies-slider__consent--shifted{
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;    
+}
+
+.cookies-slider__consent--out{
+    font-size: 0.01rem;
+    width: 0;
+    opacity: 0;
+}
+
+.cookies-slider__more-info{
+    margin-right: 0.5rem;
+    transition: margin 1s ease, font-size 0.3s ease 0.5s, width 0.3s ease 0.5s, opacity 0.2s ease 0.5s;
+    opacity: 1;
+}
+
+.cookies-slider__more-info--shifted{
+    margin-bottom: 0.2rem;    
+}
+
+.cookies-slider__more-info--out{
+    font-size: 0.01rem;
+    width: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width:720px){
+    .cookies-slider{
+        padding-bottom: 1.1rem;
+    }
+
+    .cookies-slider__text{
+        padding-left: 0.6rem;
+        width: 100%;
+        padding-bottom: 0.5rem;
+    }    
+
+    .cookies-slider__text--shifting{
+        padding-bottom: 1rem;
+    }
+
+    .cookies-slider__consent{
+        margin-left: 0.6rem;
+        margin-top: 0.5rem;
+    }
+    .cookies-slider__more-info{
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width:970px){
+    
+    .cookies-slider{
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: unset;
+        max-width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .cookies-slider--shifting{
+        animation: 0.5s ease 0.5s 1 running both shifting-container-top;           
+    }    
+
+    .cookies-slider--out{
+        right: 49%;
+        left: 49%;
+    }
+
+    body{
+        transition: padding-top 0.4s ease;
+    }
+
+    body.docookie{
+        padding-top:5rem;        
+    }
+
+    body.nocookies{
+        padding-top: 0 !important;
+    }
+}
+
+@media screen and (max-width:1679px){
+    .cookies-slider{
+        padding-bottom: 1rem;
+    }
+
+    .cookies-slider__text{
+        width: 100%;
+    }
+
+    .cookies-slider__consent{
+        margin-left: 1rem;
+    }
+}
