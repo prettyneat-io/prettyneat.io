@@ -1,5 +1,20 @@
 window.onscroll = function(){
     landingAnimator();
+    serviceAnimator();
+}
+
+window.typewriter_settimeout;
+
+
+function serviceAnimator(){
+    const servicesSection = document.getElementById('services')
+    var servicesBody = document.querySelectorAll(".service-body");
+    if (window.scrollY > servicesSection.offsetHeight / 2){
+        for(var i = 0; i < servicesBody.length; i++){
+            servicesBody[i].classList.add("attention");
+        }
+        
+    }
 }
 
 function landingAnimator(){
@@ -16,11 +31,7 @@ function landingAnimator(){
     }
 }
 function setupTypewriter(t) {
-    if(window.typewriter_finished){
-        window.typewriter_finished = false
-    }
     let HTML = document.getElementById('typewriter-htmlholder').innerHTML
-    console.log(HTML)
     const comment = document.querySelector('.code-comment');
     t.innerHTML = ''; //comment.innerHTML;
     let cursorPosition = 0,
@@ -29,6 +40,11 @@ function setupTypewriter(t) {
         tagOpen = false,
         typeSpeed = 15,
     tempTypeSpeed = 0;
+    let stop = function(){
+        if(window.typewriter_settimeout){
+            clearTimeout(window.typewriter_settimeout)
+        }
+    }
     let type = function() {
 
         if (writingTag === true) {
@@ -70,26 +86,36 @@ function setupTypewriter(t) {
         }
         cursorPosition += 1;
         if (cursorPosition < HTML.length - 1) {
-            setTimeout(type, tempTypeSpeed); 
+            window.typewriter_settimeout = setTimeout(type, tempTypeSpeed); 
         } else {
-            console.log("typewriter finished")
+            this.stop()
             window.typewriter_finished = true;
         }
     };
     return {
-        type: type
+        type: type,
+        stop:stop
     };
 }
 function initTypeWriter(){
     let typewriter = document.getElementById('typewriter');
     typewriter = setupTypewriter(typewriter);
     typewriter.type();
+    
+}
+
+function resetTypeWriter(){
+    let typewriter = document.getElementById('typewriter');
+    typewriter = setupTypewriter(typewriter);
+    typewriter.stop()
+    typewriter.type();
+    
 }
 
 initTypeWriter();
 
 let prettyNeatPlayer = document.getElementById('pretty-player');
 prettyNeatPlayer.querySelector('.play-btn').addEventListener('click', function(){
-    if(!window.typewriter_finished) return;
-    initTypeWriter()
+    // if(!window.typewriter_finished) return;
+    resetTypeWriter()
 })
