@@ -153,8 +153,7 @@
   overflow: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-filter: drop-shadow(7px -5px 5px var(--lighter-blue));
-  filter: drop-shadow(7px -5px 0px var(--lighter-blue));
+  box-shadow: 5px -3px 1px var(--lighter-blue);
   padding: 1rem;
 }
 .card-front img {
