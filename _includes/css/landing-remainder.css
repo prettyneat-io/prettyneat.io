@@ -128,10 +128,10 @@
 .card-back {
   transform: rotateY(180deg);
 }
-.service-body:active .card-front {
+.service-body.active .card-front {
   transform: rotateY(-180deg);
 }
-.service-body:active .card-back {
+.service-body.active .card-back {
   transform: rotateY(0);
 }
 .card-side {

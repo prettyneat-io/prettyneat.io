@@ -122,7 +122,19 @@ function pulsePlayBtn(){
     },1000)
 }
 
+function initEvents(){
+    var servicesBody = document.querySelectorAll(".service-body");
+    for(var i = 0; i < servicesBody.length; i++){
+        servicesBody[i].addEventListener('click', function(event){
+            console.log(this)
+            this.classList.toggle('active');
+        })
+    }
+}
+
 initTypeWriter();
+
+initEvents();
 
 prettyNeatPlayerPlayBtn.addEventListener('click', function(){
     resetTypeWriter()
