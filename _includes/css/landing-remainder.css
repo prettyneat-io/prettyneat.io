@@ -121,6 +121,7 @@
   perspective: 130rem;
   margin-left: 2rem;
   margin-right: 2rem;
+  cursor: pointer;
 }
 
 .service-body.attention .card-front {
@@ -137,12 +138,12 @@
 .service-body:active .card-back {
   transform: rotateY(0);
 }
-.service-body:hover .card-front {
+/* .service-body:hover .card-front {
   transform: rotateY(-180deg);
 }
 .service-body:hover .card-back {
   transform: rotateY(0);
-}
+} */
 .card-side {
   margin: 1rem;
   max-height: 28rem;
