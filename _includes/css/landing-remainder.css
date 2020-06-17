@@ -90,10 +90,6 @@
   margin-right: 10%;
   padding-bottom: 1rem;
 }
-.service-body {
-  -webkit-filter: drop-shadow(5px -3px 5px var(--lighter-blue));
-  filter: drop-shadow(5px -3px 0px var(--lighter-blue));
-}
 .tasty-text {
   text-shadow: 2px -2px var(--light-orange);
   color: var(--dark-blue);
@@ -138,22 +134,17 @@
 .service-body:active .card-back {
   transform: rotateY(0);
 }
-/* .service-body:hover .card-front {
-  transform: rotateY(-180deg);
-}
-.service-body:hover .card-back {
-  transform: rotateY(0);
-} */
 .card-side {
   margin: 1rem;
   max-height: 28rem;
   min-height: 28rem;
   position: absolute;
   top: 0;
+  /* left: 0; */
   left: -1rem;
   max-width: 20rem;
   min-width: 15rem;
-  width: 100%;
+  width: 20rem;
   transition: all 0.6s ease-in-out;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
   background-color: var(--dark-blue);
@@ -162,7 +153,8 @@
   overflow: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-
+  -webkit-filter: drop-shadow(7px -5px 5px var(--lighter-blue));
+  filter: drop-shadow(7px -5px 0px var(--lighter-blue));
   padding: 1rem;
 }
 .card-front img {
