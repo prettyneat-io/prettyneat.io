@@ -335,6 +335,10 @@ nav {
 
 }
 
+#pretty-player .play-btn.pulse{
+  animation: pulse 1s infinite;
+}
+
 pre {
   color: white;
 }
@@ -508,14 +512,23 @@ pre {
 
 @keyframes pulse {
 	0% {
-		transform: scale(0.95);
-	}
-
-	70% {
 		transform: scale(1);
 	}
 
-	100% {
-		transform: scale(0.95);
-	}
+	25% {
+		transform: scale(1.1);
+  }
+
+  50% {
+		transform: scale(0.9);
+  }
+
+  75% {
+		transform: scale(1.1);
+  }
+
+  100% {
+		transform: scale(1);
+  }
+  
 }

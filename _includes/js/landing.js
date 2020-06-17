@@ -5,6 +5,8 @@ window.onscroll = function(){
 
 window.typewriter_settimeout;
 
+let prettyNeatPlayer = document.getElementById('pretty-player');
+let prettyNeatPlayerPlayBtn = prettyNeatPlayer.querySelector('.play-btn');
 
 function serviceAnimator(){
     const servicesSection = document.getElementById('services')
@@ -88,6 +90,7 @@ function setupTypewriter(t) {
         if (cursorPosition < HTML.length - 1) {
             window.typewriter_settimeout = setTimeout(type, tempTypeSpeed); 
         } else {
+            pulsePlayBtn()
             this.stop()
             window.typewriter_finished = true;
         }
@@ -112,10 +115,15 @@ function resetTypeWriter(){
     
 }
 
+function pulsePlayBtn(){
+    prettyNeatPlayerPlayBtn.classList.add("pulse");
+    setTimeout(function(){
+        prettyNeatPlayerPlayBtn.classList.remove("pulse");
+    },1000)
+}
+
 initTypeWriter();
 
-let prettyNeatPlayer = document.getElementById('pretty-player');
-prettyNeatPlayer.querySelector('.play-btn').addEventListener('click', function(){
-    // if(!window.typewriter_finished) return;
+prettyNeatPlayerPlayBtn.addEventListener('click', function(){
     resetTypeWriter()
 })
