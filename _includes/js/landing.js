@@ -122,14 +122,27 @@ function pulsePlayBtn(){
     },1000)
 }
 
-function initEvents(){
+function flipServicesCardsOnClick(){
     var servicesBody = document.querySelectorAll(".service-body");
+    var currentServiceIndex = 0
+    //firt we add the click listener for each service card 
     for(var i = 0; i < servicesBody.length; i++){
         servicesBody[i].addEventListener('click', function(event){
-            console.log(this)
-            this.classList.toggle('active');
+            this.classList.toggle('active')
+            //once we click the cart we need to save the index to a variable
+            currentServiceIndex = Array.prototype.indexOf.call(servicesBody, this)
+            //we need to loop again through the cards, and wee need to flip back to normal the cards except the current one
+            for(var i = 0; i < servicesBody.length; i++){
+                if(currentServiceIndex != i){
+                    servicesBody[i].classList.remove('active')
+                }
+            }
         })
     }
+}
+
+function initEvents(){
+    flipServicesCardsOnClick()
 }
 
 initTypeWriter();
