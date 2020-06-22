@@ -194,10 +194,12 @@
   margin-bottom: 2rem;
 }
 .service-body img.tech-icon {
-  height: 4rem;
-  width: 4rem;
-  margin: 0 auto;
-  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(50% - 20px);
+  width: calc(50% - 20px);
+  margin: 10px;
 }
 
 /* STACK SECTION */
