@@ -32,9 +32,6 @@
   .card-side .card-icons {
     max-width: 50%;
   }
-  .service-body .card-side img.tech-icon {
-    width: 3rem;
-  }
 }
 .grid-content-item.service-header {
   grid-area: service-header;
