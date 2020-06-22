@@ -189,6 +189,7 @@
   max-height: 12rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 .service-body img.tech-icon {
   display: flex;
