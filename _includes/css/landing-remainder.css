@@ -443,7 +443,7 @@
 /* TASTY POST SECTION */
 @media (min-width: 763px) {
   .posts-container {
-    padding-top: 2rem;
+    padding-top: 3rem;
     background-image: url(./assets/white-twill.png);
     background-color: var(--yellow);
     border-top: 1rem solid var(--orange);
@@ -457,7 +457,7 @@
 }
 @media (max-width: 763px) {
   .posts-container {
-    padding-top: 2rem;
+    padding-top: 3rem;
     min-height: 40vh;
     background-image: url(./assets/white-twill.png);
     background-color: var(--yellow);
@@ -478,7 +478,7 @@
   display: flex;
   flex-direction: row;
   justify-content:center;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .posts {
@@ -496,7 +496,7 @@
   text-align: center;
 }
 .post-header {
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 .posts-container h4 {
   font-size: 1.5rem;
@@ -518,7 +518,7 @@
   padding-bottom: 1rem;
 }
 .post-body-container {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -543,7 +543,7 @@
   padding: 0.75rem 1.5rem;
   background: #fff8ea;
   box-shadow: 7px 9px 9px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   border-radius: 0.5rem;
 }
 
@@ -572,6 +572,7 @@
 .post-card > .post-card-body > .post-excerpt{
   font-size: 1.1rem;
   text-align: justify;
+  font-weight: 400;
 }
 
 .post-card > .post-card-body > .keep-reading{
@@ -602,7 +603,7 @@
   border-top: 1px solid var(--orange)
 }
 
-.post-card > .post-card-footer > .author{
+.post-card > .post-card-footer > .date{
   font-size: 0.95rem;
   padding-top: 0.5rem;
 }

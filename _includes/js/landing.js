@@ -1,5 +1,22 @@
 window.onscroll = function(){
     landingAnimator();
+    serviceAnimator();
+}
+
+window.typewriter_settimeout;
+
+let prettyNeatPlayer = document.getElementById('pretty-player');
+let prettyNeatPlayerPlayBtn = prettyNeatPlayer.querySelector('.play-btn');
+
+function serviceAnimator(){
+    const servicesSection = document.getElementById('services')
+    var servicesBody = document.querySelectorAll(".service-body");
+    if (window.scrollY > servicesSection.offsetHeight / 2){
+        for(var i = 0; i < servicesBody.length; i++){
+            servicesBody[i].classList.add("attention");
+        }
+        
+    }
 }
 
 function landingAnimator(){
@@ -16,7 +33,7 @@ function landingAnimator(){
     }
 }
 function setupTypewriter(t) {
-    let HTML = t.innerHTML;
+    let HTML = document.getElementById('typewriter-htmlholder').innerHTML
     const comment = document.querySelector('.code-comment');
     t.innerHTML = ''; //comment.innerHTML;
     let cursorPosition = 0,
@@ -25,7 +42,13 @@ function setupTypewriter(t) {
         tagOpen = false,
         typeSpeed = 15,
     tempTypeSpeed = 0;
+    let stop = function(){
+        if(window.typewriter_settimeout){
+            clearTimeout(window.typewriter_settimeout)
+        }
+    }
     let type = function() {
+
         if (writingTag === true) {
             tag += HTML[cursorPosition];
         }
@@ -65,13 +88,67 @@ function setupTypewriter(t) {
         }
         cursorPosition += 1;
         if (cursorPosition < HTML.length - 1) {
-            setTimeout(type, tempTypeSpeed);
+            window.typewriter_settimeout = setTimeout(type, tempTypeSpeed); 
+        } else {
+            pulsePlayBtn()
+            this.stop()
+            window.typewriter_finished = true;
         }
     };
     return {
-        type: type
+        type: type,
+        stop:stop
     };
 }
-let typewriter = document.getElementById('typewriter');
-typewriter = setupTypewriter(typewriter);
-typewriter.type();
+function initTypeWriter(){
+    let typewriter = document.getElementById('typewriter');
+    typewriter = setupTypewriter(typewriter);
+    typewriter.type();
+    
+}
+
+function resetTypeWriter(){
+    let typewriter = document.getElementById('typewriter');
+    typewriter = setupTypewriter(typewriter);
+    typewriter.stop()
+    typewriter.type();
+    
+}
+
+function pulsePlayBtn(){
+    prettyNeatPlayerPlayBtn.classList.add("pulse");
+    setTimeout(function(){
+        prettyNeatPlayerPlayBtn.classList.remove("pulse");
+    },1000)
+}
+
+function flipServicesCardsOnClick(){
+    var servicesBody = document.querySelectorAll(".service-body");
+    var currentServiceIndex = 0
+    //firt we add the click listener for each service card 
+    for(var i = 0; i < servicesBody.length; i++){
+        servicesBody[i].addEventListener('click', function(event){
+            this.classList.toggle('active')
+            //once we click the cart we need to save the index to a variable
+            currentServiceIndex = Array.prototype.indexOf.call(servicesBody, this)
+            //we need to loop again through the cards, and wee need to flip back to normal the cards except the current one
+            for(var i = 0; i < servicesBody.length; i++){
+                if(currentServiceIndex != i){
+                    servicesBody[i].classList.remove('active')
+                }
+            }
+        })
+    }
+}
+
+function initEvents(){
+    flipServicesCardsOnClick()
+}
+
+initTypeWriter();
+
+initEvents();
+
+prettyNeatPlayerPlayBtn.addEventListener('click', function(){
+    resetTypeWriter()
+})

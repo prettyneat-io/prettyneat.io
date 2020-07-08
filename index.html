@@ -20,12 +20,12 @@ layout: default
             </div>
         </div>
     </div>
-    <div class="grid-content-item landing-image">
-        <img alt="cartoon robots giving ok sign"  src="/assets/landing-hero.svg" />
+    <div class="grid-content-item pretty-player-wrapper">
+        {% include /pretty-player.html %}
     </div>
-<a href="#services" aria-label="scroll down button" class="scroll-down">
-    <span class="scroll-button"></span>
-</a>
+    <a href="#services" aria-label="scroll down button" class="scroll-down">
+        <span class="scroll-button"></span>
+    </a>
 </div> 
 
 <div id="services" class="services-container">
@@ -35,83 +35,83 @@ layout: default
         </h3>
     </div>
     <div class="service-body-container">
-        <div class="grid-content-item service-body-1 service-body">
-            <span class="card-side card-front">
+    <div class="grid-content-item service-body-1 service-body">
+        <span class="card-side card-front">
 
-                <img alt="cartoon business person" src="/assets/flame-business.png"/>
-                <h4>Enterprise Web Applications</h4>
-                <p class="service-body-subheader"> We automate systems, to keep things simple at home, in-office, or on the go. </p>
+            <img alt="cartoon business person" src="/assets/flame-business.png"/>
+            <h4>Enterprise Web Applications</h4>
+            <p class="service-body-subheader"> We automate systems, to keep things simple at home, in-office, or on the go. </p>
+        </span>
+        <span class="card-side card-back">
+            <span class="card-icons">
+                <img src="/assets/tech-icons/postgresql.svg" alt="postgres icon" class="tech-icon">
+                <img src="/assets/tech-icons/SQLServer.svg" alt="sqlserver icon" class="tech-icon">
+                <img src="/assets/tech-icons/dotnet.svg" alt="dotnet icon" class="tech-icon">
+                <img src="/assets/tech-icons/vue.svg" alt="vue icon" class="tech-icon">
             </span>
-            <span class="card-side card-back">
-                <span class="card-icons">
-                    <img src="/assets/tech-icons/postgresql.svg" alt="postgres icon" class="tech-icon">
-                    <img src="/assets/tech-icons/SQLServer.svg" alt="sqlserver icon" class="tech-icon">
-                    <img src="/assets/tech-icons/dotnet.svg" alt="dotnet icon" class="tech-icon">
-                    <img src="/assets/tech-icons/vue.svg" alt="vue icon" class="tech-icon">
-                </span>
-                <span>
-                    <h4>Monolith or Microservice?</h4>
-                    <p class="tech-text">
-                        Organizations are complex, but the tools shouldn't be. 
-                        We'll architect a system that works for you.
-                    </p>
-                </span>
+            <span>
+                <h4>Monolith or Microservice?</h4>
+                <p class="tech-text">
+                    Organizations are complex, but the tools shouldn't be. 
+                    We'll architect a system that works for you.
                 </p>
             </span>
-        </div>
-        <div class="grid-content-item service-body-2 service-body">
+            </p>
+        </span>
+    </div>
+    <div class="grid-content-item service-body-2 service-body">
+        <span class="card-side card-front">
+            <img alt="cartoon cloud and human brain" src="/assets/flame-cloud.png"/>
+            <h4>Cloud Applications and SaaS</h4>
+            <p  class="service-body-subheader"> We help provide the security, high performance and cost-effectiveness of doing things online.</p>
+        </span>
+        <span class="card-side card-back">
+            <span class="card-icons">     
+                <img src="/assets/tech-icons/aws.svg" alt="aws icon" class="tech-icon">
+                <img src="/assets/tech-icons/ubuntu.svg" alt="ubuntu icon" class="tech-icon">
+                <img src="/assets/tech-icons/windows.svg" alt="windows icon" class="tech-icon">
+                <img src="/assets/tech-icons/docker.svg"alt="docker icon" class="tech-icon">
+            </span>
+            <span>
+                <h4>Serverless, Containers or VPS?</h4>
+                <p class="tech-text">
+                    Start local, take it global. From bots to subscription services - 
+                    we'll put together a platform and stack combination that scales. 
+                </p>
+            </span>
+        </span>
+    </div>
+    <div class="grid-content-item service-body-3 service-body">
             <span class="card-side card-front">
-                <img alt="cartoon cloud and human brain" src="/assets/flame-cloud.png"/>
-                <h4>Cloud Applications and SaaS</h4>
-                <p  class="service-body-subheader"> We help provide the security, high performance and cost-effectiveness of doing things online.</p>
+                <img alt="cartoon hand coming out of phone" src="/assets/flame-mobile.png"/>
+                <h4>Mobile and Multiplatform</h4>
+                <p  class="service-body-subheader"> We create responsive applications that adapt to your customers’ habits no matter what their device is!</p>
             </span>
-            <span class="card-side card-back">
-                <span class="card-icons">     
-                    <img src="/assets/tech-icons/aws.svg" alt="aws icon" class="tech-icon">
-                    <img src="/assets/tech-icons/ubuntu.svg" alt="ubuntu icon" class="tech-icon">
-                    <img src="/assets/tech-icons/windows.svg" alt="windows icon" class="tech-icon">
-                    <img src="/assets/tech-icons/docker.svg"alt="docker icon" class="tech-icon">
-                </span>
-                <span>
-                    <h4>Serverless, Containers or VPS?</h4>
-                    <p class="tech-text">
-                        Start local, take it global. From bots to subscription services - 
-                        we'll put together a platform and stack combination that scales. 
-                    </p>
-                </span>
+        <span class="card-side card-back">
+            <span class="card-icons">
+                <img src="/assets/tech-icons/ios.svg" alt="ios icon" class="tech-icon">
+                <img src="/assets/tech-icons/swift.svg" alt="swift icon" class="tech-icon">
+                <img src="/assets/tech-icons/android.svg" alt="android icon" class="tech-icon">
+                <img src="/assets/tech-icons/java.svg" alt="java icon" class="tech-icon">
             </span>
-        </div>
-        <div class="grid-content-item service-body-3 service-body">
-                <span class="card-side card-front">
-                    <img alt="cartoon hand coming out of phone" src="/assets/flame-mobile.png"/>
-                    <h4>Mobile and Multiplatform</h4>
-                    <p  class="service-body-subheader"> We create responsive applications that adapt to your customers’ habits no matter what their device is!</p>
-                </span>
-            <span class="card-side card-back">
-                <span class="card-icons">
-                    <img src="/assets/tech-icons/ios.svg" alt="ios icon" class="tech-icon">
-                    <img src="/assets/tech-icons/swift.svg" alt="swift icon" class="tech-icon">
-                    <img src="/assets/tech-icons/android.svg" alt="android icon" class="tech-icon">
-                    <img src="/assets/tech-icons/java.svg" alt="java icon" class="tech-icon">
-                </span>
-                <span >
-                    <h4>Cross Platform or Native?</h4>
-                    <p class="tech-text">
-                        Sometimes a responsive web app is all it takes. 
-                        Other times, the only way forward is native. 
-                        We'll help you figure out when its the right fit.
-                    </p>
-                </span>
+            <span >
+                <h4>Cross Platform or Native?</h4>
+                <p class="tech-text">
+                    Sometimes a responsive web app is all it takes. 
+                    Other times, the only way forward is native. 
+                    We'll help you figure out when its the right fit.
+                </p>
             </span>
-        </div>
+        </span>
     </div>
     <div class="grid-content-item service-subheader">
     </div>
 </div>
+</div>
 <div class="stack-container ">
     <div class="grid-content-item stack-image stack-image-background">
-    <span class="stack-image-background">
-    </span>
+        <span class="stack-image-background">
+        </span>
     </div>
     <div class="grid-content-item stack-image stack-stripe">
         <img src="/assets/flame-design-science.png" alt="cartoon engineer">
@@ -151,8 +151,8 @@ layout: default
                 <a href="{{ post.url }}" class="keep-reading">Keep reading</a>
             </div>
             <div class="post-card-footer">
-                <div class="author">
-                    By {{ post.author | default: 'PrettyNeat' }} on {{ post.date | date_to_long_string: 'ordinal'}} 
+                <div class="date">
+                    on {{ post.date | date_to_long_string: 'ordinal'}} 
                 </div>    
                 <div class="tags">             
                     {% for tag in post.tags %}
