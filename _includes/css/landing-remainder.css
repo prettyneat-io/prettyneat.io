@@ -98,6 +98,11 @@
   text-shadow: 2px -2px var(--light-orange);
   color: var(--dark-blue);
 }
+.tasty-text2 {
+  text-shadow: 4px -1px var(--lighter-blue);
+  font-weight: normal;
+  color: var(--dark-blue);
+}
 .tasty-subtext {
   color: var(--dark-blue);
 }
@@ -429,4 +434,199 @@
   max-height: 3rem;
   height: 100%;
   margin-top: -1rem;
+}
+
+
+
+
+
+/* TASTY POST SECTION */
+@media (min-width: 763px) {
+  .posts-container {
+    padding-top: 2rem;
+    background-image: url(./assets/white-twill.png);
+    background-color: var(--yellow);
+    border-top: 1rem solid var(--orange);
+    display: grid;
+    grid-auto-flow: row dense;
+    justify-items: center;
+    grid-template-areas:
+      "post-header "
+      "post-body-container ";
+  }
+}
+@media (max-width: 763px) {
+  .posts-container {
+    padding-top: 2rem;
+    min-height: 40vh;
+    background-image: url(./assets/white-twill.png);
+    background-color: var(--yellow);
+    border-top: 1rem solid var(--orange);
+    justify-items: center;
+    display: grid;
+    grid-template: repeat(1, 1fr);
+    grid-template-areas:
+      "post-header"
+      "post-card-1"
+      "post-card-2"
+      "post-card-3"
+      "post-subheader";
+  }
+}
+
+.posts {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row-reverse;
+}
+.posts-container h2,
+.posts-container h3 {
+  color: white;
+}
+.post-header h3 {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+  text-align: center;
+}
+.post-header {
+  padding-bottom: 1rem;
+}
+.posts-container h4 {
+  font-size: 1.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  color: white;
+  display: flex;
+  justify-content: top;
+  flex-direction: column;
+  text-align: center;
+}
+.posts-container .post-body-subheader,
+.tech-text {
+  color: var(--light-blue);
+  max-width: 80%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 1rem;
+}
+.post-body-container {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  width: 100%;
+}
+.post-card {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 25rem;
+  width: 100%;
+  max-width: 22rem;
+  position: relative;
+  perspective: 130rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: #fff8ea;
+  box-shadow: 7px 9px 9px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.post-card > .post-card-header {
+  padding: 0.75rem 0;
+}
+
+.post-card > .post-card-header > .post-title{
+  text-decoration: none;
+}
+
+.post-card > .post-card-header > .post-title > h3{
+  color: var(--orange);
+  padding: 0;
+}
+
+.post-card > .post-card-body{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  padding: 0.75rem 0;
+} 
+
+.post-card > .post-card-body > .post-excerpt{
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.post-card > .post-card-body > .keep-reading{
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+  z-index: 1;
+  font-style: italic;
+  color: var(--dark-blue) !important;
+  display: inline;
+  font-size: 0.9em;
+  left: 0;
+  text-align: right;
+  bottom: 0;
+  background: rgb(255,248,234);
+  background: linear-gradient(0deg, rgba(255,248,234,1) 36%, rgba(9,9,121,0) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding-top: 4rem;
+  padding-bottom: 0.75rem;
+  padding-right: 0.2rem;
+  justify-content: center;
+}
+
+
+.post-card > .post-card-footer {
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--orange)
+}
+
+.post-card > .post-card-footer > .author{
+  font-size: 0.95rem;
+  padding-top: 0.5rem;
+}
+
+.post-card > .post-card-footer > .tags{
+  font-size: 0.95rem;
+  padding-top: 0.5rem;
+  margin-left: -0.1rem;
+  margin-right: -0.1rem;
+
+}
+
+.post-card > .post-card-footer > .tags .tag{
+  font-style: normal;
+  font-weight: bold;
+  padding: 0.1rem 0.2rem; 
+  color: var(--dark-orange);
+  display: inline-block;        
+}
+
+.post-card > .post-card-footer > .tags .tag::before{
+  content: '[';
+  font-size: 0.7em;
+  display: inline-block;
+  padding-right: 0.2rem;
+  transform: translate(0,-0.09rem);
+}
+.post-card > .post-card-footer > .tags .tag::after{
+  content: ']';
+  font-size: 0.7em;
+  display: inline-block;
+  padding-left: 0.2rem; 
+  transform: translate(0,-0.09rem);    
 }

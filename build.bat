@@ -1,1 +1,1 @@
-jekyll serve --watch --livereload --baseurl "" 
+bundle exec jekyll serve --watch --baseurl ""

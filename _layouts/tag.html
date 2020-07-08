@@ -1,0 +1,68 @@
+---
+layout: default
+title: Pretty Neat Blog 
+---
+<style>
+  {% include css/blog-list.css %}
+</style>
+<title>#{{ page.tag }} | The PrettyNeat blog!</title>
+<div class="container">
+    <div class="hero-container">
+      <div class="text">
+        <h1 class="title">Blog</h1>
+        <h2 class="sub-title">#{{ page.tag }}</h2>
+      </div>
+      <div class="image">
+        <img src="/assets/flame-searching.png" width="400" />
+      </div>
+      <div class="stripe"></div>
+    </div>
+    <div class="content-container">
+      <span class="">
+        <div class="header-and-text" id="recent-blogs">
+          <h3>Recent Essays</h3>
+          <div class="blog-list">
+            {% for post in site.posts %}          
+                {% if post.tags contains page.tag %}  
+                <div class="blog-list__post">
+                    <div class="blog-list__post__header">
+                    <div class="blog-list__post__header__talking-head">
+                        <!-- <img  src="/assets/authors/{{ post.author | default: 'PrettyNeat'  | slugify }}.thumb.png" alt="A nice picture of {{ author | default: 'PrettyNeat' }}"/> -->
+                    </div>                  
+                    <a href="{{ post.url }}" title="Read '{{ post.title }}'">
+                        <h4>{{post.title}}</h4>
+                    </a>
+                    <div class="blog-list__post__header__by">
+                        
+                        
+                    </div>
+                    </div>
+                    <div class="blog-list__post__excerpt">                  
+                    {{ post.excerpt }} <a href="{{ post.url }}" class="keep-reading">Keep reading</a>
+                    </div>
+                    <div class="blog-list__post__footer">
+                    <div class="blog-list__post__footer__meta">
+                        By {{ post.author | default: 'PrettyNeat' }} on {{ post.date | date_to_long_string: 'ordinal'}} 
+                    </div>    
+                    <div class="blog-list__post__footer__tags">             
+                        {% for tag in post.tags %}
+                        <a href="/tag/{{tag}}" class="blog-list__tag">{{ tag }}</a> {% unless forloop.last %}, {% endunless %}
+                        {% endfor %}
+                    </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% else %}
+              <h4>There are no posts at all!</h4>
+              <h5>We are very sad about that, and it's probably an error.</h5>
+            {% endfor %}
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="content-container">
+      {% include subscribe.html %}
+      <style>{% include css/newsletter-wizard.css %}</style>
+      <script>{% include js/newsletter-wizard.js %}</script>      
+    </div>
+  </div>
