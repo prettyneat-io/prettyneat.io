@@ -447,7 +447,7 @@
     background-image: url(./assets/white-twill.png);
     background-color: var(--yellow);
     border-top: 1rem solid var(--orange);
-    border-top: 1rem solid var(--orange);
+    border-bottom: 1rem solid var(--dark-blue);
     display: grid;
     grid-auto-flow: row dense;
     justify-items: center;
@@ -463,7 +463,7 @@
     background-image: url(./assets/white-twill.png);
     background-color: var(--yellow);
     border-top: 1rem solid var(--orange);
-        bord-bottom: 1rem solid var(--dark-blue);
+    border-bottom: 1rem solid var(--dark-blue);
     justify-items: center;
     display: grid;
     grid-template: repeat(1, 1fr);
