@@ -163,8 +163,11 @@ layout: default
         </div>
         {% endfor %}
     </div>
-    <div class="grid-content-item post-subheader">
+    {% if site.posts.size > 3%}
+    <div class="read-more-posts">
+        <a href="/blog" class="button bos-hover pretty-neat-button">View More</a>
     </div>
+    {% endif %}
 </div>
     {% include closing.html %}
 <style>

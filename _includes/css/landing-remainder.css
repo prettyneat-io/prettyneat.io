@@ -474,6 +474,13 @@
   }
 }
 
+.posts-container > .read-more-posts {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  padding-bottom: 2rem;
+}
+
 .posts {
   display: flex;
   align-items: flex-start;
