@@ -55,9 +55,13 @@ In fact, when you intentionally cut down on the time and effort spent, you are g
 But what if the developers built the solution using a great, **free**, embedded QA tool?  
 
 A **Minimal Shameless Product**, at its core, is defined as something that will not trigger the quality control of a developer’s pride: 
+
 ---
+
 _**The Minimum Shameless Product is the smallest attainable target which can be presented to a user or group of users while not carrying forward an amount of “negative effort” that the development team feels will be impossible to pay back going forward.**_
+
 ---
+
 This is not for the weak of heart. It empowers developers to negotiate slightly longer paths to delivery in exchange for lighter technical debt and heightened satisfaction, which they will pass on to the managers, owners and users. It’s a non-trivial **reversal in the cycle of trust** that requires all sides to cooperate. 
 
 But if that cycle is put in place, then instead of forcing everyone to accept a barely satisfactory solution, a product that the team will like, even love to work on, will be born. And if the team likes the working on the product, there is a _greater than zero_ chance it’s Lovable, Awesome or whatever your buzzword is when you’re reading this. 
