@@ -2,11 +2,11 @@
 layout: post
 title: The Minimal Whatever Product
 subtitle: When 'Minimal' rhymes with 'Terrible'
-author: ilya-at-prettyneat
+author: Ilya Florenskiy
 tags: ['Release Cycle', 'Dogmas and conventions', 'Project Management']
 timeToRead: 6'30"
 ---
-As the software development community seems to have agreed on _“Release early. Release often.”_, everyone seems to have their own idea of how “early” and how “often”.
+_“Release early. Release often.”_! Except, nobody can agree on how "early" and how "often".
 
 ## Minimal? Viable? Product?
 The very concept of MVP is a source of confusion even among those to whom it should be bread and butter.  
@@ -40,7 +40,7 @@ MAP goes lengths to present a shiny façade to the user at the expense of everyt
 
 Do any of these solve the core issue of being MVPs being painful stress generators for the developer? 
 
- ![A post-it completely occupied by the sentence 'minimal viable post-it'](/assets/blog/stop-using-that-methodology.png)
+ ![A post-it completely occupied by the sentence 'minimal viable post-it'](/assets/blog/mvp.jpg)
 _Clearly displays the appeal of a post-it, while also being a frustrating waste of time and paper_
 
 ## Build a Minimal you can be proud of, or introducing the MSP
