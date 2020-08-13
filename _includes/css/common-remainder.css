@@ -13,6 +13,13 @@
   text-align: justify;
   text-justify: inter-cluster;
 }
+
+@media screen and (max-width: 600px) {
+  body .content-container .blog-post__content__inner p  {
+    text-align: left;
+  }
+}
+
 .content-container a {
   color: var(--light-orange);
 }
