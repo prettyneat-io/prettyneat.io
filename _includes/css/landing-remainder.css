@@ -56,7 +56,7 @@
 }
 .service-header h3 {
   font-size: 2.5rem;
-  color: var(--dark-orange);
+  color: var(--darker-orange);
   text-align: center;
 }
 .service-header {
@@ -80,7 +80,7 @@
 }
 .services-container .service-body-subheader,
 .tech-text {
-  color: var(--light-blue);
+  color: var(--lighter-blue);
   max-width: 80%;
   text-align: center;
   margin-left: 10%;
@@ -530,7 +530,7 @@
 }
 .posts-container .post-body-subheader,
 .tech-text {
-  color: var(--light-blue);
+  color: var(--lighter-blue);
   max-width: 80%;
   text-align: center;
   margin-left: 10%;
@@ -574,6 +574,7 @@
 
 .post-card > .post-card-header > .post-card-image{
   position: relative;
+  display: block;
   height: 200px;
   margin: -1.50rem -1.50rem 1.1rem;
 
