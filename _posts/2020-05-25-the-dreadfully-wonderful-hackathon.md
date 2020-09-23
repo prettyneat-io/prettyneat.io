@@ -3,6 +3,7 @@ layout: post
 title: The Dreadfully Wonderful Hackathon
 subtitle: Dry running crunch culture
 author: Ilya Florenskiy
+image: '/assets/blog/hackathon.png'
 tags: ['Communication', 'Hackathon', 'Crunch Culture']
 timeToRead: 5'00"
 ---

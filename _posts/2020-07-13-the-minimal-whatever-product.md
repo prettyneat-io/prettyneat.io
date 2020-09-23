@@ -3,6 +3,7 @@ layout: post
 title: The Minimal Whatever Product
 subtitle: When 'Minimal' rhymes with 'Terrible'
 author: Ilya Florenskiy
+image: '/assets/blog/mvp.jpg'
 tags: ['Release Cycle', 'Dogmas and conventions', 'Project Management']
 timeToRead: 6'30"
 ---

@@ -91,6 +91,10 @@
   text-shadow: 2px -2px var(--light-orange);
   color: var(--dark-blue);
 }
+.tasty-text2 {
+  text-shadow: 2px -2px var(--orange);
+  color: var(--dark-blue);
+}
 .tasty-subtext {
   color: var(--dark-blue);
 }
@@ -569,12 +573,20 @@
 }
 
 .post-card > .post-card-header > .post-card-image{
+  position: relative;
   height: 200px;
-  margin-top: -1.50rem;
-  margin-right: -1.50rem;
-  margin-left: -1.50rem;
-  padding-bottom: 1.1rem;
+  margin: -1.50rem -1.50rem 1.1rem;
 
+}
+
+.post-card > .post-card-header > .post-card-image:after{
+  content:"";
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 180, 0, 0.09);
 }
 
 .post-card > .post-card-header > .post-card-image > img{
@@ -669,4 +681,4 @@
   font-size: 0.7em;
   display: inline-block;
   padding-left: 0.2rem; 
-  transform: tra
+}

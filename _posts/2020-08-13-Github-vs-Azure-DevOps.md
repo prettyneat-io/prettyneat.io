@@ -3,6 +3,7 @@ layout: post
 title: Azure Devops vs Github
 subtitle: More switches bad. Less switches good.
 author: Kris Camilleri
+image: '/assets/blog/azure_devops_complex_card.png'
 tags: ["User Experience (UX)", "Project Management", "Best Practices"]
 timeToRead: 3'10"
 ---

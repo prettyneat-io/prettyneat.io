@@ -3,6 +3,7 @@ layout: post
 title: The Well Mannered Modal
 subtitle: And how not to be hostile towards your users
 author: Kris Camilleri
+image: '/assets/blog/what-is-a-modal.png'
 tags: ["User Experience (UX)", "Design", "Best Practices"]
 timeToRead: 3'10"
 ---
