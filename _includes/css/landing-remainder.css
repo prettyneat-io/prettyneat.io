@@ -586,7 +586,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(255, 180, 0, 0.09);
+  background: rgba(255, 180, 0, 0.15);
 }
 
 .post-card > .post-card-header > .post-card-image > img{

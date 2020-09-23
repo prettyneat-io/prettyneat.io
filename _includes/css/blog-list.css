@@ -154,7 +154,7 @@
     font-style: normal;
     font-weight: bold;
     padding: 0.1rem 0.2rem; 
-    
+    color: var(--light-orange);
     display: inline-block;        
 }
 
