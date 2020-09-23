@@ -140,13 +140,14 @@ layout: default
         {% for post in site.posts %}  
         <div class="post-card">
             <div class="post-card-header">
+                <div class="post-card-image"><img src="{{ post.image }}"/></div>
                 <a href="{{ post.url }}" title="Read '{{ post.title }}'"  class="post-title">
                     <h3>{{post.title}}</h3>
                 </a>
             </div>
             <div class="post-card-body">
                 <div class="post-excerpt">
-                    {{ post.content | strip_html }} 
+                    {{ post.content | strip_html | truncatewords: 400 }} 
                 </div>
                 <a href="{{ post.url }}" class="keep-reading">Keep reading</a>
             </div>
