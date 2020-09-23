@@ -326,12 +326,12 @@ hr::after{
     top: -12px;    
 }
 
-.blog-post__tags{
+.blog-post__tags, .blog-post__tags a{
     font-size: 0.75rem;
-    color: var(--light-blue);
+    color: var(--light-blue) !important;
 }
 
-.blog-post__tag{
+.blog-post__tag a{
     font-style: normal;
     font-weight: bold;
     display: inline-block;    

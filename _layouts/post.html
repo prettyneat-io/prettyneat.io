@@ -144,7 +144,7 @@
                 With the blessing of {{ current_author.spirit_animal }}, this article is tagged:
               {% endif %}
             {% for tag in page.tags %}
-              <span class="blog-post__tag">{{ tag }}</span>
+              <span class="blog-post__tag"><a href="/tag/{{tag}}">{{ tag }}</a></span>
             {% endfor %}            
           </div>
           <br>
