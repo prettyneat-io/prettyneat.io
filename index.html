@@ -137,7 +137,7 @@ layout: default
         </h3>
     </div>
     <div class="post-body-container">
-        {% for post in site.posts %}  
+        {% for post in site.posts limit: 3 %}  
         <div class="post-card">
             <div class="post-card-header">
                 <div class="post-card-image"><img src="{{ post.image }}"/></div>

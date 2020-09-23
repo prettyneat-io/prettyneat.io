@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Tag: Crunch Culture</title>
+<title>Azure Devops vs Github</title>
 <meta name="generator" content="Jekyll v3.8.7" />
-<meta property="og:title" content="Tag: Crunch Culture" />
+<meta property="og:title" content="Azure Devops vs Github" />
+<meta name="author" content="Kris Camilleri" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/tag/Crunch%20Culture/" />
-<meta property="og:url" content="http://localhost:4000/tag/Crunch%20Culture/" />
+<meta name="description" content="A tale of Microwaves &amp; Premature Optimization." />
+<meta property="og:description" content="A tale of Microwaves &amp; Premature Optimization." />
+<link rel="canonical" href="http://localhost:4000/Github-vs-Azure-DevOps/" />
+<meta property="og:url" content="http://localhost:4000/Github-vs-Azure-DevOps/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-08-13T00:00:00+02:00" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Tag: Crunch Culture","url":"http://localhost:4000/tag/Crunch%20Culture/","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Azure Devops vs Github","dateModified":"2020-08-13T00:00:00+02:00","datePublished":"2020-08-13T00:00:00+02:00","url":"http://localhost:4000/Github-vs-Azure-DevOps/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/Github-vs-Azure-DevOps/"},"author":{"@type":"Person","name":"Kris Camilleri"},"description":"A tale of Microwaves &amp; Premature Optimization.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <head>
@@ -104,9 +109,10 @@ if ( (cidx > -1 && cvidx > -1 && cbidx > cvidx) || cidx == -1 )
     <meta name="theme-color" content="#ffffff" />
       
 
+    <title>Azure Devops vs Github – the PrettyNeat blog</title>
+
   </head>
-  <body class="main-container">
-    
+  <body class="main-container blog-post">
     <style>
       /* GLOBAL */
 :root {
@@ -331,8 +337,481 @@ nav {
   max-width: 90vw;
   filter: drop-shadow(5px -3px 0px var(--lighter-blue));
 }
-    </style>
+      .blog-post *{
+    box-sizing: border-box;
+}
+
+.grid-item.content{
+  border-bottom: 1rem solid var(--dark-blue);      
+}
+
+.blog-post .container {
+    padding-bottom: 6rem;
+    border-bottom: none;
+}
+/* 
+.blog-post .container::before{
+    display: block;
+    position: relative;
+    content: ' ';
+    background-image: url('/assets/blue-twill.png');
+    height: 125px;
+    width: 1200px;
+    top: calc(-125px - 2.5rem);
+    right: 2.5rem;
+    margin: 0 -2.5rem -125px auto;    
+    background-position-x: 4px;
+} */
+@media(max-width: 763px){
+
+.grid-item.content{
+    background: url('/assets/blue-twill.png');
+  }
+
+  body.blog-post .content-container{
+      padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+
+  body.blog-post .content-container.blog-post__separator{
+    padding: 0.01rem;
+  }
+}
+
+@media (min-width: 763px) {
+    .blog-post .content .container{
+        background: url('/assets/blue-twill.png');
+        background-position: 50% 0;
+        background-repeat: repeat;    
+        padding: 2.5rem;
+        margin: 0 auto;
+        max-width: 900px;
+        padding-top: 10rem;
+        margin-top: -10rem;
+    }
+}
+
+.blog-post .content-container{
+    width: calc(100% - 3rem);
+    margin: auto;    
+    padding: 1.5rem;  
+    background: #fff8ea;   
+    box-shadow: 7px 9px 9px rgba(0,0,0,0.1);
+}
+
+.blog-post__top{
+    min-height: 180px;
+    display: flex;
+    align-items: flex-start;    
+    flex-flow: row wrap;    
+}
+
+.blog-post .blog-post__top__meta{  
+    flex: 0 0 100%;
+    font-size: 21px;
+    color: var(--blue);
+    min-height: 2.2rem;
+    display: flex;
+    align-items: center;        
+    box-shadow: none;  
+    opacity: 0.75;
+}
+
+.blog-post__top .text{
+    flex: 60%;
+}
+.blog-post__top .blog-post__top-excerpt{
+    flex: 40%;
+}
+
+.blog-post__top h1{
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+}
+
+.blog-post__top h2{
+    color: var(--dark-blue);
+    margin-bottom: 0.75rem;
+    font-size: 1.6rem;
+}
+
+.blog-post__top-excerpt{
+    position: relative;
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px var(--light-orange), 1px 2px 0px var(--orange);
+    color: var(--blue);
+    display: flex;
+    padding: 0 1rem 0.5rem 0;
+}
+
+.blog-post__top-excerpt::before{
+    position: absolute;
+    width: 80%;
+    height: 75%;
+    border-top: 2px solid var(--blue);
+    border-left: 2px solid var(--blue);
+    content: ' '    
+}
+
+.blog-post__top-excerpt::after{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 65%;
+    border-bottom: 2px solid var(--blue);
+    border-right: 2px solid var(--blue);
+    content: ' '        
+}
+
+.content-container .blog-post__top-excerpt p{    
+    padding: 0.5rem 0 0.5rem 1rem;
+    text-align: left;
+}
+
+.blog-post__top-excerpt p::first-letter{
+    font-size: 2rem;
+    vertical-align: bottom;
+}
+
+.blog-post__readable{
+    display: block;
+  
     
+    filter: hue-rotate(180deg);
+    background-repeat: repeat;
+}
+
+.blog-post__readable--hue-only{
+    background: #fff8ea;
+}
+
+.blog-post__content__inner,
+.blog-post__author {
+    position: relative;
+    font-size: 21px;
+    color: var(--dark-blue);
+}
+
+.blog-post__content__inner h2{
+    line-height: 1.2;
+    margin-bottom: 1rem;    
+}
+
+.content-container .blog-post__content__inner  p,
+.content-container.blog-post__author  p  {
+  line-height: 1.6rem;
+  text-align: justify;
+  text-justify: inter-cluster;
+}
+
+.blog-post__content img{
+    width: 90%;
+    margin: 3rem auto;
+    display: block;
+    box-shadow: -5px 5px 0 var(--blue),
+     7px 9px 9px rgba(0,0,0,0.1);
+}
+
+.blog-post__content p{
+    margin-bottom: 1.3rem;
+    background-color: #fff8ea;    
+
+}
+
+.blog-post__content ul,
+.blog-post__content ol{
+    list-style-position: outside;
+    padding-left: 1.4rem;
+}
+
+.blog-post__content li{
+    font-weight: normal;
+    line-height: 2.1rem;
+}
+
+.blog-post__author{
+    padding-top: 1rem;
+    display: flex;
+}
+
+.blog-post__author h2{
+    color: var(--blue)
+}
+
+.blog-post__author .blog-post__author__data__bio{
+    padding-left: 0.4rem;
+    position: relative;
+    color: var(--blue);
+    margin-top: 1rem;
+}
+
+.blog-post__author .blog-post__author__data__bio li{
+    font-weight: 400;
+    /* text-indent: -0.4rem;     */
+}
+
+.blog-post__author .blog-post__author__data__bio ul,
+.blog-post__author .blog-post__author__data__bio ol{
+    list-style-position: inside;
+    margin-left: -0.4rem;
+    margin-top: 0.4rem;
+}
+
+.blog-post__author .blog-post__author__data__bio li{
+    margin-bottom: 0.6rem;
+}
+
+.blog-post__author figure{
+    margin-right: 2rem;
+    min-width: 20%;
+    max-width: 30%;
+}
+
+.blog-post__author figure img{
+    width: 100%;
+    background: url('/assets/orange-twill.png');
+    filter: drop-shadow(0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.2));
+    box-shadow: 
+        3px 3px 0 var(--orange),
+        -6px 6px 0 var(--light-orange),
+        -8px -8px 0 var(--lighter-blue),
+        10px -10px 0 var(--light-blue);
+}
+
+.blog-post__author figure figcaption{
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+    color: var(--blue);
+    background-color: var(--light-orange);
+    position: relative;
+    padding: 0.2rem 0.2rem;
+    text-shadow: 0 1px 0 var(--orange);
+}
+
+.blog-post__author figure figcaption::before{
+    position: absolute;
+    top: -0.3rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 0.4em solid transparent;
+    border-bottom: 0.4em solid var(--orange);
+    content: ' ';
+}
+.blog-post__author figure figcaption::after{
+    position: absolute;
+    top: -0.3rem;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0.4em solid var(--orange);
+    content: ' ';
+}
+
+.content-container.blog-post__separator{
+    padding: 0 2.1rem;
+    margin: 0 auto;
+    height: 12px;
+    margin-top: -2rem;
+    max-width: 1080px;
+}
+
+hr{
+    height: 12px;
+    width: 100%;
+    border: none 0 transparent;
+    margin: 2rem 0 2rem -2rem;
+    width: calc(100% + 4rem);   
+    background-color: var(--background-color); 
+}
+
+hr::before{    
+    content: ' ';
+    height: 12px;
+    width: calc(100%);
+    background: url('/assets/blue-twill.png');
+    background-position: 50% 0;
+    background-repeat: repeat;    
+    display: block; 
+}
+
+hr::after{
+    content: ' ';
+    height: 12px;
+    width: 100%;
+    background: linear-gradient(90deg, 
+        var(--background-color) 0%,
+        var(--background-color) 50%,
+        transparent 50%,
+        transparent 100%
+        ),
+                linear-gradient(90deg,
+                rgba(0,0,0,0) 0%,
+                rgba(0,0,0,0) 45%,                
+                rgba(0,0,0,0.1) 45%,                
+                rgba(0,0,0,0.1) 55%,
+                rgba(0,0,0,0) 90%
+        );
+    background-size: 24px;
+    background-repeat: repeat; 
+    display: block;  
+    position: relative;
+    top: -12px;    
+}
+
+.blog-post__tags{
+    font-size: 0.75rem;
+    color: var(--light-blue);
+}
+
+.blog-post__tag{
+    font-style: normal;
+    font-weight: bold;
+    display: inline-block;    
+    text-shadow: 0 1px 0px var(--blue);    
+}
+
+.blog-post__tag::before{
+    content: '[';
+    font-size: 0.7em;
+    display: inline-block;
+    padding-right: 0.2rem;
+    transform: translate(0,-0.09rem);
+    text-shadow: 0 1px 0 var(--blue);    
+
+}
+.blog-post__tag::after{
+    content: ']';
+    font-size: 0.7em;
+    display: inline-block;
+    padding-left: 0.2rem; 
+    transform: translate(0,-0.09rem);    
+    text-shadow: 0 1px 0 var(--blue);    
+
+}
+
+.stopwatch{
+    border-bottom: 1px dashed var(--orange);
+    font-size: 0.8em;
+    margin-left: 0.2rem;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: 1px 1px 0 var(--orange);
+}
+
+.stopwatch-pre,
+.stopwatch-post,
+.stopwatch-last{
+    color: var(--light-orange);
+    font-size: 0.8em;
+}
+
+.stopwatch-pre{
+    padding-left: 0.5rem;
+}
+
+.stopwatch-last,
+.stopwatch-winner{
+    display: none;
+}
+
+.stopwatch-last.running,
+.stopwatch-winner.running{
+    display: inline-block;
+}
+/* 
+.blog-post .nav-container{
+     /* background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);
+    background: url('/assets/blue-twill.png');
+    background-position-x: 0%;
+    background-position-y: 50%;
+    background-repeat: repeat;
+} */
+
+@media (max-width: 767px){
+    .blog-post .content .container{
+        max-width: 100%;
+        padding: 1rem 0 0 0;
+    }
+
+    .blog-post .content .container::before{
+        content: '';
+        display: none;
+    }
+
+    .blog-post .content-container{
+        width: calc(100% - 1rem);
+        padding: 0.6rem;
+        /* box-shadow: none; */
+    }
+
+    .blog-post__top .text{
+        margin: 0.5rem 0 1rem 0;
+    }
+
+    .blog-post__top .blog-post__top-excerpt,
+    .blog-post .blog-post__top__meta{
+        margin-bottom: 1rem;
+    }
+
+    .blog-post .blog-post__top__meta{
+        text-align: center;
+        flex-flow: row wrap;
+    }
+
+    .blog-post__content__inner::before {
+        top: -0.6rem;
+        left: -0.15rem;
+        height: 0.55rem;
+    }
+
+    .blog-post__content__inner::after {
+        bottom: -0.6rem;
+        right: -0.15rem;
+        height: 0.55rem;
+    }
+
+    .content-container.blog-post__separator {
+        margin: 0 auto;
+        height: auto;
+        margin-top: -1rem;
+    }
+
+    .content-container.blog-post__separator hr{
+        padding: 0;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .blog-post__author{
+        flex-flow: row wrap;
+    }
+
+    .blog-post__author figure{
+        /* flex: 0 0 100%; */
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
+
+    .blog-post__author figure img{
+        width: 98%;
+        max-width: 10rem;
+        text-align: center;
+        margin: 0 auto
+    }
+}
+    </style>    
     <header class="grid-item nav">
       <nav class="nav-container">
   <span class="grid-nav-item banner">
@@ -348,309 +827,121 @@ nav {
 </nav>
     </header>
     <div class="grid-item content">
-      <style>
-  .blog-list{
-    width: 100%;
-}
+        <div class="container">
+          <div class="content-container blog-post__top">
+              <div class="text">
+                <h1 class="title">Azure Devops vs Github</h1>
+                <h2 class="sub-title">More switches bad. Less switches good.</h2>
+              </div>
+              <div class="blog-post__top-excerpt">
+                <p>A tale of Microwaves &amp; Premature Optimization.</p>
 
-.blog-list *{
-    box-sizing: border-box;
-}
 
-.blog-list__post{
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    margin-bottom: 3.1rem;
-}
-
-.blog-list__post__header{    
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-    padding: 0;
-}
-
-.blog-list__post__header__talking-head{
-    display: none;
-    position: absolute;
-    left: -1.2rem; 
-    top: 0rem;
-    background-color: rgba(255,255,255,1);
-    height: 1.6rem;
-    width: 1.6rem;
-    margin-right: 0.5rem;
-    border-radius: 100%;
-
-}
-
-.blog-list__post__header__talking-head img{
-    width: 1.6rem;
-    height: 1.6rem;
-    border-radius: 100%;
-    box-shadow: 3px -1px 0 var(--orange);
-    border: 0.15rem solid var(--lighter-blue);     
-    z-index: 1;
-    position: relative;
-}
-
-.blog-list__post__header__talking-head::before{
-    position: absolute;
-    right: -0.45rem;
-    height: 0;
-    top: 0.2rem;
-    width: 0;
-    border-top: 0.6rem solid transparent;
-    border-bottom: 0.6rem solid transparent;
-    border-left: 0.6rem solid var(--orange);
-    content: ' ';    
-    z-index: 0;
-}
-
-.blog-list__post__header a{
-    text-decoration: none; 
-    align-self: center;   
-}
-
-.blog-list__post__header a h4{
-    margin: 0;
-    padding: 0;
-    display: block;    
-    color: var(--blue); 
-}
-
-.blog-list__post__header__by{      
-    margin-left: auto;  
-    margin-right: 0.6rem; 
-    flex: 0 0 auto;
-    display: flex;   
-    flex-flow: column wrap; 
-    max-height: 2.2rem;
-    opacity: 0.7;  
-    margin-bottom: -0.2rem;  
-}
-
-.blog-list__post__header__by h5{       
-    
-    font-style: italic;
-    font-size: 0.6em;
-    display: inline-block
-}
-
-.blog-list__post__excerpt{
-    margin: 0.4rem 0.1rem;
-    width: 100%;
-    display: block;
-    position: relative;    
-    border-bottom: 1px solid var(--orange);
-    /* padding: 0 2.3rem 0.6rem 2.3rem; */
-}
-
-.blog-list__post__excerpt p{
-    display: inline;
-}
-/* 
-.blog-list__post__excerpt::before{
-    display: block;
-    position: absolute;
-    width: 2rem;
-    height: 4rem;
-    top: -0.8rem;
-    left: 0;
-    content: '“';
-    font-size: 3.2rem;
-    font-weight: bold;
-    color: rgba(0,0,0,0.6);
-}
-
-.blog-list__post__excerpt::after{
-    display: block;
-    position: absolute;
-    width: 2rem;
-    height: 4rem;
-    bottom: -1.6rem;
-    right: 0;
-    content: '”';
-    font-size: 3.2rem;
-    font-weight: bold;
-    color: rgba(0,0,0,0.6);
-} */
-
-.blog-list__post__footer{
-    font-size: 0.75em;    
-    text-align: right;
-    
-    
-    width: 100%;
-        
-    
-    opacity: 0.9;
-    
-    color: rgba(0,0,0,0.7);
-    display: flex;
-}
-
-.blog-list__post__footer__meta{
-    flex: 1;
-    text-align: left;
-}
-
-.blog-list__post__footer__tags{
-    flex: 1;
-    text-align: right;
-}
-
-.blog-list__tag{
-    font-style: normal;
-    font-weight: bold;
-    padding: 0.1rem 0.2rem; 
-    
-    display: inline-block;        
-}
-
-.blog-list__tag::before{
-    content: '[';
-    font-size: 0.7em;
-    display: inline-block;
-    padding-right: 0.2rem;
-    transform: translate(0,-0.09rem);
-}
-.blog-list__tag::after{
-    content: ']';
-    font-size: 0.7em;
-    display: inline-block;
-    padding-left: 0.2rem; 
-    transform: translate(0,-0.09rem);    
-}
-
-.align-fixer{
-    display: inline-block;
-    width: 1.2rem;
-    margin-right: 0.2rem;
-    text-align: right;
-    font-style: normal;
-}
-/* 
-@keyframes reading-dots{
-    0%{ content: '.'; }
-    33%{ content: '..'; }
-    67%{ content: '...'; }
-    100%{ content: '.'; }
-} */
-
-a.keep-reading{
-    font-style: italic;
-    color: var(--dark-blue) !important;
-    display: inline;
-    font-size: 0.9em;
-}
-/* 
-.keep-reading::after{
-    content:'.';
-    animation: reading-dots 3s linear infinite running;
-} */
-
-@media (max-width: 767px){
-    .blog-list__post__excerpt{
-        text-align: justify;
-        padding: 0 1rem 1rem 0rem;
-    }
-
-    .blog-list__post__excerpt::before{
-        font-size: 2rem;
-        opacity: 0.4;
-        left: -0.2rem; 
-        top: -0.3rem;       
-    }
-    .blog-list__post__excerpt::after{
-        font-size: 2rem;
-        opacity: 0.4;
-        right: -1rem;
-        bottom: -2.2rem;
-    }
-
-    .blog-list__post__footer{
-        flex-flow: row wrap;
-    }
-
-    .blog-list__post__footer__meta,
-    .blog-list__post__footer__tags{
-        flex: 0 0 100%;
-        text-align: left;
-    }
-}
-</style>
-<title>#Crunch Culture | The PrettyNeat blog!</title>
-<div class="container">
-    <div class="hero-container">
-      <div class="text">
-        <h1 class="title">Blog</h1>
-        <h2 class="sub-title">#Crunch Culture</h2>
-      </div>
-      <div class="image">
-        <img src="/assets/flame-searching.png" width="400" />
-      </div>
-      <div class="stripe"></div>
-    </div>
-    <div class="content-container">
-      <span class="">
-        <div class="header-and-text" id="recent-blogs">
-          <h3>Recent Essays</h3>
-          <div class="blog-list">
-                      
-                
-                      
-                
-                      
-                
-                      
-                  
-                <div class="blog-list__post">
-                    <div class="blog-list__post__header">
-                    <div class="blog-list__post__header__talking-head">
-                        <!-- <img  src="/assets/authors/ilya-florenskiy.thumb.png" alt="A nice picture of PrettyNeat"/> -->
-                    </div>                  
-                    <a href="/the-dreadfully-wonderful-hackathon/" title="Read 'The Dreadfully Wonderful Hackathon'">
-                        <h4>The Dreadfully Wonderful Hackathon</h4>
-                    </a>
-                    <div class="blog-list__post__header__by">
-                        
-                        
-                    </div>
-                    </div>
-                    <div class="blog-list__post__excerpt">                  
-                    <p>If reading about crunch culture struck a chord, you’re not alone.</p>
-
- <a href="/the-dreadfully-wonderful-hackathon/" class="keep-reading">Keep reading</a>
-                    </div>
-                    <div class="blog-list__post__footer">
-                    <div class="blog-list__post__footer__meta">
-                        By Ilya Florenskiy on 25th May 2020 
-                    </div>    
-                    <div class="blog-list__post__footer__tags">             
-                        
-                        <a href="/tag/Communication" class="blog-list__tag">Communication</a> , 
-                        
-                        <a href="/tag/Hackathon" class="blog-list__tag">Hackathon</a> , 
-                        
-                        <a href="/tag/Crunch Culture" class="blog-list__tag">Crunch Culture</a> 
-                        
-                    </div>
-                    </div>
-                </div>
-                
-                      
-                
-                      
-                
-            
+              </div>
+              <div class="blog-post__top__meta">
+                Posted 13th August 2020
+                <!-- ,
+                 takes&nbsp;3'10"&nbsp;to read <span class="stopwatch-pre"></span><a href="javascript:;" class="stopwatch" title="Want to race?" onclick="toggle_stopwatch()">⏱</a><span class="stopwatch-post"></span>
+                 -->
+              </div>              
           </div>
-        </div>
-      </span>
-    </div>
-    <div class="content-container">
-      <div class="nl-subscribe">
+          <div class="content-container blog-post__separator">
+            <hr>
+          </div>           
+          <div class="content-container blog-post__content">            
+            <div class="blog-post__content__inner">
+              <h2 id="the-microwave-moment">The Microwave Moment</h2>
+
+<p><em>“The objective was food. What I found, was distraction.”</em></p>
+
+<p>Earlier in my life, when shopping around for a microwave (or just about any appliance), I used to be the person hunting for the most knobs and switches. Aside from the promise of convenience, every extra button represented a problem that the manufacturer had graciously worried about on my behalf, so I didn’t have to. Double win!</p>
+
+<p>A better person than me likely takes a lot of pride in their many buttons and knobs, pouring over the manual for tricks and tips at every opportunity; memorizing the subtle differences in icon and duration between the ‘Popcorn’ and ‘Beverage’ options; Maximizing the use of ‘Oven Mode’ when heating leftovers for that succulent crunchy finish; <em>Certainly</em> not accidentally resetting the clock every-time they want to set an alarm.</p>
+
+<p>As I’ve come to discover in my adult life, I am not that person. I began skimming through the manual once… then I got hungry. I cranked the temperature to max, and set the timer for 1 minute. I ate, and moved on with my life.</p>
+
+<p>Nothing has changed since. When something is still cold at the end of that 1 minute, I repeat the process… until it’s not. I now look at the many knobs and switches not as solutions to prospective problems, but as perpetual distractions whenever I reach for a bag of uncooked popcorn.</p>
+
+<p>If only I went for the simpler microwave…</p>
+
+<h2 id="a-developers-siren-song-premature-optimization">A Developer’s Siren Song: Premature Optimization</h2>
+
+<p>Now that you understand the relevant parts of my psyche let’s meander to the tech talk. For context, at the time of writing Pretty Neat is a small agency juggling a handful of clients and internal projects.</p>
+
+<p>Cue our recent foray into Azure Devops. All the knobs and switches! If you can imagine it, odds are there’s a configuration option for it. Every Agile consultant’s wet dream!</p>
+
+<p><img src="/assets/blog/azure_devops_complex_card.png" alt="Azure Devops documentation of the user card. All the knobs and switches!" /></p>
+
+<p><em>Look at all the knobs and switches! Just look at them…</em></p>
+
+<p>Thus, with a few days budgeted for building our workflow around Azure Devops, we began pouring through the documentation, poking around with a couple of repositories and project boards, and generally structuring things ‘by the book’. Immaculate project structures, descriptive, well labelled user stories and sprints abound. Good feels all round.</p>
+
+<p>That is, until the actual work of software development started pouring in. In a world where the client needs something done <em>yesterday</em> - pristinely documenting perpetually changing requirements is a luxury that <em>ought</em> to be reserved for the fictional project manager. In practice though, it became a wonderful way for us developers to feel good about doing a whole lot of low-value project management busy work. <strong>A premature optimization for the sophisticated reporting and review process that never existed.</strong></p>
+
+<p>In response to this degradation of productivity, every non-essential setting was quickly tossed by the wayside in our quest to <em>Get Shit Done</em>. We stripped down Azure Devops to its very simplest repository, Kanban and sprint management feature set… but what we were left with was a UX that never stopped advertising its potential complexity.</p>
+
+<p>The final nail in the coffin was struck when project management started bubbling back out into meat-space. Sticky notes, whiteboards, and heaps of scribbled papers… the antithesis of what we aspired for.</p>
+
+<p>The equivalent of using the stove instead of the shiny new microwave. Less than ideal… back to the drawing board.</p>
+
+<h2 id="wheres-my-food">Where’s my food?</h2>
+
+<p>What we needed was ‘maximum heat for 1 minute’. What we ended up with a surgically precise but totally impractical microwave rail-gun with a thousand buttons. Oh, and our metaphorical food was still cold.</p>
+
+<p>Enter Github. Dumb by default. A kanban board for the team, and another per project. A Git repository store, with some serverless actions to tie things together. No WYSIWYG editors in sight - Markdown for everything. Wonderfully unsophisticated, barebones and straightforward.</p>
+
+<p><img src="/assets/blog/github_simple_card.png" alt="Look at the total lack of knobs and switches! Just look at it..." /></p>
+
+<p><em>Look at <strong>the total lack</strong> of knobs and switches! Just look at it…</em></p>
+
+<p>We’re now crossing into the second month of our transition to Github from Azure Devops for our project management - and we have absolutely no intention of looking back.</p>
+
+<h2 id="so-what-did-we-learn">So, what did we learn?</h2>
+
+<ul>
+  <li>Resist premature optimization at an organizational level - by not dangling configurations that aren’t <em>immediately</em> necessary.</li>
+  <li>If you can get away with doing something simply - do it simply. Add complexity gradually and only as needed.</li>
+  <li>If project management is becoming as time consuming as the actual project - you’re doing it wrong.</li>
+</ul>
+
+<p><br />
+<strong>TLDR</strong>: More switches bad. Less switches good.</p>
+
+            </div>
+            <span class="stopwatch-last"></span><a class="stopwatch stopwatch-winner" href="javascript:;" onclick="done_stopwatch();"></a>
+          </div>   
+          <br>  
+          
+          
+          <div class="content-container blog-post__author">
+            <figure>
+              <img alt="kris-camilleri portrait" src="/assets/authors/kris-camilleri.png" />
+              <figcaption>Technical Lead </figcaption>
+            </figure>
+            <div class="blog-post__author__data">
+              <h2>Written by Kris</h2>
+              <div class="blog-post__author__data__bio"><p>Kris is head of everything Pretty Neat. In any given day he can be fixing vulnerabilities in an enterprise system, whipping up a web application, or wrestling with the drip coffee machine.</p>
+</div>
+            </div>
+          </div>
+          <div class="content-container blog-post__separator">
+            <hr>
+          </div>       
+            <div class="content-container blog-post__tags">
+              
+                This article is tagged:
+              
+            
+              <span class="blog-post__tag">User Experience (UX)</span>
+            
+              <span class="blog-post__tag">Project Management</span>
+            
+              <span class="blog-post__tag">Best Practices</span>
+                        
+          </div>
+          <br>
+          <div class="content-container">
+            <div class="nl-subscribe">
     <h3>Never miss an essay!</h3>
     <p>If you find software development, design, systems thinking and management interesting - just drop
         your email into the box below. We write content roughly every other week, we won't share your mail with anyone,
@@ -706,7 +997,7 @@ a.keep-reading{
     </div>
 
 </div>
-      <style>.nl-subscribe{
+            <style>.nl-subscribe{
  font-size: 1.2rem;
 }
 
@@ -1028,7 +1319,7 @@ input[name='rd_promo']:checked + .fancy-radio:before{
         top: 50%;
     }    
 }</style>
-      <script>var nl_wizard_step = 1;
+            <script>var nl_wizard_step = 1;
 const nl_wizard_steps = 3;
 var emailRegex = /\S+@\S+\.\S+/;
 
@@ -1152,8 +1443,9 @@ function nl_wizard_unlock() {
 }
 
 nl_wizard_showNext();</script>      
-    </div>
-  </div>  <div class="closing-section">
+          </div>          
+        </div>      
+      <div class="closing-section">
     <div class="contact-us">
         <span class="contact-text text-center">Contact us today!</span>
         <form class="contact-inputs" name="submit-to-google-sheet">
@@ -1207,8 +1499,7 @@ nl_wizard_showNext();</script>
     <link
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&display=swap"
       rel="stylesheet"
-    />
-    
+    />    
     <style>
       /* CONTENT */
 .content-container {
@@ -1357,7 +1648,6 @@ nl_wizard_showNext();</script>
 }
 
     </style>
-        
     <style>
           @keyframes shifting-container{
     0%{
@@ -1670,6 +1960,74 @@ if (consent === null){
 else{
     let box = document.querySelector('.cookies-slider');
     box.parentNode.removeChild(box);
+}
+  var blog_post_timer = 0;
+var started = 0;
+
+var span_pre = document.querySelector('.stopwatch-pre');
+var span_post = document.querySelector('.stopwatch-post');
+var span_last = document.querySelector('.stopwatch-last')
+var toggle = document.querySelector('.stopwatch');
+var winner = document.querySelector('.stopwatch-winner');
+
+function toggle_stopwatch(){
+    if ( started > 0 )
+        reset();
+    else
+        run();
+}
+
+function run(){
+    started = Date.now();   
+    blog_post_timer = window.setTimeout(second,1000); 
+    span_pre.innerHTML = ' (You took no time at all ';
+    span_post.innerHTML = ')';
+    toggle.innerHTML = '[reset?]';
+    span_last.innerHTML = "";
+    span_last.classList.add('running');
+    winner.innerHTML = "[Done?]";
+    winner.classList.add('running');
+}
+
+function reset(){
+    span_pre.innerHTML = '';
+    span_post.innerHTML = '';
+    window.clearTimeout(blog_post_timer);
+    toggle.innerHTML = '⏱';
+    started = 0;
+    span_last.classList.remove('running');
+    winner.classList.remove('running');
+}
+
+function done_stopwatch(){
+    winner.innerHTML = "";
+    span_last.innerHTML = `You ended up taking ${timeSpanToWords(Date.now() - started)}!`;
+    reset();
+    span_last.classList.add('running');
+}
+
+function second(){
+    span_pre.innerHTML = ` (You took ${timeSpanToWords(Date.now() - started)} so far `;
+    blog_post_timer = window.setTimeout(second,1000);
+}
+
+function timeSpanToWords(ms){
+    s = Math.floor(ms / 1000);
+    
+    if ( s >= 60 ){
+        m = Math.floor( s / 60 );
+        s-= m * 60;
+    }
+    else
+        m = 0;
+
+    let almost = (s * 1000) - ms > 800 ? true : false;
+
+    if ( almost ) s++;
+
+    if ( m > 59 ) return 'way too much!';
+
+    return `${ m > 0 ? (`${m} minute${ m != 1 ? 's' : ''}`) : ''}${ s > 0 ? ( `${ almost? 'almost ' : ''} ${s} second${ s != 1 ? 's': ''}` ) : ' sharp'}`;
 }
   </script>
   </body>
