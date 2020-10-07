@@ -1,9 +1,9 @@
 jekyll serve --watch --baseurl ""markdown: redcarpet
-collections: 
+collections:
   - neat_people
-baseurl: prettyneat.io
+url: http://prettyneat.io
 exclude: ["README.md"]
-permalink: /:title/
+permalink: /:title
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
