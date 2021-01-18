@@ -72,7 +72,8 @@ async function nl_wizard_complete() {
     data.append('email', email);
     data.append('promo', nl_consent);
 
-    let url = 'https://script.google.com/macros/s/AKfycbw4qqfAgT3hAEiQWSqqhI6fP_kCO0P28evR0nmzEFfrC2J-DVU/exec';
+    
+    let url = 'https://script.google.com/macros/s/AKfycbxevQ8QjPzw3I0kCPMirvqAbZBJoyCEE1cXrc_8xkUnMAmvRSqDtM2N/exec';
 
     let response = await fetch(url, {
         method: 'POST',
