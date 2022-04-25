@@ -11,7 +11,7 @@ timeToRead: 3'50"
 Once upon a time, Unity provided a first party multiplayer framework - UNet. That's gone. Thankfully, there's Mirror.
 
 
-# Mirror framework: The better Unity’s UNet replacement
+# Mirror framework: The improved UNet replacement
 
 
 Unfortunately, despite it still being  a class leading networking solution, it was no longer directly supported by the company. In UNet's stead, other multiplayer services came in to fill in its shoes (ex Photon), but they are notoriously more expensive (because they charge per connected "player").
@@ -20,7 +20,7 @@ That said, an individual who goes by the handle [vis2k](https://assetstore.unity
 
 Below is a demo of uMMORPG, with 480 players in a small map. As you can see, Mirror is fast and stable.
 
-https://www.youtube.com/watch?v=mDCNff1S9ZU
+![uMMORPG 480 CCU *Worst Case* Stress Test](https://www.youtube.com/watch?v=mDCNff1S9ZU)
 
 # Setup
 
@@ -40,7 +40,7 @@ Create a empty project (2d or 3d). Import the mirror unity package.
 
 **Step 3**
 
-To make Mirro work with your empty scene, you need to create an empty gameobject called Network Manager. Next, add NetworkManager and NetworkManagerHUD components to this gameobject. If you did everything correctly, upon starting the scene you should see this.
+To make Mirror work with your empty scene, you need to create an empty gameobject called Network Manager. Next, add NetworkManager and NetworkManagerHUD components to this gameobject. If you did everything correctly, upon starting the scene you should see this.
 
 ![NetworkManagerHUD](https://miro.medium.com/max/460/1*nSMmLoOha7KLzVqE0f-LTQ.png)
 
@@ -48,9 +48,9 @@ To make Mirro work with your empty scene, you need to create an empty gameobject
 
 Now you have multiplayer game - well, minus the game :D
 
-![enter image description here](https://c.tenor.com/tS2sh1XgewwAAAAC/ricky-gervais-dancing.gif)
+![A dancing Ricky Gervais](https://c.tenor.com/tS2sh1XgewwAAAAC/ricky-gervais-dancing.gif)
 
-To write your custom networking code, you need to replace MonoBehaviour with NetworkBehaviour
+To write your custom networking code, you need to replace MonoBehaviour with NetworkBehaviour.
  
 ## APIs and Development Experience
 
@@ -130,7 +130,7 @@ Besides all the code and examples, Mirror also offers a large range of component
 
 ![Mirror’s Layered Design](https://miro.medium.com/max/1400/0*CEj14eb0MosCtgAY)
 
-****Mirror’s Layered Design****
+**Mirror’s Layered Design**
 
 The API in general is very solid with many tools and components, so it makes development fast and easy.
 
@@ -143,7 +143,7 @@ As a user who used UNet before for small and simple multiplayer games, I can say
 
 You can check [Mirror Webiste](https://mirror-networking.com/) for documentation, tips, examples, videos, deployment strategies and many more...
  
-## Warp Up
+## Wrap Up
 Mirror is a great open source unity networking plugin. It gives you a very high level API, which is understandable and easy to  integrate to your new amazing game.
 
 Since it's based on UNet, the community is big and you can always find examples or guides.
