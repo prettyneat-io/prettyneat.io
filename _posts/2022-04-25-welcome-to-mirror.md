@@ -20,7 +20,7 @@ That said, an individual who goes by the handle [vis2k](https://assetstore.unity
 
 Below is a demo of uMMORPG, with 480 players in a small map. As you can see, Mirror is fast and stable.
 
-![uMMORPG 480 CCU *Worst Case* Stress Test](https://www.youtube.com/watch?v=mDCNff1S9ZU)
+[uMMORPG 480 CCU *Worst Case* Stress Test](https://www.youtube.com/watch?v=mDCNff1S9ZU)
 
 # Setup
 
